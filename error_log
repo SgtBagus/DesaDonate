@@ -1,0 +1,253 @@
+[12-Oct-2018 13:11:26 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/gatokoco/public_html/sop/application/views/crud/generate.php on line 80
+[12-Oct-2018 06:37:34 UTC] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 12
+[12-Oct-2018 07:30:03 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 163
+[12-Oct-2018 07:30:05 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 163
+[12-Oct-2018 14:33:08 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 87
+[12-Oct-2018 14:33:11 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 19
+[12-Oct-2018 14:38:12 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 87
+[12-Oct-2018 14:38:15 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 19
+[12-Oct-2018 14:50:21 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 14:50:24 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 14:50:52 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 14:51:35 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 14:51:59 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 14:52:03 Asia/Jakarta] PHP Fatal error:  Call to undefined method Alert::danger() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 41
+[12-Oct-2018 07:58:40 UTC] PHP Parse error:  syntax error, unexpected ''created_at'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 66
+[12-Oct-2018 07:59:32 UTC] PHP Parse error:  syntax error, unexpected ''created_at'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 66
+[12-Oct-2018 07:59:34 UTC] PHP Parse error:  syntax error, unexpected ''created_at'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 66
+[12-Oct-2018 07:59:40 UTC] PHP Parse error:  syntax error, unexpected ''created_at'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 66
+[12-Oct-2018 15:05:34 Asia/Jakarta] PHP Fatal error:  Call to a member function data() on null in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 79
+[12-Oct-2018 15:06:36 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 115
+[12-Oct-2018 15:08:07 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::layout() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 95
+[12-Oct-2018 15:34:12 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class PHPExcel in /home/gatokoco/public_html/sop/application/libraries/PHPExcel.php on line 34
+[12-Oct-2018 08:38:12 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 12
+[12-Oct-2018 08:38:26 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:27 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:28 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:30 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:30 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:32 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:46 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:47 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 08:38:49 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 172
+[12-Oct-2018 16:04:13 Asia/Jakarta] PHP Fatal error:  Class 'IOFactory' not found in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 133
+[12-Oct-2018 09:36:47 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 183
+[12-Oct-2018 17:31:25 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Crud.php on line 55
+[12-Oct-2018 17:31:51 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Crud.php on line 55
+[12-Oct-2018 17:31:52 Asia/Jakarta] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gatokoco/public_html/sop/application/controllers/Crud.php on line 55
+[12-Oct-2018 17:53:37 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/gatokoco/public_html/sop/application/views/crud/index.php on line 166
+[12-Oct-2018 17:55:04 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/gatokoco/public_html/sop/application/views/crud/index.php on line 167
+[13-Oct-2018 05:54:57 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gatokoco/public_html/sop/application/controllers/master/Type_post.php on line 45
+[13-Oct-2018 06:16:00 UTC] PHP Parse error:  syntax error, unexpected '$excel' (T_VARIABLE), expecting '(' in /home/gatokoco/public_html/sop/application/libraries/Excel.php on line 74
+[13-Oct-2018 06:23:45 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/gatokoco/public_html/sop/application//third_party/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Excel.php on line 4
+[13-Oct-2018 14:39:43 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:39:46 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:39:58 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:40:04 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:40:39 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:40:46 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:41:00 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 14:41:09 Asia/Jakarta] PHP Fatal error:  Call to undefined method Role::upload_file() in /home/gatokoco/public_html/sop/application/controllers/master/Role.php on line 118
+[13-Oct-2018 15:04:25 Asia/Jakarta] PHP Fatal error:  Call to undefined method Home::curUrl() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:05:55 Asia/Jakarta] PHP Fatal error:  Call to undefined function cururl() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:05:57 Asia/Jakarta] PHP Fatal error:  Call to undefined function cururl() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:07:32 Asia/Jakarta] PHP Fatal error:  Call to undefined function curcname() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:07:33 Asia/Jakarta] PHP Fatal error:  Call to undefined function curcname() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:08:29 Asia/Jakarta] PHP Fatal error:  Call to undefined function curcname() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:08:29 Asia/Jakarta] PHP Fatal error:  Call to undefined function curcname() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 15:08:36 Asia/Jakarta] PHP Fatal error:  Call to undefined function curcname() in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 11
+[13-Oct-2018 08:38:54 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 26
+[13-Oct-2018 08:44:04 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 3
+[13-Oct-2018 08:51:06 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 3
+[13-Oct-2018 08:51:07 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 3
+[13-Oct-2018 08:55:55 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 55
+[13-Oct-2018 08:56:19 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 3
+[24-Oct-2018 03:58:38 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 3
+[24-Oct-2018 04:06:55 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gatokoco/public_html/sop/application/core/MY_Controller.php on line 33
+[26-Oct-2018 14:32:57 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ';' in /home/gatokoco/public_html/sop/application/views/template/template.php on line 75
+[26-Oct-2018 14:54:27 Asia/Jakarta] PHP Fatal error:  Call to a member function row() on array in /home/gatokoco/public_html/sop/application/views/template/template.php on line 149
+[26-Oct-2018 14:54:28 Asia/Jakarta] PHP Fatal error:  Call to a member function row() on array in /home/gatokoco/public_html/sop/application/views/template/template.php on line 149
+[26-Oct-2018 14:54:39 Asia/Jakarta] PHP Fatal error:  Call to a member function row() on array in /home/gatokoco/public_html/sop/application/views/template/template.php on line 149
+[26-Oct-2018 14:56:39 Asia/Jakarta] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/views/template/template.php on line 149
+[26-Oct-2018 14:56:41 Asia/Jakarta] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/views/template/template.php on line 149
+[29-Oct-2018 10:20:19 UTC] PHP Fatal error:  Call to a member function library() on null in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 10
+[29-Oct-2018 10:20:41 UTC] PHP Fatal error:  Call to a member function load() on null in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 15
+[29-Oct-2018 10:20:43 UTC] PHP Fatal error:  Call to a member function load() on null in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 15
+[29-Oct-2018 10:29:06 UTC] PHP Parse error:  syntax error, unexpected 'TRUE' (T_STRING) in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 243
+[01-Nov-2018 10:37:40 Asia/Jakarta] PHP Fatal error:  Call to a member function decode() on null in /home/gatokoco/public_html/sop/application/views/master/user/edit-user.php on line 47
+[01-Nov-2018 10:37:42 Asia/Jakarta] PHP Fatal error:  Call to a member function decode() on null in /home/gatokoco/public_html/sop/application/views/master/user/edit-user.php on line 47
+[01-Nov-2018 06:22:15 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 181
+[01-Nov-2018 08:52:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 122
+[01-Nov-2018 08:52:41 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 122
+[01-Nov-2018 08:53:16 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 121
+[01-Nov-2018 08:53:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 121
+[01-Nov-2018 08:54:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 121
+[01-Nov-2018 08:54:44 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 121
+[01-Nov-2018 08:55:07 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 121
+[01-Nov-2018 10:10:50 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 187
+[01-Nov-2018 10:11:30 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 187
+[01-Nov-2018 10:11:31 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 187
+[01-Nov-2018 10:12:16 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 188
+[01-Nov-2018 10:12:17 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 188
+[01-Nov-2018 10:12:35 UTC] PHP Parse error:  syntax error, unexpected 'print_r' (T_STRING) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 188
+[01-Nov-2018 10:12:36 UTC] PHP Parse error:  syntax error, unexpected 'print_r' (T_STRING) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 188
+[01-Nov-2018 10:38:48 UTC] PHP Parse error:  syntax error, unexpected '"bar"' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 201
+[01-Nov-2018 10:38:49 UTC] PHP Parse error:  syntax error, unexpected '"bar"' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 201
+[02-Nov-2018 02:44:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 107
+[02-Nov-2018 02:44:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 107
+[02-Nov-2018 02:44:28 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 107
+[02-Nov-2018 02:55:31 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 116
+[02-Nov-2018 02:55:32 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 116
+[02-Nov-2018 03:02:18 UTC] PHP Parse error:  syntax error, unexpected '$html' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 118
+[02-Nov-2018 03:22:33 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 119
+[02-Nov-2018 03:22:34 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 119
+[02-Nov-2018 03:22:35 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 119
+[02-Nov-2018 03:29:12 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 114
+[02-Nov-2018 03:29:13 UTC] PHP Fatal error:  Cannot use [] for reading in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 114
+[02-Nov-2018 03:38:20 UTC] PHP Parse error:  syntax error, unexpected ''"></canvas>' (T_ENCAPSED_AND_WHITESPACE) in /home/gatokoco/public_html/sop/application/libraries/Template.php on line 169
+[17-Jan-2019 03:12:46 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:03 UTC] PHP Fatal error:  Class 'sop\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:04 UTC] PHP Fatal error:  Class 'sop\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:16 UTC] PHP Fatal error:  Class 'Application\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:17 UTC] PHP Fatal error:  Class 'Application\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:27 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:40 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:41 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:43 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:43 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:43 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:43 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:13:44 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Key.php on line 21
+[17-Jan-2019 03:16:33 UTC] PHP Parse error:  syntax error, unexpected ''.libraries/REST_Controller.ph' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/controllers/api/Users.php on line 2
+[17-Jan-2019 03:16:35 UTC] PHP Parse error:  syntax error, unexpected ''.libraries/REST_Controller.ph' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/controllers/api/Users.php on line 2
+[17-Jan-2019 03:16:38 UTC] PHP Parse error:  syntax error, unexpected ''.libraries/REST_Controller.ph' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/controllers/api/Users.php on line 2
+[17-Jan-2019 03:17:03 UTC] PHP Parse error:  syntax error, unexpected ''.libraries/REST_Controller.ph' (T_CONSTANT_ENCAPSED_STRING) in /home/gatokoco/public_html/sop/application/controllers/api/Users.php on line 2
+[17-Jan-2019 03:17:44 UTC] PHP Fatal error:  Class 'Restserver\Libraries\Format' not found in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 853
+[17-Jan-2019 03:25:22 UTC] PHP Fatal error:  Class 'REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 5
+[17-Jan-2019 03:26:14 UTC] PHP Fatal error:  Class 'REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 6
+[17-Jan-2019 03:29:33 UTC] PHP Fatal error:  require(): Failed opening required '/home/gatokoco/public_html/sop/application/../libraries/REST_Controller.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 2
+[17-Jan-2019 03:30:29 UTC] PHP Fatal error:  Class 'REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 5
+[17-Jan-2019 03:31:16 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting '(' in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 718
+[17-Jan-2019 03:31:27 UTC] PHP Fatal error:  Class 'Restserver\Libraries\MY_Controller' not found in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 22
+[17-Jan-2019 03:31:35 UTC] PHP Fatal error:  Class 'Restserver\Libraries\MY_Controller' not found in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 22
+[17-Jan-2019 03:32:20 UTC] PHP Fatal error:  Class 'Restserver\Libraries\MY_Controller' not found in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 22
+[17-Jan-2019 03:33:03 UTC] PHP Fatal error:  Class 'Restserver\Libraries\N_Controller' not found in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 22
+[17-Jan-2019 03:33:05 UTC] PHP Fatal error:  Class 'Restserver\Libraries\REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 22
+[17-Jan-2019 03:42:50 UTC] PHP Fatal error:  Class 'REST_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 5
+[17-Jan-2019 03:53:50 UTC] PHP Parse error:  syntax error, unexpected ''role_id'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 53
+[17-Jan-2019 04:00:00 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE), expecting ')' in /home/gatokoco/public_html/sop/application/controllers/api/Masters.php on line 79
+[06-Feb-2019 04:04:52 UTC] PHP Parse error:  syntax error, unexpected 'Default' (T_DEFAULT), expecting identifier (T_STRING) in /home/gatokoco/public_html/sop/application/controllers/api/Default.php on line 22
+[06-Feb-2019 04:45:12 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 303
+[06-Feb-2019 04:46:04 UTC] PHP Parse error:  syntax error, unexpected ''data'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 62
+[06-Feb-2019 04:46:05 UTC] PHP Parse error:  syntax error, unexpected ''data'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 62
+[06-Feb-2019 04:50:44 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 42
+[06-Feb-2019 04:50:53 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gatokoco/public_html/sop/application/controllers/api/Example.php on line 42
+[06-Feb-2019 12:07:25 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '" use Restserver\Libraries\RES' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) in /home/gatokoco/public_html/sop/application/views/crud/Api.php on line 340
+[06-Feb-2019 12:08:15 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '" use Restserver\Libraries\RES' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) in /home/gatokoco/public_html/sop/application/views/crud/Api.php on line 340
+[06-Feb-2019 12:08:26 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '" use Restserver\Libraries\RES' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) in /home/gatokoco/public_html/sop/application/views/crud/Api.php on line 340
+[06-Feb-2019 12:09:31 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file, expecting ',' or ';' in /home/gatokoco/public_html/sop/application/views/crud/Api.php on line 343
+[19-Feb-2019 10:26:25 Asia/Jakarta] PHP Fatal error:  Call to undefined method Home::sendEmail() in /home/gatokoco/public_html/sop/application/controllers/Home.php on line 40
+[19-Feb-2019 10:44:27 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::sonEncode() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:28 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::sonEncode() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:29 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::sonEncode() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:30 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::sonEncode() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:31 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::sonEncode() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:44 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:44 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:44 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:44:45 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:45:44 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 10:45:46 Asia/Jakarta] PHP Fatal error:  Call to undefined method Template::encrypt() in /home/gatokoco/public_html/sop/application/views/template/template.php on line 187
+[19-Feb-2019 03:52:42 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 32
+[19-Feb-2019 03:52:47 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gatokoco/public_html/sop/application/controllers/master/User.php on line 32
+[21-Feb-2019 14:49:29 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ''' (T_ENCAPSED_AND_WHITESPACE) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 362
+[21-Feb-2019 15:23:32 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 't', expecting variable (T_VARIABLE) or quoted-string and whitespace (T_ENCAPSED_AND_WHITESPACE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 397
+[21-Feb-2019 15:51:22 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:24 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:25 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:27 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:28 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:29 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:29 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:40 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:41 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:45 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:45 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:51:50 Asia/Jakarta] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 251
+[21-Feb-2019 15:57:22 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ''as' (T_ENCAPSED_AND_WHITESPACE) in /home/gatokoco/public_html/sop/application/views/template/template.php on line 471
+[21-Feb-2019 16:23:23 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '"checked"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/gatokoco/public_html/sop/application/views/master/role/edit-role.php on line 51
+[21-Feb-2019 16:23:24 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '"checked"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/gatokoco/public_html/sop/application/views/master/role/edit-role.php on line 51
+[21-Feb-2019 16:44:31 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:44:55 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:44:56 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:44:57 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:45:34 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:01 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:02 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:03 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:04 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:05 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:06 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:06 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:07 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:07 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:08 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:09 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:09 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:10 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:47 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:48 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:49 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:50 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:50 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:51 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:47:51 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:11 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:11 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:12 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:13 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:50 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:48:51 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:50:11 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:50:59 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:51:00 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:51:01 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 16:51:01 Asia/Jakarta] PHP Fatal error:  Cannot redeclare class Restserver\Libraries\REST_Controller in /home/gatokoco/public_html/sop/application/libraries/REST_Controller.php on line 0
+[21-Feb-2019 09:51:55 UTC] PHP Fatal error:  Class 'MY_Controller' not found in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 3
+[22-Feb-2019 11:43:12 Asia/Jakarta] PHP Fatal error:  Call to a member function server() on null in /home/gatokoco/public_html/sop/application/views/template/form-validation.php on line 18
+[13-Mar-2019 10:04:28 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/gatokoco/public_html/sop/application/views/master/report/edit-report.php on line 107
+[13-Mar-2019 10:29:49 Asia/Jakarta] PHP Parse error:  syntax error, unexpected end of file in /home/gatokoco/public_html/sop/application/views/template/template.php on line 287
+[13-Mar-2019 05:02:51 UTC] PHP Parse error:  syntax error, unexpected '$viewfile' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/master/Report.php on line 221
+[13-Mar-2019 05:02:53 UTC] PHP Parse error:  syntax error, unexpected '$viewfile' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/master/Report.php on line 221
+[13-Mar-2019 05:02:54 UTC] PHP Parse error:  syntax error, unexpected '$viewfile' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/master/Report.php on line 221
+[13-Mar-2019 05:03:01 UTC] PHP Parse error:  syntax error, unexpected '$viewfile' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/master/Report.php on line 221
+[16-Mar-2019 07:43:42 UTC] PHP Parse error:  syntax error, unexpected '$output' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 36
+[16-Mar-2019 07:43:59 UTC] PHP Parse error:  syntax error, unexpected '$output' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 36
+[16-Mar-2019 15:07:07 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '<', expecting variable (T_VARIABLE) or '$' in /home/gatokoco/public_html/sop/application/views/master/report/generate/Controller.php on line 8
+[16-Mar-2019 08:25:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gatokoco/public_html/sop/application/controllers/master/Report.php on line 240
+[18-Mar-2019 02:54:36 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 76
+[18-Mar-2019 02:55:55 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 76
+[18-Mar-2019 02:56:19 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 76
+[18-Mar-2019 03:09:11 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 61
+[19-Mar-2019 16:35:50 Asia/Jakarta] PHP Fatal error:  Call to a member function get_datatables() on null in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 23
+[19-Mar-2019 16:35:55 Asia/Jakarta] PHP Fatal error:  Call to a member function get_datatables() on null in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 23
+[19-Mar-2019 16:36:01 Asia/Jakarta] PHP Fatal error:  Call to a member function get_datatables() on null in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 23
+[19-Mar-2019 16:39:43 Asia/Jakarta] PHP Fatal error:  Call to a member function get_datatables() on null in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 23
+[19-Mar-2019 09:57:11 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 35
+[19-Mar-2019 09:58:14 UTC] PHP Parse error:  syntax error, unexpected 'Detailnya' (T_STRING) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 35
+[19-Mar-2019 09:58:24 UTC] PHP Parse error:  syntax error, unexpected 'Detailnya' (T_STRING) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 35
+[19-Mar-2019 09:58:28 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 36
+[19-Mar-2019 09:59:06 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 36
+[19-Mar-2019 09:59:10 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/gatokoco/public_html/sop/application/controllers/report/Users.php on line 36
+[19-Mar-2019 17:01:22 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/gatokoco/public_html/sop/application/views/master/report/generate/Controller.php on line 47
+[19-Mar-2019 17:01:29 Asia/Jakarta] PHP Parse error:  syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/gatokoco/public_html/sop/application/views/master/report/generate/Controller.php on line 47
+[01-Apr-2019 17:18:16 Asia/Jakarta] PHP Fatal error:  Call to a member function folder() on null in /home/gatokoco/public_html/sop/application/controllers/Fitur.php on line 508
+[01-Apr-2019 17:18:32 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required 'dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[01-Apr-2019 17:20:26 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '../third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[01-Apr-2019 17:20:37 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required './third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[01-Apr-2019 17:21:08 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required 'http://gatoko1.com/sop/../third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[01-Apr-2019 17:22:04 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/../third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[01-Apr-2019 17:22:05 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/../third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/gatokoco/public_html/sop/application/libraries/Pdf.php on line 137
+[29-May-2019 16:33:10 Asia/Jakarta] PHP Fatal error:  Call to undefined method Inline_Frame_Decorator::normalise() in /home/gatokoco/public_html/sop/application/third_party/dompdf/include/table_frame_decorator.cls.php on line 252
+[29-May-2019 16:33:13 Asia/Jakarta] PHP Fatal error:  Call to undefined method Inline_Frame_Decorator::normalise() in /home/gatokoco/public_html/sop/application/third_party/dompdf/include/table_frame_decorator.cls.php on line 252
+[29-May-2019 16:33:52 Asia/Jakarta] PHP Fatal error:  Call to undefined method Inline_Frame_Decorator::normalise() in /home/gatokoco/public_html/sop/application/third_party/dompdf/include/table_frame_decorator.cls.php on line 252
