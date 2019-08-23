@@ -3,7 +3,7 @@
     <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       APLIKASI GALANG DONASI DESA
       <br>
-      <br>
+      <br> 
       <div class="row">
         <div class="col-md-6 col-6 mb-md-0 mb-5">
           <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
@@ -219,7 +219,11 @@
         </div>
       </div>
       <div class="row" align="center">
-        <button type="button" class="btn btn-primary btn-lg round"><i class="fa fa-search"></i> Lihat Semua</button>
+        <a href="<?= base_url('penggalangan') ?>">
+          <button type="button" class="btn btn-primary btn-lg round">
+            <i class="fa fa-search"></i> Lihat Semua
+          </button>
+        </a>
       </div>
     </section>
   </div>

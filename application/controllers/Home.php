@@ -10,7 +10,5 @@ class Home extends MY_Controller {
         $data['page_name'] = "home";
         $this->template->load('template/template','index',$data);
 	}
-
+	
 }
-/* End of file Home.php */
-/* Location: ./application/controllers/Home.php */
