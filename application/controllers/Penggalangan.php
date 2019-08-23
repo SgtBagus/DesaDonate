@@ -9,7 +9,13 @@ class Penggalangan extends MY_Controller {
 	public function index()
 	{
         $data['page_name'] = "Penggalangan";
-        $this->template->load('template/template','penggalangan',$data);
+        $this->template->load('template/template','penggalangan/index',$data);
+	}
+
+	public function view($id)
+	{
+        $data['page_name'] = "Penggalangan";
+        $this->template->load('template/template','penggalangan/view',$data);
 	}
 	
 }
