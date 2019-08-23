@@ -73,6 +73,8 @@
 </head>
 <body class="hold-transition skin-blue layout-top-nav">
   <div class="wrapper">
+
+  
     <header class="main-header">
       <nav class="navbar navbar-static-top">
         <div class="container">
@@ -86,21 +88,25 @@
             <ul class="nav navbar-nav">
               <li><a href="#"><i class="fa fa-plus"></i> Galang Dana</a></li>
               <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-money"></i> Donasi</a></li>
+              
             </ul>
           </div>
+          <?php
+          if($this->session->userdata('session_sop') == true){
+          ?>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs"><?php echo $this->session->userdata('nama') ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <li class="user-header">
                     <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     <p>
-                      Alexander Pierce - Web Developer
-                      <small>Member since Nov. 2012</small>
+                      <?php echo $this->session->userdata('nama') ?>
+                      <small><?php echo $this->session->userdata('email') ?></small>
                     </p>
                   </li>
                   <li class="user-body">
@@ -114,7 +120,7 @@
                     <br>
                     <div class="row">
                       <div class="col-md-12">
-                        <a href="<?= base_url('login') ?>">
+                        <a href="<?= base_url('login/logout') ?>">
                           <button type="button" class="btn btn-block btn-danger round">Keluar</button>
                         </a>
                       </div>        
@@ -124,6 +130,20 @@
               </li>
             </ul>
           </div>
+          <?php
+          }
+          ?>
+          <?php
+              if($this->session->userdata('session_sop') == ""){
+              ?>
+              <div class="navbar-custom-menu">
+              <ul class="nav navbar-nav">
+              <li><a href="<?= base_url('login') ?>">Login</a></li>
+              </ul>
+              </div>
+              <?php
+              }
+              ?>
         </div>
       </nav>
     </header>

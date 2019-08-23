@@ -8,14 +8,13 @@ class Mlogin extends CI_Model {
   }
   
   
-  public function login($email, $password)
+  public function login($email)
   {
     $email_special = htmlspecialchars($this->db->escape($email));
-    $password_password = htmlspecialchars($this->db->escape($password));
+    // $password_password = htmlspecialchars($this->db->escape($password));
     $this->db->select('*');
-    $this->db->from('user');
-    $this->db->where("nip = $email_special"); 
-    $this->db->where("password = $password_password");
+    $this->db->from('tbl_user');
+    $this->db->where("emailUser = $email_special"); 
     $query = $this->db->get();
     return $query->num_rows();
   }
@@ -25,9 +24,9 @@ class Mlogin extends CI_Model {
   {
    $email_special = htmlspecialchars($this->db->escape($email));    
    $this->db->select('*');
-   $this->db->where("nip = $email_special"); 
+   $this->db->where("emailUser = $email_special"); 
    
-   $query = $this->db->get('user');
+   $query = $this->db->get('tbl_user');
    
    return $query->row();
   }
