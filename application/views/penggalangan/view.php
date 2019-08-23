@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1>
-            <b>Lorem ipsum dolor sit amet<b>
+            <b>Lorem ipsum dolor sit amet</b>
           </h1>
         </div>
       </div>
@@ -29,6 +29,22 @@
                   <span class="sr-only">20% Complete</span>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-6" align="left">
+                  <b>10%</b> Tercapat
+                </div>
+                <div class="col-md-6" align="right">
+                  <b>9</b> Hari Lagi
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Donasi Sekarang</button>
+          <br>
+          Penggalangan dana dimulai <b>2 Augustus 2019</b> oleh:
+          <div class="box box-solid round">
+            <div class="box-body">
+              
             </div>
           </div>
         </div>
