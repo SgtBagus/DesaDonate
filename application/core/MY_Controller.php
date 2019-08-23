@@ -20,8 +20,7 @@ abstract class MY_Controller extends CI_Controller{
 
 		$role = $this->session->userdata('role_id');
 
-		$this->admin_url = "https://192.168.1.6/desa/";
-		
+		$this->admin_url = "https://admin.karyastudio.com/";
 
 		if($folder==""){
 
