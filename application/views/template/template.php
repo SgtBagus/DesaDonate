@@ -65,6 +65,10 @@
       color: #323439;
     }
 
+    .progress-xs{
+      background-color: #f3f3f3;
+    }
+
   </style>
 </head>
 <body class="hold-transition skin-blue layout-top-nav">

@@ -18,10 +18,11 @@
         <div class="col-md-6">
           <div class="box box-solid round">
             <div class="box-body">
+              <form action="" method="GET">
               <div class="form-group">
                 <h3>Pilih Kategori yang Ingin Anda Bantu</h3>
-                <select class="form-control select2" style="width: 100%;">
-                  <option value="" selected="">Semua Kategori</option>
+                <select class="form-control select2" style="width: 100%;" name="kategori">
+                  <option value=" " selected="">Semua Kategori</option>
                   <option value="1">Medis</option>
                   <option value="2">Anak</option>
                   <option value="3">Pembangunan</option>
@@ -29,8 +30,9 @@
                 </select>
               </div>
               <div class="form-group">
-                <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Cari</button>
+                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Cari</button>
               </div>
+              </form>
             </div>
           </div>
         </div>
