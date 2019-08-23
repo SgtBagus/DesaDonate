@@ -10,7 +10,7 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 350px; width: 100%" class="round">
+          <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 360px; width: 100%" class="round">
           <br>
           <br>
           <div class="box box-solid round">
@@ -30,10 +30,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                   <b>10%</b> Tercapat
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                   <b>9</b> Hari Lagi
                 </div>
               </div>
@@ -44,7 +44,15 @@
           Penggalangan dana dimulai <b>2 Augustus 2019</b> oleh:
           <div class="box box-solid round">
             <div class="box-body">
-              
+              <div class="row">
+                <div class="col-md-4" align="center">
+                  <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                </div>
+                <div class="col-md-8">
+                  <h4><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
+                  <small>Member since Nov. 2012</small>
+                </div>
+              </div>
             </div>
           </div>
         </div>

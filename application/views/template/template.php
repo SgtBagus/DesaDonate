@@ -82,10 +82,14 @@
               <i class="fa fa-bars"></i>
             </button>
           </div>
-          <div class="navbar-custom-menu">
+          <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="#"><i class="fa fa-plus"></i> Galang Dana</a></li>
               <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-money"></i> Donasi</a></li>
+            </ul>
+          </div>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">

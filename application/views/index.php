@@ -114,7 +114,7 @@
         <div class="col-md-6 col-12 mb-md-0 mb-5">
           <div class="box box-solid round">
             <div class="box-body">
-              <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+              <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 230px; width: 100%">
               <h3>Lorem ipsum dolor sit amet</h3>
               <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
               <div class="progress-xs">
@@ -123,12 +123,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                   Terkumpul
                   <br>
                   <b>Rp. 1.435.234,00,-</b>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                   Sisa Hari
                   <br>
                   <b>9</b>
@@ -140,7 +140,7 @@
         <div class="col-md-6 col-12 mb-md-0 mb-5">
           <div class="box box-solid round">
             <div class="box-body">
-              <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+              <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
               <h3>Lorem ipsum dolor sit amet</h3>
               <h4>Jhon Jack</h4>
               <div class="progress-xs">
@@ -149,12 +149,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                   Terkumpul
                   <br>
                   <b>Rp. 1.123.234,00,-</b>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                   Sisa Hari
                   <br>
                   <b>14</b>
@@ -168,7 +168,7 @@
         <div class="col-md-6 col-12 mb-md-0 mb-5">
           <div class="box box-solid round">
             <div class="box-body">
-              <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+              <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg" alt="Second slide" style="height: 230px; width: 100%">
               <h3>Lorem ipsum dolor sit amet</h3>
               <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
               <div class="progress-xs">
@@ -177,12 +177,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                   Terkumpul
                   <br>
                   <b>Rp. 53.234,00,-</b>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                   Sisa Hari
                   <br>
                   <b>67</b>
@@ -194,7 +194,7 @@
         <div class="col-md-6 col-12 mb-md-0 mb-5">
           <div class="box box-solid round">
             <div class="box-body">
-              <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+              <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
               <h3>Lorem ipsum dolor sit amet</h3>
               <h4>Jhon Jack</h4>
               <div class="progress-xs">
@@ -203,12 +203,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6" align="left">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                   Terkumpul
                   <br>
                   <b>Rp. 1.123.234,00,-</b>
                 </div>
-                <div class="col-md-6" align="right">
+                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                   Sisa Hari
                   <br>
                   <b>14</b>

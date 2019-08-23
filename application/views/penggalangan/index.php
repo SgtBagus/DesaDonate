@@ -2,7 +2,7 @@
   <div class="container">
     <section class="content">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 col-xs-12" align="center">
           <div class="row">
             <div class="col-md-4">
               <img src="https://i2.wp.com/www.churchworksmedia.com/wp-content/uploads/2018/11/Give-donate-vector.png?fit=432%2C375&ssl=1" width="150px" height="150px">
@@ -15,7 +15,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="box box-solid round">
             <div class="box-body">
               <form action="" method="GET">
@@ -42,7 +42,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
                 <div class="progress-xs">
@@ -51,12 +51,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.435.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>9</b>
@@ -70,7 +70,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Jhon Jack</h4>
                 <div class="progress-xs">
@@ -79,12 +79,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.123.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>14</b>
@@ -98,7 +98,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Jhon Jack</h4>
                 <div class="progress-xs">
@@ -107,12 +107,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.123.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>14</b>
@@ -128,7 +128,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
                 <div class="progress-xs">
@@ -137,12 +137,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.435.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>9</b>
@@ -156,7 +156,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Jhon Jack</h4>
                 <div class="progress-xs">
@@ -165,12 +165,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.123.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>14</b>
@@ -184,7 +184,7 @@
           <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 300px; width: 100%">
+                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Jhon Jack</h4>
                 <div class="progress-xs">
@@ -193,12 +193,12 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-6" align="left">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     Terkumpul
                     <br>
                     <b>Rp. 1.123.234,00,-</b>
                   </div>
-                  <div class="col-md-6" align="right">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     Sisa Hari
                     <br>
                     <b>14</b>
