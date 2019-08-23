@@ -4,38 +4,12 @@ class Home extends MY_Controller {
 	{
 		parent::__construct();
 	}
+
 	public function index()
 	{
-		$data['page_name'] = "home";
-		$this->template->load('template/template','template/index',$data);
-		
+        $data['page_name'] = "home";
+        $this->template->load('template/template','index',$data);
 	}
-
-    function chart($value='')
-    {
-        $data['page_name'] = "chart";
-        $this->template->load('template/template','template/chart',$data);
-    }
-
-
-
-    function get_autocomplete(){
-        if (isset($_GET['term'])) {
-        	$this->db->like('name',$_GET['term'],'both');
-            $result = $this->mymodel->selectWhere('user',null);
-            if (count($result) > 0) {
-            foreach ($result as $row)
-                $arr_result[] = [
-                				'id'=>$row['id'],
-                				'label'=>$row['name']
-                				];
-
-                echo json_encode($arr_result);
-            }
-        }
-    }
-
-   
 
 }
 /* End of file Home.php */

@@ -217,27 +217,51 @@ public function sonKey()
     {
         return "sonsonz";
     }
-	   public function sonEncode($str)
-    {
-        // $key = $this->sonKey();
-        // return strtr(base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $str, MCRYPT_MODE_CBC, md5(md5($key)))), '+/=', '-_~');
+	       function sonEncode( $string) {
+	    // you may change these values to your own
+	    $secret_key = '#sismik123';
+    	$secret_iv = '#sismik123';
+	 
+	    $output = false;
+	    $encrypt_method = "AES-256-CBC";
+	    $key = hash( 'sha256', $secret_key );
+	    $iv = substr( hash( 'sha256', $secret_iv ), 0, 16 );
+	 
+    	$output = base64_encode( openssl_encrypt( $string, $encrypt_method, $key, 0, $iv ) );
+	    
+	    return $output;
+	}
 
-        return $str;        
-    }
-    public function sonDecode($encoded)
-    {
-	    // $this->CI =& get_instance();
+	function sonDecode( $string) {
+	    // you may change these values to your own
+	    $secret_key = 'my_simple_secret_key';
+	    $secret_iv = 'my_simple_secret_iv';
+	 
+	    $output = false;
+	    $encrypt_method = "AES-256-CBC";
+	    $key = hash( 'sha256', $secret_key );
+	    $iv = substr( hash( 'sha256', $secret_iv ), 0, 16 );
+	 
+	       $output = openssl_decrypt( base64_decode( $string ), $encrypt_method, $key, 0, $iv );
+	    
+	 
+	    return $output;
+	}
 
-     //    $key = $this->sonKey();
-     //    $random = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($key), base64_decode(strtr($encoded, '-_~', '+/=')), MCRYPT_MODE_CBC, md5(md5($key))), "");
-    	// $result = str_replace("\\", "/", $this->CI->db->escape($random));
-    	// $result = str_replace("/0", "", $result);
-    	// $result = str_replace("'", "", $result);
+    public function rupiah($angka){
+		if ($angka=='') {
+			$hasil_rupiah = '0';
+		} else {
+			$hasil_rupiah = "" . @number_format($angka,0,'','.');
+		}
+		return $hasil_rupiah;
+	 
+	}
 
-
-   		// return $result;
-
-   		return $encoded;
-    }
+	public function deleteRupiah($angka)
+	{
+		$hasil = str_replace('.', '', $angka);
+		return $hasil;
+	}
 
 }
