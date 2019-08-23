@@ -39,7 +39,7 @@
 <body class="hold-transition login-page cover">
   <div class="login-box">
     <div class="login-logo">
-        <img src="<?= base_url('assets/login/')?>/images/logo.png">
+        <img src="<?= base_url('webfile/')?>/login/logo.png">
     </div>
     <?=$contents?>
   </div>
