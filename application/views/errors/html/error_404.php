@@ -160,7 +160,7 @@ a.more-link {
   <span class="four"><span class="screen-reader-text">4</span></span>
 </section>
 <div class="link-container">
-  <a target="_blank" href="javascript::void(0)" onclick="history.go(-1)" class="more-link">Go Back</a>
+  <a href="javascript::void(0)" onclick="history.go(-1)" class="more-link">Go Back</a>
 </div>
 
 

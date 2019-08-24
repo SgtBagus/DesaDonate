@@ -12,18 +12,12 @@
         <div class="col-md-8">
           <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 360px; width: 100%" class="round">
           <br>
-          <br>
-          <div class="box box-solid round">
-            <div class="box-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
+          <p style="text-indent: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div class="col-md-4">            
           <div class="box box-solid round">
             <div class="box-body">
               <h2><b>Rp 48.285.955</b></h2>
-              Terkumpul Dari <b>Rp 500.000.000</b>
               <div class="progress-xs">
                 <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                   <span class="sr-only">20% Complete</span>
@@ -34,7 +28,7 @@
                   <b>10%</b> Tercapat
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                  <b>9</b> Hari Lagi
+                  <b>Rp 500.000.000</b>
                 </div>
               </div>
             </div>
@@ -56,6 +50,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="col-md-12">
           <div class="box box-solid round">
             <div class="box-body">
@@ -67,17 +63,80 @@
                 <div class="tab-content">
                   <div class="tab-pane active" id="tab_1">
                     <div class="row">
-                      <div class="col-md-8">
+                      <div class="col-md-8 col-sm-8 col-xs-12">
                         <p>
                           So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.
                         </p>
-                        
                         <p>
                           It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn't relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.
                         </p>
-
-                        <br>
-                        <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Donasi Sekarang</button>
+                        <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 360px; width: 100%" class="round">
+                        <p>
+                          It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn't relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.
+                        </p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h4>Donatur (13) Berdasarkan :</h4>
+                        <div class="nav-tabs-custom">
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab_donatur_1" data-toggle="tab" aria-expanded="false">Waktu</a></li>
+                            <li class=""><a href="#tab_donatur_2" data-toggle="tab" aria-expanded="false">Jumlah</a></li>
+                          </ul>
+                          <div class="tab-content">
+                            <div class="tab-pane active" id="tab_donatur_1">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-4" align="center">
+                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                    </div>
+                                    <div class="col-md-8">
+                                      <h3><b>Rp. 130.000,00,-</b></h3>
+                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                      <small>Member since Nov. 2012</small>
+                                      <p> The European languages are members of the same family.</p>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4" align="center">
+                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                    </div>
+                                    <div class="col-md-8">
+                                      <h3><b>Rp. 130.000,00,-</b></h3>
+                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                      <small>Member since Nov. 2012</small>
+                                      <p> The European languages are members of the same family.</p>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="tab_donatur_2">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-4" align="center">
+                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                    </div>
+                                    <div class="col-md-8">
+                                      <h3><b>Rp. 130.000,00,-</b></h3>
+                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                      <small>Member since Nov. 2012</small>
+                                      <p> The European languages are members of the same family.</p>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -91,6 +150,31 @@
                     and regular than that of the individual languages.
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" align="center">
+        <div class="col-md-12">
+          <h3>
+            Penggalangan dana ini mencurigakan? <a href="">Laporkan</a>
+          </h3>
+          <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Donasi Sekarang</button>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">      
+          <div class="box box-solid round">
+            <div class="box-body">
+              <div class="col-md-8 col-sm-8 col-xs-12" align="center">
+                <h3>Mau buat halaman untuk galang dana online seperti ini?</h3>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <a href="<?= base_url('penggalangan') ?>/create/">   
+                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-plus"></i> Buat Penggalangan</button>
+                </a>
               </div>
             </div>
           </div>

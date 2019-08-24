@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>plugins/iCheck/all.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
@@ -18,6 +19,7 @@
   <link rel="stylesheet" href="<?= base_url('assets/') ?>dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="<?= base_url('assets/') ?>/jquery/jquery.min.js"></script>
   <style type="text/css">
 
     .cover {
@@ -69,12 +71,28 @@
       background-color: #f3f3f3;
     }
 
+    .avatar{
+      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGF0592ieHaEF-YdkHjuFkW49zv9Ee_OtA2S1NdIONI5bbnD2FZA");
+      background-size: 100% 100%;
+    }
+    
+    .list-group-item{
+      border: 0px;
+    }
+
+    .list-group-item:hover{    
+      color: #fff;
+      background-color: #337ab7;
+      border-color: #337ab7;
+    }
+    
+    .nav-tabs-custom{
+      box-shadow: none;
+    }
   </style>
 </head>
 <body class="hold-transition skin-blue layout-top-nav">
   <div class="wrapper">
-
-  
     <header class="main-header">
       <nav class="navbar navbar-static-top">
         <div class="container">
@@ -86,7 +104,7 @@
           </div>
           <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#"><i class="fa fa-plus"></i> Galang Dana</a></li>
+              <li><a href="#"><i class="fa fa-plus"></i> Buat Penggalangan</a></li>
               <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-money"></i> Donasi</a></li>
               
             </ul>
@@ -170,6 +188,8 @@
   <script src="<?= base_url('assets/') ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
   <script src="<?= base_url('assets/') ?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
   <script src="<?= base_url('assets/') ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="<?= base_url('assets/') ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url('assets/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
   <script src="<?= base_url('assets/') ?>plugins/iCheck/icheck.min.js"></script>
   <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
   <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
@@ -227,7 +247,50 @@
       $('.timepicker').timepicker({
         showInputs: false
       })
+  
+      $('#datatable').DataTable({
+        "paging"      : true,
+        "lengthChange": false,
+        "searching"   : true,
+        "ordering"    : true,
+        "info"        : false,
+        "autoWidth"   : false,
+        "scrollY": true,
+        "scrollX": true,
+        "language": {
+          "zeroRecords": function () {
+            return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
+          },
+        },
+        "oLanguage": {
+            "sSearch": "<b> Pencarian : </b>",
+            "oPaginate": {
+              "sNext": "Selanjutnya",
+              "sPrevious": "Sebelumnya"
+            }
+        },
+      })
     })
+
+    $("#btnFile").click(function() {
+      document.getElementById('imageFile').click();
+    });
+
+    $("#imageFile").change(function() {
+      imagePreview(this);
+    });
+
+    function imagePreview(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+          $('#preview_image').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
   </script>
 </body>
 </html>
