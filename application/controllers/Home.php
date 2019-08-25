@@ -25,10 +25,13 @@ class Home extends MY_Controller {
 		where file.table = 'galang_dana'");
 
 		$data['admin_url'] = $this->admin_url;
-
-		// print_r($data['admin_url']);
-		// die();
         $this->template->load('template/template','index',$data);
+	}
+
+	public function profil($name)
+	{
+		$data['page_name'] = "profl";
+        $this->template->load('template/template','profil',$data);
 	}
 	
 }

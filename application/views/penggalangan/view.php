@@ -36,19 +36,21 @@
           <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Donasi Sekarang</button>
           <br>
           Penggalangan dana dimulai <b>2 Augustus 2019</b> oleh:
-          <div class="box box-solid round">
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-4" align="center">
-                  <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
-                </div>
-                <div class="col-md-8">
-                  <h4><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
-                  <small>Member since Nov. 2012</small>
+          <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-md-4" align="center">
+                    <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                  </div>
+                  <div class="col-md-8">
+                    <h4><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
+                    <small>Member since Nov. 2012</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="row">
@@ -86,28 +88,32 @@
                             <div class="tab-pane active" id="tab_donatur_1">
                               <div class="row">
                                 <div class="col-md-12">
-                                  <div class="row">
-                                    <div class="col-md-4" align="center">
-                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                  <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+                                    <div class="row">
+                                      <div class="col-md-4" align="center">
+                                        <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                      </div>
+                                      <div class="col-md-8">
+                                        <h3><b>Rp. 130.000,00,-</b></h3>
+                                        <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                        <small>Member since Nov. 2012</small>
+                                        <p> The European languages are members of the same family.</p>
+                                      </div>
                                     </div>
-                                    <div class="col-md-8">
-                                      <h3><b>Rp. 130.000,00,-</b></h3>
-                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
-                                      <small>Member since Nov. 2012</small>
-                                      <p> The European languages are members of the same family.</p>
+                                  </a>
+                                  <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+                                    <div class="row">
+                                      <div class="col-md-4" align="center">
+                                        <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                      </div>
+                                      <div class="col-md-8">
+                                        <h3><b>Rp. 130.000,00,-</b></h3>
+                                        <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                        <small>Member since Nov. 2012</small>
+                                        <p> The European languages are members of the same family.</p>
+                                      </div>
                                     </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-4" align="center">
-                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
-                                    </div>
-                                    <div class="col-md-8">
-                                      <h3><b>Rp. 130.000,00,-</b></h3>
-                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
-                                      <small>Member since Nov. 2012</small>
-                                      <p> The European languages are members of the same family.</p>
-                                    </div>
-                                  </div>
+                                  </a>
                                   <br>
                                   <div class="row">
                                     <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
@@ -118,17 +124,19 @@
                             <div class="tab-pane" id="tab_donatur_2">
                               <div class="row">
                                 <div class="col-md-12">
-                                  <div class="row">
-                                    <div class="col-md-4" align="center">
-                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                  <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+                                    <div class="row">
+                                      <div class="col-md-4" align="center">
+                                        <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                      </div>
+                                      <div class="col-md-8">
+                                        <h3><b>Rp. 130.000,00,-</b></h3>
+                                        <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
+                                        <small>Member since Nov. 2012</small>
+                                        <p> The European languages are members of the same family.</p>
+                                      </div>
                                     </div>
-                                    <div class="col-md-8">
-                                      <h3><b>Rp. 130.000,00,-</b></h3>
-                                      <h5><b>Alexander Pierce </b><i class="fa fa-check-circle" style="color:blue"></i></h5>
-                                      <small>Member since Nov. 2012</small>
-                                      <p> The European languages are members of the same family.</p>
-                                    </div>
-                                  </div>
+                                  </a>
                                   <div class="row">
                                     <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
                                   </div>

@@ -89,6 +89,15 @@
     .nav-tabs-custom{
       box-shadow: none;
     }
+
+    .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+        height: 160px;
+    }
+    
+    .navbar-nav>.user-menu>.dropdown-menu>.user-body {
+        padding: 5px;
+    }
+
   </style>
 </head>
 <body class="hold-transition skin-blue layout-top-nav">
@@ -128,18 +137,20 @@
                     </p>
                   </li>
                   <li class="user-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <a href="<?= base_url('dashboard') ?>">
-                          <button type="button" class="btn btn-block btn-primary round">Dashboard</button>
+                  <div class="row">
+                      <div class="col-md-3">
+                        <a href="<?= base_url('profil') ?>/asds/">
+                          <button type="button" class="btn btn-block btn-info"><i class="fa fa-user"></i></button>
                         </a>
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-md-12">
+                      </div>  
+                      <div class="col-md-6">
+                        <a href="<?= base_url('dashboard') ?>">
+                          <button type="button" class="btn btn-block btn-primary">Dashboard</button>
+                        </a>
+                      </div>  
+                      <div class="col-md-3">
                         <a href="<?= base_url('login/logout') ?>">
-                          <button type="button" class="btn btn-block btn-danger round">Keluar</button>
+                          <button type="button" class="btn btn-block btn-danger"><i class="fa fa-sign-out"></i></button>
                         </a>
                       </div>        
                     </div>
@@ -258,16 +269,14 @@
         "scrollY": true,
         "scrollX": true,
         "language": {
+          "search": "<b> Pencarian : </b>",
           "zeroRecords": function () {
             return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
           },
-        },
-        "oLanguage": {
-            "sSearch": "<b> Pencarian : </b>",
-            "oPaginate": {
-              "sNext": "Selanjutnya",
-              "sPrevious": "Sebelumnya"
-            }
+          "paginate": {
+            "previous": "Sebelumnya",
+            "next" : "Selanjutnya"
+          }
         },
       })
     })

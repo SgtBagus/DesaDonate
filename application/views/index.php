@@ -6,13 +6,15 @@
       <br> 
       <div class="row">
         <div class="col-md-6 col-6 mb-md-0 mb-5">
-          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
+          <a href="<?= base_url('penggalangan') ?>">
+            <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
+          </a>
         </div>
         <div class="col-md-6 col-6 mb-md-0 mb-5">
           <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
         </div>
       </div>
-    </h1>
+    </h1> 
   </div>
 </div>
 <div class="content-wrapper">
@@ -164,7 +166,9 @@
     <br>
     <div class="row">
       <div class="col-md-6 col-12 mb-md-0 mb-5">
-        <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
+        <a href="<?= base_url('penggalangan') ?>">
+          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
+        </a>
       </div>
       <div class="col-md-6 col-12 mb-md-0 mb-5">
         <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>

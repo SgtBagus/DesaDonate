@@ -67,7 +67,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Trident</td>
+                                    <td>Bagus</td>
                                     <td>Internet Explorer 4.0</td>
                                     <td>Win 95+</td>
                                     <td> 4</td>
