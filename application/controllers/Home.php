@@ -20,11 +20,11 @@ class Home extends MY_Controller {
 		FROM donasi");
 		$data['donatur'] = $this->mymodel->selectWithQuery("SELECT COUNT(idUser) as jumlah
 		FROM tbl_user");
-		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT * FROM galang_dana LEFT JOIN file
-		on galang_dana.idGalang = file.table_id
+		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, file.dir as file_dir FROM galang_dana a LEFT JOIN file on a.idGalang = file.table_id LEFT JOIN user u on a.idUser = u.id LEFT JOIN master_desa desa on u.idDesa = desa.idDesa
 		where file.table = 'galang_dana'");
 
 		$data['admin_url'] = $this->admin_url;
+
         $this->template->load('template/template','index',$data);
 	}
 

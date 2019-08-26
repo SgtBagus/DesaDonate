@@ -13,21 +13,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <style type="text/css">
 
+    *, body, h1,h2,h3,h4,h5,h6{
+      font-family: 'Poppins', sans-serif;
+    }
+
     .cover {
-      background: url("https://i.imgur.com/LBNoA1W.png") no-repeat center center fixed; 
+      background: url("https://images.pexels.com/photos/126793/pexels-photo-126793.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260") no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       height: 0%;
-    }
-
-    .div-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      padding: 2rem;
     }
 
     .round {
@@ -37,11 +33,10 @@
   </style>
 </head>
 <body class="hold-transition login-page cover">
-  <div class="login-box">
-    <div class="login-logo">
-        <img src="<?= base_url('webfile/')?>/login/logo.png">
+  <div class="col-md-12">
+    <div class="login-box">
+      <?=$contents?>
     </div>
-    <?=$contents?>
   </div>
   <script src="<?= base_url() ?>/assets/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="<?= base_url() ?>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

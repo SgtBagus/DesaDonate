@@ -5,12 +5,12 @@
       <br>
       <br> 
       <div class="row">
-        <div class="col-md-6 col-6 mb-md-0 mb-5">
+        <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
           <a href="<?= base_url('penggalangan') ?>">
             <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
           </a>
         </div>
-        <div class="col-md-6 col-6 mb-md-0 mb-5">
+        <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
           <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
         </div>
       </div>
@@ -18,7 +18,7 @@
   </div>
 </div>
 <div class="content-wrapper">
-  <div class="container">
+  <div class="container"> 
     <section class="content">
       <div class="row">
         <div class="col-md-4">
@@ -114,36 +114,32 @@
       <br>
       <div class="row">
         <?php foreach($listgalang as $row){ ?>
-        <div class="col-md-6 col-12 mb-md-0 mb-5">
-          <div class="box box-solid round">
-            <div class="box-body">
-            <?php  
-            // print_r($this->admin_url.$row['dir']);
-            //   die();
-              ?>
-              <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-              <h3><?= $row['tittleGalang'] ?></h3>
-              <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
-              <div class="progress-xs">
-                <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                  <span class="sr-only">20% Complete</span>
+          <div class="col-md-6 col-12 mb-md-0 mb-5">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                <h3><?= $row['tittleGalang'] ?></h3>
+                <h4><i class="fa fa-map"></i> <?= $row['desa_value'] ?></h4>
+                <div class="progress-xs">
+                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                    <span class="sr-only">20% Complete</span>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                  Terkumpul
-                  <br>
-                  <b>Rp. 1.435.234,00,-</b>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                  Target Donasi
-                  <br>
-                  <b>Rp <?= $row['targetDonasi'] ?></b>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    Terkumpul
+                    <br>
+                    <b>Rp. 1.435.234,00,-</b>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                    Target Donasi
+                    <br>
+                    <b>Rp <?= $row['targetDonasi'] ?></b>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         <?php } ?>
       </div>
       <div class="row" align="center">
@@ -165,12 +161,12 @@
     <br>
     <br>
     <div class="row">
-      <div class="col-md-6 col-12 mb-md-0 mb-5">
+      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
         <a href="<?= base_url('penggalangan') ?>">
           <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-money"></i> Mulai Donasi</button>
         </a>
       </div>
-      <div class="col-md-6 col-12 mb-md-0 mb-5">
+      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
         <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
       </div>
     </div>

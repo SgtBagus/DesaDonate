@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Advanced form elements</title>
+  <title>Ayo Bangun Desa</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?= base_url('assets/') ?>bower_components/font-awesome/css/font-awesome.min.css">
@@ -20,15 +20,19 @@
   <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <script src="<?= base_url('assets/') ?>/jquery/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <style type="text/css">
+    *, body, h1,h2,h3,h4,h5,h6{
+      font-family: 'Poppins', sans-serif;
+    }
 
     .cover {
       width: 100%;
-      height: 500px;
+      height: 550px;
       max-height: 100%;
       margin: 0;
       padding: 0;
-      background-image: url("https://i.imgur.com/LBNoA1W.png");
+      background-image: url("https://images.pexels.com/photos/126793/pexels-photo-126793.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
       background-size: 100% 100%;
       /*background-attachment: fixed;*/
       background-repeat: no-repeat;
@@ -45,6 +49,7 @@
 
     .round {
       border-radius: 20px;
+      box-shadow: 0 0 40px 0 rgba(0,0,0,.1);
     }
 
     .skin-blue .main-header li.user-header {
@@ -98,22 +103,26 @@
         padding: 5px;
     }
 
+    .cover_button{
+      margin-bottom: 10px;
+    }
+
   </style>
 </head>
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-green layout-top-nav">
   <div class="wrapper">
     <header class="main-header">
       <nav class="navbar navbar-static-top">
         <div class="container">
           <div class="navbar-header">
-            <a href="<?= base_url()?>" class="navbar-brand"><b>Admin</b>LTE</a>
+            <a href="<?= base_url()?>" class="navbar-brand"><b>AYO! BANGUN DESA</b></a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
               <i class="fa fa-bars"></i>
             </button>
           </div>
           <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#"><i class="fa fa-plus"></i> Buat Penggalangan</a></li>
+              <li><a href="#"><i class="fa fa-map"></i> Kabar Desa</a></li>
               <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-money"></i> Donasi</a></li>
               
             </ul>

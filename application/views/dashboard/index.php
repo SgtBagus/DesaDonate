@@ -3,6 +3,7 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
+                    <h1>Dashboard </h1>
                     <div class="box box-solid round avatar">
                         <div class="box-body">
                             <div class="row">
@@ -26,23 +27,18 @@
                                 <div class="box-body">
                                     <ul class="list-group list-group-unbordered">
                                         <a href="<?= base_url('dashboard') ?>">
-                                            <li class="list-group-item a_black" align="center" id="overview">
-                                                <i class="fa fa-dashboard"></i> <b>Overview</b>
-                                            </li>
-                                        </a>
-                                        <a href="<?= base_url('dashboard/penggalangan') ?>">
-                                            <li class="list-group-item a_black" align="center" id="penggalangan">
-                                                <i class="fa fa-file"></i> <b>Penggalangan Saya</b>
+                                            <li class="list-group-item a_black" id="overview">
+                                                <i class="fa fa-dashboard"></i> Overview
                                             </li>
                                         </a>
                                         <a href="<?= base_url('dashboard/donasi') ?>">
-                                            <li class="list-group-item a_black" align="center" id="donasi">
-                                                <i class="fa fa-money"></i> <b>Donasi Saya</b>
+                                            <li class="list-group-item a_black" id="donasi">
+                                                <i class="fa fa-money"></i> Donasi Saya
                                             </li>
                                         </a>
                                         <a href="<?= base_url('dashboard/account') ?>">
-                                            <li class="list-group-item a_black" align="center" id="account">
-                                                <i class="fa fa-user"></i> <b>Akun Saya</b>
+                                            <li class="list-group-item a_black" id="account">
+                                                <i class="fa fa-user"></i> Akun Saya
                                             </li>
                                         </a>
                                     </ul>
