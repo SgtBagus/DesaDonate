@@ -1,8 +1,13 @@
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
+      <div class="row" align="center">
+        <h1><i class="fa fa-archive"></i> Galang Dana Desa </h1>
+        <small>Halo #OrangBaik, Siap memberi bantuan ?</small>
+      </div>
+      <br>
       <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12" align="center">
+        <div class="col-md-6 col-sm-6 col-xs-12" align="center"> 
           <div class="row">
             <div class="col-md-4">
               <img src="https://i2.wp.com/www.churchworksmedia.com/wp-content/uploads/2018/11/Give-donate-vector.png?fit=432%2C375&ssl=1" width="150px" height="150px">
@@ -30,7 +35,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Cari</button>
+                <button type="submit" class="btn btn-block btn-primary btn-lg"><i class="fa fa-search"></i> Cari</button>
               </div>
               </form>
             </div>

@@ -21,93 +21,8 @@
   href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <script src="<?= base_url('assets/') ?>/jquery/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  <style type="text/css">
-    *, body, h1,h2,h3,h4,h5,h6{
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .cover {
-      width: 100%;
-      height: 550px;
-      max-height: 100%;
-      margin: 0;
-      padding: 0;
-      background-image: url("https://images.pexels.com/photos/126793/pexels-photo-126793.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-      background-size: 100% 100%;
-      /*background-attachment: fixed;*/
-      background-repeat: no-repeat;
-      position: relative;
-    }
-
-    .div-center {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      padding: 2rem;
-    }
-
-    .round {
-      border-radius: 20px;
-      box-shadow: 0 0 40px 0 rgba(0,0,0,.1);
-    }
-
-    .skin-blue .main-header li.user-header {
-      background-color: #6177e2;
-    }
-
-    .a_black{
-      color: #323439;
-    }
-
-    .a_black:hover{
-      color: #323439;
-    }
-
-    .a_black:active{
-      color: #323439;
-    }
-
-    .a_black:focus{
-      color: #323439;
-    }
-
-    .progress-xs{
-      background-color: #f3f3f3;
-    }
-
-    .avatar{
-      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGF0592ieHaEF-YdkHjuFkW49zv9Ee_OtA2S1NdIONI5bbnD2FZA");
-      background-size: 100% 100%;
-    }
-    
-    .list-group-item{
-      border: 0px;
-    }
-
-    .list-group-item:hover{    
-      color: #fff;
-      background-color: #337ab7;
-      border-color: #337ab7;
-    }
-    
-    .nav-tabs-custom{
-      box-shadow: none;
-    }
-
-    .navbar-nav>.user-menu>.dropdown-menu>li.user-header {
-        height: 160px;
-    }
-    
-    .navbar-nav>.user-menu>.dropdown-menu>.user-body {
-        padding: 5px;
-    }
-
-    .cover_button{
-      margin-bottom: 10px;
-    }
-
-  </style>
+  
+  <link rel="stylesheet" href="<?= base_url('assets/') ?>custom/css_custom.css">
 </head>
 <body class="hold-transition skin-green layout-top-nav">
   <div class="wrapper">
@@ -122,66 +37,72 @@
           </div>
           <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#"><i class="fa fa-map"></i> Kabar Desa</a></li>
-              <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-money"></i> Donasi</a></li>
-              
-            </ul>
-          </div>
-          <?php
-          if($this->session->userdata('session_sop') == true){
-          ?>
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <li class="dropdown user user-menu">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs"><?php echo $this->session->userdata('nama') ?></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="user-header">
-                    <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      <?php echo $this->session->userdata('nama') ?>
-                      <small><?php echo $this->session->userdata('email') ?></small>
-                    </p>
-                  </li>
-                  <li class="user-body">
-                  <div class="row">
-                      <div class="col-md-3">
-                        <a href="<?= base_url('profil') ?>/asds/">
-                          <button type="button" class="btn btn-block btn-info"><i class="fa fa-user"></i></button>
-                        </a>
-                      </div>  
-                      <div class="col-md-6">
-                        <a href="<?= base_url('dashboard') ?>">
-                          <button type="button" class="btn btn-block btn-primary">Dashboard</button>
-                        </a>
-                      </div>  
-                      <div class="col-md-3">
-                        <a href="<?= base_url('login/logout') ?>">
-                          <button type="button" class="btn btn-block btn-danger"><i class="fa fa-sign-out"></i></button>
-                        </a>
-                      </div>        
-                    </div>
-                  </li>
+              <li><a href="<?= base_url('news') ?>"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</a></li>
+              <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-archive"></i> Galang Dana Desa</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-heart-o"> </i> Fakta & Info <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="<?= base_url('fakta_info') ?>">Informasi Tambahan</a></li>
+                  <li><a href="<?= base_url('fakta_info') ?>">Tentang Aplikasi</a></li>
                 </ul>
               </li>
             </ul>
           </div>
           <?php
+          if($this->session->userdata('session_sop') == true){
+            ?>
+            <div class="navbar-custom-menu">
+              <ul class="nav navbar-nav">
+                <li class="dropdown user user-menu">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                    <span class="hidden-xs"><?php echo $this->session->userdata('nama') ?></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="user-header">
+                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      <p>
+                        <?php echo $this->session->userdata('nama') ?>
+                        <small><?php echo $this->session->userdata('email') ?></small>
+                      </p>
+                    </li>
+                    <li class="user-body">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a href="<?= base_url('profil') ?>/asds/">
+                            <button type="button" class="btn btn-block btn-info"><i class="fa fa-user"></i></button>
+                          </a>
+                        </div>  
+                        <div class="col-md-6">
+                          <a href="<?= base_url('dashboard') ?>">
+                            <button type="button" class="btn btn-block btn-primary">Dashboard</button>
+                          </a>
+                        </div>  
+                        <div class="col-md-3">
+                          <a href="<?= base_url('login/logout') ?>">
+                            <button type="button" class="btn btn-block btn-danger"><i class="fa fa-sign-out"></i></button>
+                          </a>
+                        </div>        
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <?php
           }
           ?>
           <?php
-              if($this->session->userdata('session_sop') == ""){
-              ?>
-              <div class="navbar-custom-menu">
+          if($this->session->userdata('session_sop') == ""){
+            ?>
+            <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
-              <li><a href="<?= base_url('login') ?>">Login</a></li>
+                <li><a href="<?= base_url('login') ?>">Login</a></li>
               </ul>
-              </div>
-              <?php
-              }
-              ?>
+            </div>
+            <?php
+          }
+          ?>
         </div>
       </nav>
     </header>
@@ -267,7 +188,7 @@
       $('.timepicker').timepicker({
         showInputs: false
       })
-  
+
       $('#datatable').DataTable({
         "paging"      : true,
         "lengthChange": false,
