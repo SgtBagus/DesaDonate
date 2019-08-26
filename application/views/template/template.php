@@ -112,8 +112,7 @@
         <div class="pull-right hidden-xs"> 
           <b>Version</b> 2.4.0
         </div>
-        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-        reserved.
+        <strong>Copyright &copy; 2019 Made with <span style=color:#e25555>&#10084;</span> in Banyuwangi by <a href="https://www.karyastudio.com/">Karya Studio Teknologi Digital</a> x <a href="https://www.ayokumpul.com/">Komunitas Ayo Kumpul</a>
       </div>
     </footer>
   </div>
