@@ -15,7 +15,7 @@ print_r(count($listgalang));
           </a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-          <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
+          <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
         </div>
       </div>
     </h1> 
@@ -214,7 +214,7 @@ print_r(count($listgalang));
         </a>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
+        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
       </div>
     </div>
   </div>
@@ -312,7 +312,7 @@ print_r(count($listgalang));
         </a>
       </div>
       <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
+        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
       </div>
     </div>
   </div>
