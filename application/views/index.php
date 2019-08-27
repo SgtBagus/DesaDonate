@@ -142,10 +142,10 @@
                     </div>
                   </div>
                   <?php
-                    $target = $row['targetDonasi'];
-                    $terkumpul = 10000000;
+                  $target = $row['targetDonasi'];
+                  $terkumpul = 10000000;
 
-                    $persen = ($terkumpul/$target)*100;
+                  $persen = ($terkumpul/$target)*100;
 
                   ?>
                   <div class="progress-xs" style="margin-bottom: 10px">
@@ -313,5 +313,112 @@
         <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> Whats App</button>
       </div>
     </div>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div class="container"> 
+    <section class="content">
+      <div class="row" align="center">
+        <h1><i class="fa fa-camera-retro"></i> Aku dan Ceritaku</h1>
+        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+      </div>
+      <br>
+      <div class="box box-solid round">
+        <div class="row box-body">
+          <div class="col-md-12">
+            <div id="carousel-story" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-story" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-story" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-story" data-slide-to="2" class=""></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="item  active" style="height: 400px">
+                  <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" style="height: 100%; width: 100%" class="sidebar_mobile">
+                  <div class="carousel-caption">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  </div>
+                </div>
+                <div class="item"  style="height: 400px">
+                  <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 100%; width: 100%" class="sidebar_mobile">
+                  <div class="carousel-caption">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
+                </div>
+                <div class="item" style="height: 400px">
+                  <img src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg" alt="Third slide" style="height: 100%; width: 100%" class="sidebar_mobile">
+                  <div class="carousel-caption">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </div>
+                </div>
+              </div>
+              <a class="left carousel-control" href="#carousel-story" data-slide="prev">
+                <span class="fa fa-angle-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-story" data-slide="next">
+                <span class="fa fa-angle-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <a href="<?= base_url('story') ?>/view/1" class="a_black">
+          <div class="col-md-4 col-12 mb-md-0 mb-5">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
+                <h3 align="center">How Do I Be A Missionary?</h3>
+                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="<?= base_url('story') ?>/view/1" class="a_black">
+          <div class="col-md-4 col-12 mb-md-0 mb-5">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
+                <h3 align="center">How Do I Be A Missionary?</h3>
+                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="<?= base_url('story') ?>/view/1" class="a_black">
+          <div class="col-md-4 col-12 mb-md-0 mb-5">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
+                <h3 align="center">How Do I Be A Missionary?</h3>
+                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row" align="center">
+        <a href="<?= base_url('story') ?>">
+          <button type="button" class="btn btn-primary btn-lg round">
+            <i class="fa fa-search"></i> Lihat Semua Aku dan Cerita
+          </button>
+        </a>
+      </div>
+    </section>
   </div>
 </div>

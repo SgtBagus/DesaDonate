@@ -35,12 +35,13 @@
               <i class="fa fa-bars"></i>
             </button>
           </div>
-          <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+          <div class="collapse navbar-collapse pull-left menu-custom_css" id="navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="<?= base_url('news') ?>"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</a></li>
               <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-archive"></i> Galang Dana Desa</a></li>
+              <li><a href="<?= base_url('news') ?>"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</a></li>
+              <li><a href="<?= base_url('story') ?>"><i class="fa fa-camera-retro"></i> Aku Dan Ceritaku</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-heart-o"> </i> Fakta & Info <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-list-ul"> </i> Fakta & Info <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="<?= base_url('fakta_info') ?>">Informasi Tambahan</a></li>
                   <li><a href="<?= base_url('fakta_info') ?>">Tentang Aplikasi</a></li>
@@ -85,6 +86,11 @@
                         </div>        
                       </div>
                     </li>
+                    <li>
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="refresh">
+                        <i class="fa fa-refresh"></i>
+                      </button>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -98,6 +104,11 @@
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
                 <li><a href="<?= base_url('login') ?>">Login</a></li>
+                <li>
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="refresh">
+                    <i class="fa fa-refresh"></i>
+                  </button>
+                </li>
               </ul>
             </div>
             <?php
@@ -106,6 +117,10 @@
         </div>
       </nav>
     </header>
+    <div class="row">
+      <br>
+      <br>
+    </div>
     <?=$contents?>
     <footer class="main-footer">
       <div class="container">
@@ -113,122 +128,126 @@
           <b>Version</b> 2.4.0
         </div>
         <strong>Copyright &copy; 2019 Made with <span style=color:#e25555>&#10084;</span> in Banyuwangi by <a href="https://www.karyastudio.com/">Karya Studio Teknologi Digital</a> x <a href="https://www.ayokumpul.com/">Komunitas Ayo Kumpul</a>
-      </div>
-    </footer>
-  </div>
-  <script src="<?= base_url('assets/') ?>bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/select2/dist/js/select2.full.min.js"></script>
-  <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.js"></script>
-  <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-  <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/moment/min/moment.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-  <script src="<?= base_url('assets/') ?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-  <script src="<?= base_url('assets/') ?>plugins/iCheck/icheck.min.js"></script>
-  <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
-  <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
-  <script src="<?= base_url('assets/') ?>dist/js/demo.js"></script>
+        </div>
+      </footer>
+    </div>
+    <script src="<?= base_url('assets/') ?>bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/moment/min/moment.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <script src="<?= base_url('assets/') ?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/') ?>plugins/iCheck/icheck.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
+    <script src="<?= base_url('assets/') ?>dist/js/demo.js"></script>
 
-  <script>
-    $(function () {
-      $('.select2').select2()
-      $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-      $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-      $('[data-mask]').inputmask()
+    <script>
+      $(function () {
+        $('.select2').select2()
+        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+        $('[data-mask]').inputmask()
 
-      $('#reservation').daterangepicker()
-      $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
-      $('#daterange-btn').daterangepicker(
-      {
-        ranges   : {
-          'Today'       : [moment(), moment()],
-          'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-          'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        },
-        startDate: moment().subtract(29, 'days'),
-        endDate  : moment()
-      },
-      function (start, end) {
-        $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-      }
-      )
-
-      $('#datepicker').datepicker({
-        autoclose: true
-      })
-
-      $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-        checkboxClass: 'icheckbox_minimal-blue',
-        radioClass   : 'iradio_minimal-blue'
-      })
-
-      $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
-        checkboxClass: 'icheckbox_minimal-red',
-        radioClass   : 'iradio_minimal-red'
-      })
-
-      $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-        checkboxClass: 'icheckbox_flat-green',
-        radioClass   : 'iradio_flat-green'
-      })
-
-      $('.my-colorpicker1').colorpicker()
-      $('.my-colorpicker2').colorpicker()
-
-      $('.timepicker').timepicker({
-        showInputs: false
-      })
-
-      $('#datatable').DataTable({
-        "paging"      : true,
-        "lengthChange": false,
-        "searching"   : true,
-        "ordering"    : true,
-        "info"        : false,
-        "autoWidth"   : false,
-        "scrollY": true,
-        "scrollX": true,
-        "language": {
-          "search": "<b> Pencarian : </b>",
-          "zeroRecords": function () {
-            return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
+        $('#reservation').daterangepicker()
+        $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
+        $('#daterange-btn').daterangepicker(
+        {
+          ranges   : {
+            'Today'       : [moment(), moment()],
+            'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+            'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
           },
-          "paginate": {
-            "previous": "Sebelumnya",
-            "next" : "Selanjutnya"
-          }
+          startDate: moment().subtract(29, 'days'),
+          endDate  : moment()
         },
-      })
-    })
-
-    $("#btnFile").click(function() {
-      document.getElementById('imageFile').click();
-    });
-
-    $("#imageFile").change(function() {
-      imagePreview(this);
-    });
-
-    function imagePreview(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        
-        reader.onload = function(e) {
-          $('#preview_image').attr('src', e.target.result);
+        function (start, end) {
+          $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
         }
-        
-        reader.readAsDataURL(input.files[0]);
+        )
+
+        $('#datepicker').datepicker({
+          autoclose: true
+        })
+
+        $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+          checkboxClass: 'icheckbox_minimal-blue',
+          radioClass   : 'iradio_minimal-blue'
+        })
+
+        $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+          checkboxClass: 'icheckbox_minimal-red',
+          radioClass   : 'iradio_minimal-red'
+        })
+
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+          checkboxClass: 'icheckbox_flat-green',
+          radioClass   : 'iradio_flat-green'
+        })
+
+        $('.my-colorpicker1').colorpicker()
+        $('.my-colorpicker2').colorpicker()
+
+        $('.timepicker').timepicker({
+          showInputs: false
+        })
+
+        $('#datatable').DataTable({
+          "paging"      : true,
+          "lengthChange": false,
+          "searching"   : true,
+          "ordering"    : true,
+          "info"        : false,
+          "autoWidth"   : false,
+          "scrollY": true,
+          "scrollX": true,
+          "language": {
+            "search": "<b> Pencarian : </b>",
+            "zeroRecords": function () {
+              return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
+            },
+            "paginate": {
+              "previous": "Sebelumnya",
+              "next" : "Selanjutnya"
+            }
+          },
+        })
+      })
+
+      $("#btnFile").click(function() {
+        document.getElementById('imageFile').click();
+      });
+
+      $("#imageFile").change(function() {
+        imagePreview(this);
+      });
+
+      function imagePreview(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function(e) {
+            $('#preview_image').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+        }
       }
-    }
-  </script>
-</body>
-</html>
+
+      $('#refresh').click(function() {
+          location.reload();
+      });
+    </script>
+  </body>
+  </html>
