@@ -187,31 +187,74 @@ foreach($listgalang as $row){
         <h4 class="modal-title" align="center"><i class="fa fa-credit-card"></i> Donasi Sekarang</h4>
       </div>
       <div class="modal-body">
-        <div class="form-group">
-          <label>Nominal Uang</label>
-          <div class="input-group">
-            <div class="input-group-addon">
-              <i class="fa fa-credit-card"> Rp. </i>
+        <?php
+        if($this->session->userdata('session_sop') == true){
+          ?>
+          <form action="<?= base_url('penggalangan')?>/donate/" method="POST">
+            <div class="form-group">
+              <label>Nominal Uang</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-credit-card"> Rp. </i>
+                </div>
+                <input type="text" class="number-separator form-control" placeholder="Masukan Nominal uang..">
+              </div>
             </div>
-            <input type="text" class="number-separator form-control" placeholder="Masukan Nominal uang..">
+            <div class="form-group">
+              <label>Catatan : </label>
+              <textarea class="form-control" rows="3" placeholder="Masukan catatan yang ingin disampaikan"></textarea>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked>
+                  Tampil atas Nama !
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6" align="left">
+                <button type="button" class="btn pull-left btn-block btn-md btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Tutup</button>
+              </div>
+              <div class="col-md-6" align="right">
+                <button type="submit" class="btn btn-block pull-right btn-md btn-primary"><i class="fa fa-credit-card"></i> Kirim</button>
+              </div>
+            </div>
+          </form>
+          <?php
+        } else if($this->session->userdata('session_sop') == ""){
+          ?>
+          <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-ban"></i> Perhatian!</h4>
+            Mohon untuk Melakukan Login Masuk Terlebih Dahulu !
           </div>
-        </div>
-        <div class="form-group">
-          <label>Catatan : </label>
-          <textarea class="form-control" rows="3" placeholder="Masukan catatan yang ingin disampaikan"></textarea>
-        </div>
-        <div class="form-group">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" checked>
-              Tampil atas Nama !
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer bottom-round">
-        <button type="button" class="btn pull-left btn-md btn-danger" data-dismiss="modal">Tutup</button>
-        <button type="submit" class="btn btn-md btn-primary">Kirim</button>
+          <h3 align="center"> Masuk Sebagai Donatur</h3>
+          <form action="<?= base_url('#')?>/" method="POST">
+            <div class="form-group">
+              <label>Email</label>
+              <div class="input-group">
+                <div class="input-group-addon">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <input type="email" class="form-control" placeholder="Masukan Email anda">
+              </div>
+              <span style="text-align: right;"><a href="<?= base_url('login/') ?>lupapassword">Lupa Password?</a></span>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-block pull-right btn-md btn-primary"><i class="fa fa-sign-in"></i> Masuk</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12" align="center">
+                <span>Belum Punya Akun? <a href="<?= base_url('login/') ?>daftar">Daftar</a></span>
+              </div>
+            </div>
+          </form>
+          <?php
+        }
+        ?>
       </div>
     </div>
   </div>

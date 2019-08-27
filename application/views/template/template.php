@@ -104,10 +104,7 @@
               </ul>
             </div>
             <?php
-          }
-          ?>
-          <?php
-          if($this->session->userdata('session_sop') == ""){
+          } else if($this->session->userdata('session_sop') == ""){
             ?>
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
