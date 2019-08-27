@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 23 Agu 2019 pada 11.09
+-- Generation Time: 27 Agu 2019 pada 04.01
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -403,6 +403,31 @@ INSERT INTO `activity` (`ip`, `link`, `get`, `post`, `user_id`, `created_at`) VA
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `berita`
+--
+
+CREATE TABLE IF NOT EXISTS `berita` (
+  `idBerita` int(11) NOT NULL,
+  `judulberita` varchar(255) NOT NULL,
+  `isiBerita` text NOT NULL,
+  `idUser` int(11) NOT NULL,
+  `idKategori` int(11) NOT NULL,
+  `status` enum('ENABLE','DISABLE') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `berita`
+--
+
+INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
+(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 1, 'ENABLE', '2019-08-27 08:56:43', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `customer`
 --
 
@@ -449,12 +474,12 @@ CREATE TABLE IF NOT EXISTS `donasi` (
 --
 
 INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `statusDonatur`, `statusPembayaran`, `tanggalPembayaran`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 20, '100000', '1', 'Terbayar', '2019-08-23 00:00:00', 'ENABLE', '2019-08-22 10:54:20', '2019-08-23 09:03:08'),
-(2, 1, 20, '200000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:09', '0000-00-00 00:00:00'),
-(3, 1, 20, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:20', '0000-00-00 00:00:00'),
-(4, 2, 20, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:34', '0000-00-00 00:00:00'),
-(5, 1, 20, '500000', '2', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:53', '0000-00-00 00:00:00'),
-(6, 3, 22, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-23 10:17:33', '0000-00-00 00:00:00');
+(1, 1, 1, '100000', '1', 'Terbayar', '2019-08-23 00:00:00', 'ENABLE', '2019-08-22 10:54:20', '2019-08-23 09:03:08'),
+(2, 1, 1, '200000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:09', '0000-00-00 00:00:00'),
+(3, 1, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:20', '0000-00-00 00:00:00'),
+(4, 2, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:34', '0000-00-00 00:00:00'),
+(5, 1, 1, '500000', '2', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:53', '0000-00-00 00:00:00'),
+(6, 3, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-23 10:17:33', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -472,7 +497,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=233 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -685,7 +710,10 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (226, '6950c16c9bcc6995f376b297f163175933774.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175933774.jpeg', 'galang_dana', 3, 'ENABLE', '2019-08-23 10:09:41', NULL),
 (227, '', '', '', 'donasi', 6, 'ENABLE', '2019-08-23 10:17:33', NULL),
 (228, '6950c16c9bcc6995f376b297f163175996209.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175996209.jpg', 'update_galang_dana', 2, 'ENABLE', '2019-08-23 10:27:40', NULL),
-(229, '6950c16c9bcc6995f376b297f163175971830.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175971830.jpg', 'galang_dana', 4, 'ENABLE', '2019-08-23 15:18:18', NULL);
+(229, '6950c16c9bcc6995f376b297f163175971830.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175971830.jpg', 'galang_dana', 4, 'ENABLE', '2019-08-23 15:18:18', NULL),
+(230, '6950c16c9bcc6995f376b297f163175939642.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175939642.png', 'user', 20, NULL, NULL, '2019-08-27 08:37:00'),
+(231, '6950c16c9bcc6995f376b297f163175982958.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175982958.jpeg', 'berita', 1, 'ENABLE', '2019-08-27 08:47:19', NULL),
+(232, '6950c16c9bcc6995f376b297f163175993432.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175993432.jpeg', 'berita', 2, 'ENABLE', '2019-08-27 08:56:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -1023,7 +1051,15 @@ CREATE TABLE IF NOT EXISTS `master_desa` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_desa`
+--
+
+INSERT INTO `master_desa` (`idDesa`, `value`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Desa Anjlok', 'ENABLE', '2019-08-26 07:26:09', '0000-00-00 00:00:00'),
+(2, 'Desa Tengah Dalan', 'ENABLE', '2019-08-26 07:26:09', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1086,7 +1122,7 @@ CREATE TABLE IF NOT EXISTS `menu_master` (
   `status` enum('ENABLE','DISABLE') DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `menu_master`
@@ -1118,12 +1154,13 @@ INSERT INTO `menu_master` (`id`, `name`, `icon`, `link`, `urutan`, `parent`, `no
 (34, 'Galang Dana', 'fa fa-sign-language', 'master/Galang_dana', '1', '0', '', 'ENABLE', '2019-08-22 10:35:32', NULL),
 (35, 'Donasi', 'fa fa-handshake-o', 'master/Donasi', '2', '0', '', 'ENABLE', '2019-08-22 10:36:26', NULL),
 (36, 'Update Galang Dana', 'fa fa-tasks', 'master/Update_galang_dana', '3', '0', '', 'ENABLE', '2019-08-22 10:38:12', NULL),
-(37, 'Master', 'fa fa-folder', '#', '5', '0', '', 'ENABLE', '2019-08-22 10:42:04', '2019-08-22 11:52:44'),
+(37, 'Master', 'fa fa-folder', '#', '6', '0', '', 'ENABLE', '2019-08-22 10:42:04', '2019-08-27 08:39:40'),
 (38, 'Kategori', 'fa fa-circle', 'master/Master_kategori', '0', '37', '', 'ENABLE', '2019-08-22 10:42:38', NULL),
 (39, 'Web Page', 'fa fa-circle', 'master/Webpage ', '1', '37', '', 'ENABLE', '2019-08-22 10:43:06', NULL),
 (40, 'Laporan Galang Dana', 'fa fa-bar-chart', 'report/Laporan_galang_dana', '4', '0', '', 'ENABLE', '2019-08-22 11:52:21', NULL),
 (41, 'Donatur', 'fa fa-circle', 'master/Master_donatur', '2', '37', '', 'ENABLE', '2019-08-22 16:07:45', NULL),
-(42, 'Desa', 'fa fa-circle', 'master/Master_desa', '3', '37', '', 'ENABLE', '2019-08-22 16:08:14', NULL);
+(42, 'Desa', 'fa fa-circle', 'master/Master_desa', '3', '37', '', 'ENABLE', '2019-08-22 16:08:14', NULL),
+(43, 'Berita Desa', 'fa fa-newspaper-o', 'master/Berita', '5', '0', '', 'ENABLE', '2019-08-27 08:39:22', NULL);
 
 -- --------------------------------------------------------
 
@@ -1181,7 +1218,7 @@ CREATE TABLE IF NOT EXISTS `role` (
 --
 
 INSERT INTO `role` (`id`, `role`, `status`, `menu`, `created_at`, `updated_at`) VALUES
-(17, 'Super Admin', 'ENABLE', '["17","34","35","36","40","37","38","39","41","42"]', '2018-10-12 17:03:59', '2019-08-22 16:08:55'),
+(17, 'Super Admin', 'ENABLE', '["17","34","35","36","40","43","37","38","39","41","42"]', '2018-10-12 17:03:59', '2019-08-27 08:40:11'),
 (18, 'Operator', 'ENABLE', '["17","27","30","31","32","28","29"]', '2018-10-24 10:29:54', '2019-08-16 11:03:35'),
 (19, 'Pelanggan', 'DISABLE', NULL, '2019-08-18 01:31:39', NULL);
 
@@ -1299,7 +1336,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `status`, `created_at`, `updated_at`) VALUES
-(20, 'adminarvin', 'admin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-16 15:19:52'),
+(20, 'adminarvin', 'admin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-27 08:37:00'),
 (22, 'desa1', 'Desa nomer 1', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-16 15:19:52');
 
 -- --------------------------------------------------------
@@ -1333,6 +1370,12 @@ ALTER TABLE `access`
 --
 ALTER TABLE `access_control`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`idBerita`);
 
 --
 -- Indexes for table `customer`
@@ -1469,6 +1512,11 @@ ALTER TABLE `access`
 ALTER TABLE `access_control`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=268;
 --
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `idBerita` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
@@ -1482,7 +1530,7 @@ ALTER TABLE `donasi`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=230;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=233;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
@@ -1517,7 +1565,7 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT for table `master_desa`
 --
 ALTER TABLE `master_desa`
-  MODIFY `idDesa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDesa` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `master_donatur`
 --
@@ -1532,7 +1580,7 @@ ALTER TABLE `master_kategori`
 -- AUTO_INCREMENT for table `menu_master`
 --
 ALTER TABLE `menu_master`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `report`
 --
