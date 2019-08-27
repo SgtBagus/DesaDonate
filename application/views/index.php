@@ -28,7 +28,7 @@ print_r(count($listgalang));
         <div class="col-md-3 col-6 mb-md-0 mb-5">
           <div class="small-box bg-purple round">
             <div class="inner">
-              <h4>Total Desa Terdaftar</h4>
+              <h4>Jumlah Desa Terdaftar</h4>
               <h2><b><?= $total_desa[0]['jumlah'] ?></b></h2>
             </div>
             <div class="icon">
@@ -39,7 +39,7 @@ print_r(count($listgalang));
         <div class="col-md-3 col-6 mb-md-0 mb-5">
           <div class="small-box bg-green round">
             <div class="inner">
-              <h4>Total Galang Dana</h4>
+              <h4>Jumlah Galang Dana</h4>
               <h2><b><?= $total_galang[0]['jumlah'] ?></b></h2>
             </div>
             <div class="icon">
@@ -62,7 +62,7 @@ print_r(count($listgalang));
           <div class="small-box bg-orange round">
             <div class="inner">
               <h4>Total Dana Terkumpul</h4>
-              <h2><b>Rp. <?= number_format($donasi[0]['total'],0,',','.'); ?>,-</b></h2>
+              <h2><b>Rp. <?= number_format($donasi,0,',','.'); ?>,-</b></h2>
             </div>
             <div class="icon">
               <i class="fa fa-credit-card"></i>
@@ -129,7 +129,7 @@ print_r(count($listgalang));
       <br>
       <div class="row">
         <?php foreach($listgalang as $row){ ?>
-          <a href="<?= base_url('penggalangan') ?>/view/<?= $row['id'] ?>" class="a_black">
+          <a href="<?= base_url('penggalangan') ?>/view/<?= $row['idGalang'] ?>" class="a_black">
             <div class="col-md-6 col-12 mb-md-0 mb-5">
               <div class="box box-solid round">
                 <div class="box-body">
@@ -145,8 +145,8 @@ print_r(count($listgalang));
                   </div>
                   <?php
                   $target = $row['targetDonasi'];
-                  $terkumpul = $row['terkumpul'];
-
+                  $terkumpul = $row['donasion'] + $row['donasioff'];
+                  // var_dump($terkumpul);
                   $persen = ($terkumpul/$target)*100;
 
                   ?>
@@ -159,7 +159,7 @@ print_r(count($listgalang));
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                       <i class="fa fa-credit-card"></i> Terkumpul
                       <br>
-                      <b>Rp <?= number_format($row['terkumpul'],0,',','.'); ?>,-</b>
+                      <b>Rp <?= number_format($terkumpul,0,',','.'); ?>,-</b>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <i class="fa fa-credit-card"></i> Target Donasi
@@ -169,17 +169,13 @@ print_r(count($listgalang));
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                       <i class="fa fa-heart"></i> Terpakai :  
                       <br>
-                      <b>Rp. 523.421,-</b>
+                      <b>Rp <?= number_format($row['terpakai'],0,',','.'); ?>,-</b>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <i class="fa fa-cog"></i> Status :
                       <br>
                       <small class="label pull-right bg-green btn-md round"> 
-                        <?php
-                        if($row['status'] == 'ENABLE'){
-                          echo 'Masih Dibuka';
-                        } 
-                        ?>
+                        <?= $row['publish'] ?>
                       </small>
                     </div>
                   </div>
@@ -228,28 +224,29 @@ print_r(count($listgalang));
       </div>
       <br>
       <div class="row">
-        <a href="<?= base_url('news') ?>/view/1" class="a_black">
+      <?php foreach($listberita as $row){ ?>
+        <a href="<?= base_url('news') ?>/view/<?= $row['id'] ?>" class="a_black">
           <div class="col-md-6 col-12 mb-md-0 mb-5">
             <div class="box box-solid round">
               <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
+                <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                <h3 align="center"><?= $row['judulberita'] ?></h3>
+                <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
                 <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> 45
+                    <i class="fa fa-eye"></i> <?= $row['views'] ?>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> Malang
+                    <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b>Bamabang</b>
+                      <i class="fa fa-user"></i> <b><?= $row['name'] ?></b>
                     </small>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b>12-03-2019</b>
+                      <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
                     </small>
                   </div>
                 </div>
@@ -257,35 +254,7 @@ print_r(count($listgalang));
             </div>
           </div>
         </a>
-        <a href="<?= base_url('news') ?>/view/1" class="a_black">
-          <div class="col-md-6 col-12 mb-md-0 mb-5">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> 45
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> Malang
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b>Bamabang</b>
-                    </small>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b>12-03-2019</b>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
+      <?php } ?>
       </div>
       <div class="row" align="center">
         <a href="<?= base_url('news') ?>">
@@ -327,93 +296,37 @@ print_r(count($listgalang));
       </div>
       <br>
       <div class="row">
-        <a href="<?= base_url('story') ?>/view/1" class="a_black">
-          <div class="col-md-4 col-12 mb-md-0 mb-5">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> 45
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> Malang
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b>Bamabang</b>
-                    </small>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b>12-03-2019</b>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="<?= base_url('story') ?>/view/1" class="a_black">
-          <div class="col-md-4 col-12 mb-md-0 mb-5">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> 45
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> Malang
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b>Bamabang</b>
-                    </small>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b>12-03-2019</b>
-                    </small>
+        <?php foreach($listcerita as $row){ ?>
+          <a href="<?= base_url('cerita') ?>/view/<?= $row['id'] ?>" class="a_black">
+            <div class="col-md-4 col-12 mb-md-0 mb-5">
+              <div class="box box-solid round">
+                <div class="box-body">
+                  <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                  <h3 align="center"><?= $row['judulCerita'] ?></h3>
+                  <p style="text-indent: 15px;"><?= $row['isiCerita'] ?>... "Klik untuk baca lebih lanjut."</p>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                      <i class="fa fa-eye"></i> <?= $row['views'] ?>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                      <small class="label bg-blue btn-md round"> 
+                        <i class="fa fa-user"></i> <b><?= $row['namaUser'] ?></b>
+                      </small>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                      <small class="label pull-right bg-yellow btn-md round"> 
+                        <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </a>
-        <a href="<?= base_url('story') ?>/view/1" class="a_black">
-          <div class="col-md-4 col-12 mb-md-0 mb-5">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 200px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> 45
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> Malang
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b>Bamabang</b>
-                    </small>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b>12-03-2019</b>
-                    </small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
+          </a>
+        <?php } ?>
       </div>
       <div class="row" align="center">
         <a href="<?= base_url('story') ?>">

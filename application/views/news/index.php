@@ -16,7 +16,7 @@
                     <div class="form-group">
                       <h3>Pilih Kategori Berita</h3>
                       <select class="form-control select2" style="width: 100%;" name="idKategori">
-                        <option value=" " selected="">Semua Kategori</option>
+                        <option value="" selected="">Semua Kategori</option>
                         <?php foreach($kategori as $row){
                           $text="";
                             if($row['idKategori']==$this->session->userdata('idKategori')){
@@ -33,7 +33,7 @@
                     <div class="form-group">
                       <h3>Pilih Desa</h3>
                       <select class="form-control select2" style="width: 100%;" name="idDesa">
-                        <option value=" " selected="">Semua Desa</option>
+                        <option value="" selected="">Semua Desa</option>
                         <?php foreach($desa as $row){
                           $text="";
                             if($row['idDesa']==$this->session->userdata('idDesa')){
@@ -63,12 +63,25 @@
               <a href="<?= base_url('news') ?>/view/<?= $row['id'] ?>" class="a_black">
                 <div class="box box-solid round">
                   <div class="box-body">
-                    <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 180px; width: 100%">
-                    <h3 align="center">How Do I Be A Missionary?</h3>
-                    <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
+                    <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                    <h3 align="center"><?= $row['judulberita'] ?></h3>
+                    <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
                     <div class="row">
                       <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                        <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+                        <i class="fa fa-eye"></i> <?= $row['views'] ?>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                        <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6">
+                        <small class="label bg-blue btn-md round"> 
+                          <i class="fa fa-user"></i> <b><?= $row['name'] ?></b>
+                        </small>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                        <small class="label pull-right bg-yellow btn-md round"> 
+                          <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
+                        </small>
                       </div>
                     </div>
                   </div>

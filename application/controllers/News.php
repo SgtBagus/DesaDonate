@@ -25,21 +25,45 @@ class News extends MY_Controller {
 		$data['desa'] = $this->mymodel->selectWithQuery("SELECT * FROM master_desa WHERE status = 'ENABLE'");
 		$data['kategori'] = $this->mymodel->selectWithQuery("SELECT * FROM master_kategori WHERE status = 'ENABLE'");
 
-		if($kategori == ''){
+		if($kategori == '' && $desa == ''){
 			$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
-			berita.judulberita, berita.isiBerita,
-			berita.created_at, user.name, master_desa.value as namadesa, 
-			master_kategori.value as kategori
+			berita.judulberita, SUBSTR(berita.isiBerita, 1, 380) as isiBerita,
+			date_format(berita.created_at, '%d %M %Y') as tanggal, user.name, master_desa.value as namadesa, 
+			master_kategori.value as kategori, berita.views
 			FROM berita
 			LEFT JOIN user on berita.idUser = user.id
 			LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
 			LEFT JOIN master_kategori on berita.idKategori = master_kategori.idKategori
 			LEFT JOIN file on berita.idBerita = file.table_id
 			WHERE berita.status = 'ENABLE' AND file.table = 'berita'");
+		}else if($kategori == ''){
+			$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
+			berita.judulberita, SUBSTR(berita.isiBerita, 1, 380) as isiBerita,
+			date_format(berita.created_at, '%d %M %Y') as tanggal, user.name, master_desa.value as namadesa, 
+			master_kategori.value as kategori, berita.views
+			FROM berita
+			LEFT JOIN user on berita.idUser = user.id
+			LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
+			LEFT JOIN master_kategori on berita.idKategori = master_kategori.idKategori
+			LEFT JOIN file on berita.idBerita = file.table_id
+			WHERE berita.status = 'ENABLE' AND user.idDesa = '$desa'
+			AND file.table = 'berita'");
+		}else if($desa == ''){
+			$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
+			berita.judulberita, SUBSTR(berita.isiBerita, 1, 380) as isiBerita,
+			date_format(berita.created_at, '%d %M %Y') as tanggal, user.name, master_desa.value as namadesa, 
+			master_kategori.value as kategori, berita.views
+			FROM berita
+			LEFT JOIN user on berita.idUser = user.id
+			LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
+			LEFT JOIN master_kategori on berita.idKategori = master_kategori.idKategori
+			LEFT JOIN file on berita.idBerita = file.table_id
+			WHERE berita.status = 'ENABLE' AND berita.idKategori = '$kategori' AND file.table = 'berita'");
 		}else{
-			$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, berita.judulberita, berita.isiBerita,
-			berita.created_at, user.name, master_desa.value as namadesa, 
-			master_kategori.value as kategori
+			$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
+			berita.judulberita, SUBSTR(berita.isiBerita, 1, 380) as isiBerita,
+			date_format(berita.created_at, '%d %M %Y') as tanggal, user.name, master_desa.value as namadesa, 
+			master_kategori.value as kategori, berita.views
 			FROM berita
 			LEFT JOIN user on berita.idUser = user.id
 			LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
