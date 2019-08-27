@@ -24,12 +24,12 @@
   
   <link rel="stylesheet" href="<?= base_url('assets/') ?>custom/css_custom.css">
   <style>
-  #myList li{ display:none;
-    list-style-type:none;
-  }
-  #showLess {
+    #myList li{ display:none;
+      list-style-type:none;
+    }
+    #showLess {
       display:none;
-  }
+    }
   </style>
 </head>
 <body class="hold-transition skin-green layout-top-nav">
@@ -156,37 +156,38 @@
     <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
     <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
     <script src="<?= base_url('assets/') ?>dist/js/demo.js"></script>
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="<?= base_url('assets/') ?>custom/number-separator.js"></script>
     <script>
-    $(document).ready(function () {
+      $(document).ready(function () {
         size_li = $("#myList li").size();
         x=3;
         $('#myList li:lt('+x+')').show();
         $('#loadMore').click(function () {
-            x= (x+5 <= size_li) ? x+5 : size_li;
-            $('#myList li:lt('+x+')').show();
-            $('#showLess').show();
-            if(x == size_li){
-                $('#loadMore').hide();
-            }
+          x= (x+5 <= size_li) ? x+5 : size_li;
+          $('#myList li:lt('+x+')').show();
+          $('#showLess').show();
+          if(x == size_li){
+            $('#loadMore').hide();
+          }
         });
         $('#showLess').click(function () {
-            x=(x-5<0) ? 3 : x-5;
-            $('#myList li').not(':lt('+x+')').hide();
-            $('#loadMore').show();
-            $('#showLess').show();
-            if(x == 3){
-                $('#showLess').hide();
-            }
+          x=(x-5<0) ? 3 : x-5;
+          $('#myList li').not(':lt('+x+')').hide();
+          $('#loadMore').show();
+          $('#showLess').show();
+          if(x == 3){
+            $('#showLess').hide();
+          }
         });
-    });
+      });
     </script>
     <script>
       $(function () {
         $('.select2').select2()
         $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
         $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
-        $('[data-mask]').inputmask()
+
+        $('[data-mask]').inputmask();
 
         $('#reservation').daterangepicker()
         $('#reservationtime').daterangepicker({ timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A' })
@@ -206,33 +207,33 @@
         function (start, end) {
           $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
         }
-        )
+        );
 
         $('#datepicker').datepicker({
           autoclose: true
-        })
+        });
 
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
           checkboxClass: 'icheckbox_minimal-blue',
           radioClass   : 'iradio_minimal-blue'
-        })
+        });
 
         $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
           checkboxClass: 'icheckbox_minimal-red',
           radioClass   : 'iradio_minimal-red'
-        })
+        });
 
         $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
           checkboxClass: 'icheckbox_flat-green',
           radioClass   : 'iradio_flat-green'
-        })
+        });
 
-        $('.my-colorpicker1').colorpicker()
-        $('.my-colorpicker2').colorpicker()
+        $('.my-colorpicker1').colorpicker();
+        $('.my-colorpicker2').colorpicker();
 
         $('.timepicker').timepicker({
           showInputs: false
-        })
+        });
 
         $('#datatable').DataTable({
           "paging"      : true,
@@ -253,8 +254,25 @@
               "next" : "Selanjutnya"
             }
           },
+        });
+
+        $('#datatable-update').DataTable({
+          "paging"      : false,
+          "lengthChange": false,
+          "searching"   : false,
+          "ordering"    : true,
+          "info"        : false,
+          "autoWidth"   : false,
+          "scrollY": true,
+          "scrollX": true,
+          "language": {
+            "zeroRecords": function () {
+              return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
+            },
+          },
         })
-      })
+
+      });
 
       $("#btnFile").click(function() {
         document.getElementById('imageFile').click();
@@ -274,10 +292,10 @@
 
           reader.readAsDataURL(input.files[0]);
         }
-      }
+      };
 
       $('#refresh').click(function() {
-          location.reload();
+        location.reload();
       });
     </script>
   </body>

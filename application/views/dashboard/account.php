@@ -23,8 +23,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">Nomor Whatsapp</label>
-                                                        <input type="text" name="useremail" class="form-control" id="useremail" 
-                                                        data-inputmask="&quot;mask&quot;: &quot;(999) 999-9999&quot;" data-mask="" placeholder="Masukan Nomor Whatsapp" value="1231243231">
+                                                        <input type="text" name="nowa" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Masukan Nomor Whatsapp" value="1231243231">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">Email</label>
