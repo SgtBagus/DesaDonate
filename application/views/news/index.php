@@ -10,27 +10,39 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="box box-solid round">
             <div class="box-body">
-              <form action="" method="GET">
+              <form action="<?= base_url("news") ?>" method="post">
                 <div class="row">
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">
                       <h3>Pilih Kategori Berita</h3>
-                      <select class="form-control select2" style="width: 100%;" name="kategori">
+                      <select class="form-control select2" style="width: 100%;" name="idKategori">
                         <option value=" " selected="">Semua Kategori</option>
-                        <option value="1">Medis</option>
-                        <option value="2">Anak</option>
-                        <option value="3">Pembangunan</option>
-                        <option value="4">Zakat</option>
+                        <?php foreach($kategori as $row){
+                          $text="";
+                            if($row['idKategori']==$this->session->userdata('idKategori')){
+                              $text = "selected";
+                            }
+
+                            echo "<option value=".$row['idKategori']." ".$text." >".$row['value']."</option>";
+                          }
+                        ?>
                       </select>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">
                       <h3>Pilih Desa</h3>
-                      <select class="form-control select2" style="width: 100%;" name="desa">
+                      <select class="form-control select2" style="width: 100%;" name="idDesa">
                         <option value=" " selected="">Semua Desa</option>
-                        <option value="1">Malang</option>
-                        <option value="2">Batu</option>
+                        <?php foreach($desa as $row){
+                          $text="";
+                            if($row['idDesa']==$this->session->userdata('idDesa')){
+                              $text = "selected";
+                            }
+
+                            echo "<option value=".$row['idDesa']." ".$text." >".$row['value']."</option>";
+                          }
+                        ?>
                       </select>
                     </div>
                   </div>
@@ -44,108 +56,35 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+      <ul id="myList">
+        <?php foreach($listberita as $row){ ?>
+          <li>  
+            <div class="col-md-4 col-6 mb-md-0 mb-5">
+              <a href="<?= base_url('news') ?>/view/<?= $row['id'] ?>" class="a_black">
+                <div class="box box-solid round">
+                  <div class="box-body">
+                    <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 180px; width: 100%">
+                    <h3 align="center">How Do I Be A Missionary?</h3>
+                    <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                        <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("news/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://cdn.hipwallpaper.com/i/81/44/mweBMY.jpg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center">How Do I Be A Missionary?</h3>
-                <p style="text-indent: 15px;">The Missionary Church, in obedience to Jesus Christ his Lord, is devoted to being holy people of God worldwide as well as to building His Church by around the world evangelism, discipleship and reproduction of expanding churches. Sample HTML Template is one of Mobirise's best templates.</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-calendar"></i> Dibuat :  <b>23-03-2019</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+          </li>
+        <?php } ?>
+      </ul>
       </div>
       <div class="row" align="center">
-        <button type="button" class="btn btn-primary btn-lg round">
+        <button type="button" id="loadMore" class="btn btn-primary btn-lg round">
           <i class="fa fa-search"></i> Tampilkan Lebih Banyak
+        </button>
+        <button type="button" id="showLess" class="btn btn-danger btn-lg round">
+          <i class="fa fa-search"></i> Tampilkan Lebih Sedikit
         </button>
       </div>
     </section>

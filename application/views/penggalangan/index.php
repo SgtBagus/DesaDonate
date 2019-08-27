@@ -1,3 +1,4 @@
+
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
@@ -23,15 +24,20 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="box box-solid round">
             <div class="box-body">
-              <form action="" method="GET">
+              <form action="<?= base_url("penggalangan") ?>" method="post">
               <div class="form-group">
                 <h3>Pilih Kategori yang Ingin Anda Bantu</h3>
-                <select class="form-control select2" style="width: 100%;" name="kategori">
+                <select class="form-control select2" style="width: 100%;" name="idKategori">
                   <option value=" " selected="">Semua Kategori</option>
-                  <option value="1">Medis</option>
-                  <option value="2">Anak</option>
-                  <option value="3">Pembangunan</option>
-                  <option value="4">Zakat</option>
+                  <?php foreach($kategori as $row){
+                    $text="";
+                      if($row['idKategori']==$this->session->userdata('idKategori')){
+                        $text = "selected";
+                      }
+
+                      echo "<option value=".$row['idKategori']." ".$text." >".$row['value']."</option>";
+                    }
+                   ?>
                 </select>
               </div>
               <div class="form-group">
@@ -43,180 +49,77 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
+        <ul id="myList">
+          <?php foreach($listgalang as $row){ ?>
+            <li>
+              <a href="<?= base_url('penggalangan') ?>/view/<?= $row['id'] ?>" class="a_black">
+                <div class="col-md-4 col-12 mb-md-0 mb-5">
+                  <div class="box box-solid round">
+                    <div class="box-body">
+                      <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 180px; width: 100%">
+                      <h3 align="center"><?= $row['tittleGalang'] ?></h3>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                          <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                          <h4><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h4>  
+                        </div>
+                      </div>
+                      <?php
+                        $target = $row['targetDonasi'];
+                        $terkumpul = $row['terkumpul'];
+
+                        $persen = ($terkumpul/$target)*100;
+
+                      ?>
+                      <div class="progress-xs" style="margin-bottom: 10px">
+                        <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <?= $persen.'%' ?>">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                          <i class="fa fa-credit-card"></i> Terkumpul
+                          <br>
+                          <b>Rp <?= number_format($row['terkumpul'],0,',','.'); ?>,-</b>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                          <i class="fa fa-credit-card"></i> Target Donasi
+                          <br>
+                          <b>Rp <?= number_format($row['targetDonasi'],0,',','.'); ?>,-</b>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                          <i class="fa fa-heart"></i> Terpakai :  
+                          <br>
+                          <b>Rp. 523.421,-</b>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                          <i class="fa fa-cog"></i> Status :
+                          <br>
+                          <small class="label pull-right bg-green btn-md round"> 
+                          <?php
+                            if($row['status'] == 'ENABLE'){
+                                echo 'Masih Dibuka';
+                            } 
+                          ?>
+                          </small>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.435.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>9</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Jhon Jack</h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.123.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>14</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Jhon Jack</h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.123.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>14</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Donated <i class="fa fa-check-circle" style="color:blue"></i> </h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.435.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>9</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Jhon Jack</h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.123.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>14</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-6 mb-md-0 mb-5">
-          <a href="<?= base_url("penggalangan/view/1") ?>" class="a_black">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg" alt="Second slide" style="height: 230px; width: 100%">
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <h4>Jhon Jack</h4>
-                <div class="progress-xs">
-                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                    <span class="sr-only">20% Complete</span>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    Terkumpul
-                    <br>
-                    <b>Rp. 1.123.234,00,-</b>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    Sisa Hari
-                    <br>
-                    <b>14</b>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+              </a>
+            </li>
+          <?php } ?>
+        </ul>
       </div>
       <div class="row" align="center">
-        <button type="button" class="btn btn-primary btn-lg round">
+        <button type="button" id="loadMore" class="btn btn-primary btn-lg round">
           <i class="fa fa-search"></i> Tampilkan Lebih Banyak
+        </button>
+        <button type="button" id="showLess" class="btn btn-danger btn-lg round">
+          <i class="fa fa-search"></i> Tampilkan Lebih Sedikit
         </button>
       </div>
     </section>

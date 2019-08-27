@@ -23,6 +23,14 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="<?= base_url('assets/') ?>custom/css_custom.css">
+  <style>
+  #myList li{ display:none;
+    list-style-type:none;
+  }
+  #showLess {
+      display:none;
+  }
+  </style>
 </head>
 <body class="hold-transition skin-green layout-top-nav">
   <div class="wrapper">
@@ -131,7 +139,6 @@
         </div>
       </footer>
     </div>
-    <script src="<?= base_url('assets/') ?>bower_components/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/') ?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="<?= base_url('assets/') ?>bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="<?= base_url('assets/') ?>plugins/input-mask/jquery.inputmask.js"></script>
@@ -149,7 +156,31 @@
     <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
     <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
     <script src="<?= base_url('assets/') ?>dist/js/demo.js"></script>
-
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+    $(document).ready(function () {
+        size_li = $("#myList li").size();
+        x=3;
+        $('#myList li:lt('+x+')').show();
+        $('#loadMore').click(function () {
+            x= (x+5 <= size_li) ? x+5 : size_li;
+            $('#myList li:lt('+x+')').show();
+            $('#showLess').show();
+            if(x == size_li){
+                $('#loadMore').hide();
+            }
+        });
+        $('#showLess').click(function () {
+            x=(x-5<0) ? 3 : x-5;
+            $('#myList li').not(':lt('+x+')').hide();
+            $('#loadMore').show();
+            $('#showLess').show();
+            if(x == 3){
+                $('#showLess').hide();
+            }
+        });
+    });
+    </script>
     <script>
       $(function () {
         $('.select2').select2()
