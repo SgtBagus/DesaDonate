@@ -4,21 +4,22 @@ print_r(count($listgalang));
 ?>
 <div class="cover">
   <div class="div-center">
-    <h1 style="color:white; text-shadow: 2px 2px 4px #000000;" align="center">
-      <b>AYO! BANGUN DESA</b>
-      <br>
-      <br> 
-      <div class="row">
-        <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-          <a href="<?= base_url('penggalangan') ?>">
-            <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
-          </a>
-        </div>
-        <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-          <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
-        </div>
+    <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
+      AYO BANGUN DESA<br>
+    </h1>
+      <div style="width: 800px"></div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
+        <a href="<?= base_url('penggalangan') ?>">
+          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
+        </a>
       </div>
-    </h1> 
+      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
+        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="content-wrapper">
@@ -199,7 +200,7 @@ print_r(count($listgalang));
   <div class="div-center">
     <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       LOREM IPSUM<br>
-      <small style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+      <div style="width: 800px; color:white; font-weight: bold; color:white; text-shadow: 2px 2px 4px #000000;"><small style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></div>
     </h1>
     <br>
     <br>
@@ -270,7 +271,7 @@ print_r(count($listgalang));
   <div class="div-center">
     <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       LOREM IPSUM<br>
-      <small style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+      <div style="width: 800px; color:white; font-weight: bold; color:white; text-shadow: 2px 2px 4px #000000;"><small style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></div>
     </h1>
     <br>
     <br>
@@ -286,7 +287,6 @@ print_r(count($listgalang));
     </div>
   </div>
 </div>
-
 <div class="content-wrapper">
   <div class="container"> 
     <section class="content">
