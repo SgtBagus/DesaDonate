@@ -64,7 +64,7 @@
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false"><i class="fa fa-money"></i> <b>Penggalangan yang Didukung</b></a></li>
-              <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"><i class="fa fa-plus"></i> <b>Penggalangan yang Dimulai</b></a></li>
+              <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"><i class="fa fa-plus"></i> <b>Aku dan Ceritaku</b></a></li>
             </ul>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_1">

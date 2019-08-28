@@ -99,10 +99,13 @@ print_r(count($listgalang));
                     </div>
                     <?php foreach($listgalang as $row){ ?>
                       <div class="item" style="height: 310px">
+                      
+                      <a href="<?= base_url('penggalangan/view/'.$row['idGalang'])?>">
                         <img src="<?= $admin_url.$row['file_dir'] ?>" alt="<?= $i ?> slide" style="height: 100%; width: 100%" class="sidebar_mobile">
                         <div class="carousel-caption">
                           <?= $row['deskripsi'] ?>
                         </div>
+                      </a>
                       </div>
                     <?php } ?>
                   </div>

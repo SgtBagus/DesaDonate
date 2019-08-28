@@ -17,26 +17,44 @@ foreach($listgalang as $row){
         <div class="row">
           <div class="col-md-8">
             <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 390px; width: 100%" class="round">
-            <br>
+            <br><br>
             <p style="text-indent: 10px;"><?= $row['deskripsiGalang'] ?></p>
           </div>
           <div class="col-md-4">            
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
+              <?php if(strlen($row['desa_value']) > 15){ ?>
+                          <h5><i class="fa fa-globe"></i> <?= substr($row['desa_value'], 0, 15) ?>...</h5> 
+                        <?php } else {
+                          ?>
+                          <h5><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h5> 
+                        <?php } ?>   
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                <h4><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h4>  
+              <?php if(strlen($row['kategori']) > 15){ ?>
+                          <h5><i class="fa fa-list-ul"></i> <?= substr($row['kategori'], 0, 15) ?>...</h5> 
+                        <?php } else {
+                          ?>
+                          <h5><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?></h5> 
+                        <?php } ?> 
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 div_status">
                 <?php
-                if($row['status'] == 'ENABLE'){
-                  echo '<div class="alert alert-success alert-dismissible round status-alert" align="center">
-                  <i class="fa fa-check-circle"></i> <b>Masih Dibuka</b>
-                  </div>';
-                } 
+                  if($row['publish'] == 'Masih Dibuka'){
+                ?>
+                  <div class="alert alert-success alert-dismissible round status-alert" align="center">
+                    <i class="fa fa-check-circle"></i> <b>Masih Dibuka</b>
+                  </div>
+                <?php
+                  } else {
+                ?>
+                  <div class="alert alert-danger alert-dismissible round status-alert" align="center">
+                    <i class="fa fa-ban"></i> <b>Sudah Ditutup</b>
+                  </div>
+                <?php
+                  }
                 ?>
               </div>
             </div>
@@ -52,7 +70,7 @@ foreach($listgalang as $row){
                 <div align="center">
                   <h3><i class="fa fa-credit-card"></i> Total Donasi</h3>
                 </div>
-                <h2><b>Rp <?= $terkumpul ?>,-</b></h2>
+                <h2><b>Rp <?= number_format($terkumpul,0,',','.'); ?>,-</b></h2>
                 
                 <div class="progress-xs" style="margin-bottom: 10px">
                   <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <?= $persen.'%' ?>">
@@ -74,6 +92,7 @@ foreach($listgalang as $row){
             </button>
             <br>
             Penggalangan dana dimulai <b><?= $row['dibuat'] ?></b> oleh:
+            <br><br>
             <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
               <div class="box box-solid round">
                 <div class="box-body">
@@ -83,7 +102,7 @@ foreach($listgalang as $row){
                     </div>
                     <div class="col-md-8">
                       <h4><b><?= $row['namaPenggalang'] ?> </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
-                      <small>Member since <?= $row['userdibuat'] ?></small>
+                      <small><?= $row['desa_value'] ?></small>
                     </div>
                   </div>
                 </div>
@@ -105,8 +124,8 @@ foreach($listgalang as $row){
                     <h4>Donatur :</h4>
                     <div class="nav-tabs-custom">
                       <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_donatur_1" data-toggle="tab" aria-expanded="false">Waktu</a></li>
-                        <li class=""><a href="#tab_donatur_2" data-toggle="tab" aria-expanded="false">Update</a></li>
+                        <li class="active"><a href="#tab_donatur_1" data-toggle="tab" aria-expanded="false">Online</a></li>
+                        <li class=""><a href="#tab_donatur_2" data-toggle="tab" aria-expanded="false">Offline</a></li>
                       </ul>
                       <div class="tab-content">
                         <div class="tab-pane active" id="tab_donatur_1">
@@ -136,6 +155,16 @@ foreach($listgalang as $row){
                                   </div>
                                 </a>
                               <?php } ?>
+                              <br>
+                              <div class="row">
+                                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane" id="tab_donatur_2">
+                          <div class="row">
+                            <div class="col-md-12">
                               <?php foreach($donaturoff as $row){ ?>
                                 <a href="" class="a_black">
                                   <div class="row">
@@ -168,33 +197,7 @@ foreach($listgalang as $row){
                             </div>
                           </div>
                         </div>
-                        <div class="tab-pane" id="tab_donatur_2">
-                          <table id="datatable-update" class="table table-bordered table-striped" >
-                            <thead>
-                              <tr>
-                                <th>No</th>
-                                <th>Tanggal</th>
-                                <th>Deskripsi</th>
-                                <th>Dana Terpakai</th>
-                                <th>Pemberita</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php 
-                              $no = 1;
-                              foreach($updategalang as $row){?>
-                                <tr>
-                                  <td><?= $no++ ?></td>
-                                  <td><?= $row['tglupdate'] ?></td>
-                                  <td><?= $row['deskripsiUpdate'] ?></td>
-                                  <td><?= $row['nominalterpakai'] ?></td>
-                                  <td><?= $row['name'] ?></td>
-                                </tr>
-                              <?php } ?>
-
-                            </tbody>
-                          </table>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>

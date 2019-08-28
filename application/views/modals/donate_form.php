@@ -4,7 +4,7 @@
     <label>Nominal Uang</label>
     <div class="input-group">
       <div class="input-group-addon">
-        <i class="fa fa-credit-card"> Rp. </i>
+        <i class="fa fa-credit-card"></i> Rp. 
       </div>
       <input type="hidden" name="dt[idGalang]" value="<?= $this->uri->segment(3); ?>">
       <input type="hidden" name="dt[idUser]" value="<?= $this->session->userdata('id') ?>">

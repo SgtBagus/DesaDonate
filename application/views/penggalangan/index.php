@@ -56,13 +56,23 @@
                   <div class="box box-solid round">
                     <div class="box-body">
                       <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 180px; width: 100%">
-                      <h3 align="center"><?= $row['tittleGalang'] ?></h3>
+                      <?php if(strlen($row['tittleGalang']) > 25){ ?>
+                        <h4 align="center"><?= substr($row['tittleGalang'], 0,25) ?>...</h4>
+                      <?php } else {
+                          ?>
+                        <h4 align="center"><?= $row['tittleGalang'] ?></h4>
+                      <?php } ?>
                       <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                          <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
+                        <?php if(strlen($row['desa_value']) > 15){ ?>
+                          <h5><i class="fa fa-globe"></i> <?= substr($row['desa_value'], 0, 15) ?>...</h5> 
+                        <?php } else {
+                          ?>
+                          <h5><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h5> 
+                        <?php } ?> 
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                          <h4><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h4>  
+                          <h5><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h5>  
                         </div>
                       </div>
                       <?php

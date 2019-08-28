@@ -51,8 +51,13 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-list-ul"> </i> Fakta & Info <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="<?= base_url('fakta_info') ?>">Informasi Tambahan</a></li>
-                  <li><a href="<?= base_url('fakta_info') ?>">Tentang Aplikasi</a></li>
+                <?php
+                $data = $this->mymodel->selectWhere('webpage','status = "ENABLE"'); 
+                // var_dump($data);
+                foreach($data as $row){ 
+                  ?>
+                  <li><a href="<?= base_url().'web/'.$row['slug'] ?>"><?= $row['title'] ?></a></li>
+                <?php } ?>
                 </ul>
               </li>
             </ul>

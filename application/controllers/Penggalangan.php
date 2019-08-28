@@ -174,19 +174,29 @@ class Penggalangan extends MY_Controller {
 
 	public function adddonasi()
 	{
-		
+
 		$dt = $_POST['dt'];
+
+		$dt['nominalDonasi'] = str_replace( ',', '', $dt['nominalDonasi'] );
+		
+		if($dt['statusDonatur']){
+			$dt['statusDonatur'] = '1';
+		}else{
+			$dt['statusDonatur'] = '0';
+		}
 
 		$dt['statusPembayaran'] = "Belum Terbayar";
 		
 		$dt['created_at'] = date('Y-m-d H:i:s');
 
 		$dt['status'] = "ENABLE";
-
-		// var_dump($dt);
-		// die();
+// var_dump($dt);
+// 		die();
+		
 
 		$str = $this->db->insert('donasi', $dt);
+
+		header("Location:".base_url('penggalangan/view/'.$dt['idGalang']));
 	}
 	
 }
