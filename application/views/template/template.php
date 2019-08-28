@@ -128,7 +128,7 @@
       <div class="modal-dialog round">
         <div class="modal-content round">
           <div class="modal-header top-round bg-green">
-            <h4 class="modal-title" align="center"><i class="fa fa-credit-card"></i> Donasi Sekarang</h4>
+            <h4 class="modal-title" align="center"><b>Masuk Sebagai Donatur<b></h4>
           </div>
           <div class="modal-body">
             <?php $this->load->view('modals/login_form') ?>
