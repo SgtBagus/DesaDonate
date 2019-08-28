@@ -122,7 +122,7 @@
         </div>
       </nav>
     </header>
-    <div class="row" style="height: 50px"></div>
+    <div class="row" style="height: 50px;background-color: #f3f3f3;"></div>
     <?=$contents?>
     <div class="modal modal-default fade" id="modal-login" style="display: none;">
       <div class="modal-dialog round">
