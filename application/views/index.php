@@ -1,24 +1,19 @@
 <?php 
 print_r(count($listgalang));
-// die();
 ?>
 <div class="cover">
   <div class="div-center">
-    <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
+    <h1 style="color:white; font-size: 44px; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       AYO BANGUN DESA<br>
     </h1>
-      <div style="width: 800px"></div>
     <br>
-    <br>
-    <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <a href="<?= base_url('penggalangan') ?>">
-          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
-        </a>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
-      </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 " align="center">
+      <a href="<?= base_url('penggalangan') ?>">
+        <button type="button" class="btn btn-block btn-primary btn-lg round cover_button"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
+      </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12" align="center">
+      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
     </div>
   </div>
 </div>
@@ -198,21 +193,18 @@ print_r(count($listgalang));
 </div>
 <div class="cover">
   <div class="div-center">
-    <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
+    <h1 style="color:white; font-size: 44px; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       LOREM IPSUM<br>
-      <div style="width: 800px; color:white; font-weight: bold; color:white; text-shadow: 2px 2px 4px #000000;"><small style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></div>
+      <small style="color: white; font-size: 25px; ">Lorem ipsum dolor sit amet</small>
     </h1>
     <br>
-    <br>
-    <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <a href="<?= base_url('penggalangan') ?>">
-          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
-        </a>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
-      </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 " align="center">
+      <a href="<?= base_url('penggalangan') ?>">
+        <button type="button" class="btn btn-block btn-primary btn-lg round cover_button"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
+      </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12" align="center">
+      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
     </div>
   </div>
 </div>
@@ -225,37 +217,37 @@ print_r(count($listgalang));
       </div>
       <br>
       <div class="row">
-      <?php foreach($listberita as $row){ ?>
-        <a href="<?= base_url('news') ?>/view/<?= $row['id'] ?>" class="a_black">
-          <div class="col-md-6 col-12 mb-md-0 mb-5">
-            <div class="box box-solid round">
-              <div class="box-body">
-                <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                <h3 align="center"><?= $row['judulberita'] ?></h3>
-                <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    <i class="fa fa-eye"></i> <?= $row['views'] ?>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <small class="label bg-blue btn-md round"> 
-                      <i class="fa fa-user"></i> <b><?= $row['name'] ?></b>
-                    </small>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                    <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
-                    </small>
+        <?php foreach($listberita as $row){ ?>
+          <a href="<?= base_url('news') ?>/view/<?= $row['id'] ?>" class="a_black">
+            <div class="col-md-6 col-12 mb-md-0 mb-5">
+              <div class="box box-solid round">
+                <div class="box-body">
+                  <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                  <h3 align="center"><?= $row['judulberita'] ?></h3>
+                  <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                      <i class="fa fa-eye"></i> <?= $row['views'] ?>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                      <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                      <small class="label bg-blue btn-md round"> 
+                        <i class="fa fa-user"></i> <b><?= $row['name'] ?></b>
+                      </small>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                      <small class="label pull-right bg-yellow btn-md round"> 
+                        <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </a>
-      <?php } ?>
+          </a>
+        <?php } ?>
       </div>
       <div class="row" align="center">
         <a href="<?= base_url('news') ?>">
@@ -269,21 +261,18 @@ print_r(count($listgalang));
 </div>
 <div class="cover">
   <div class="div-center">
-    <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
+    <h1 style="color:white; font-size: 44px; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
       LOREM IPSUM<br>
-      <div style="width: 800px; color:white; font-weight: bold; color:white; text-shadow: 2px 2px 4px #000000;"><small style="color: white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></div>
+      <small style="color: white; font-size: 25px; ">Lorem ipsum dolor sit amet</small>
     </h1>
     <br>
-    <br>
-    <div class="row">
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <a href="<?= base_url('penggalangan') ?>">
-          <button type="button" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
-        </a>
-      </div>
-      <div class="col-md-6 col-sm-6 col-xs-12 cover_button">
-        <button type="button" class="btn btn-block btn-success btn-lg round"><i class="fa fa-whatsapp"></i> WhatsApp</button>
-      </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 " align="center">
+      <a href="<?= base_url('penggalangan') ?>">
+        <button type="button" class="btn btn-block btn-primary btn-lg round cover_button"><i class="fa fa-credit-card"></i> Mulai Donasi</button>
+      </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12" align="center">
+      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
     </div>
   </div>
 </div>
@@ -314,7 +303,7 @@ print_r(count($listgalang));
                       </small>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      
+
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <small class="label pull-right bg-yellow btn-md round"> 
