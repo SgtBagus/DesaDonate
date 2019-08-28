@@ -93,12 +93,12 @@ foreach($listgalang as $row){
             <br>
             Penggalangan dana dimulai <b><?= $row['dibuat'] ?></b> oleh:
             <br><br>
-            <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+            <a href="<?= base_url('/profildesa/'.$row['idUser']) ?>" class="a_black">
               <div class="box box-solid round">
                 <div class="box-body">
                   <div class="row">
                     <div class="col-md-4" align="center">
-                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                      <img src="<?= $admin_url.$row['foto']?>" class="img-circle" alt="User Image" width="80px" height="80px">
                     </div>
                     <div class="col-md-8">
                       <h4><b><?= $row['namaPenggalang'] ?> </b><i class="fa fa-check-circle" style="color:blue"></i></h4>

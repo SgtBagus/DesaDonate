@@ -107,10 +107,16 @@ class Home extends MY_Controller {
         $this->template->load('template/template','lupapassword',$data);
 	}
 
-	public function profil($name)
+	public function profil($id)
 	{
 		$data['page_name'] = "profl";
-        $this->template->load('template/template','profil',$data);
+        $this->template->load('template/template','profil/profil',$data);
+	}
+
+	public function profildesa($id)
+	{
+		$data['page_name'] = "profl";
+        $this->template->load('template/template','profil/profiladmin',$data);
 	}
 	
 }

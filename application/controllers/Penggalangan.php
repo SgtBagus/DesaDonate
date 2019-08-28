@@ -108,7 +108,9 @@ class Penggalangan extends MY_Controller {
 
 	public function view($id)
 	{
-		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qrya.*, 
+		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qryall.*, file.dir as foto, 
+		file.table FROM
+			(SELECT qrya.*, 
 			COALESCE(totaldonasion, 0) as donasion, COALESCE(totaldonasioff, 0) as donasioff, 
 			COALESCE(totalterpakai, 0) as terpakai 
 			FROM
@@ -116,7 +118,7 @@ class Penggalangan extends MY_Controller {
 			a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, 
 			file.dir as file_dir, a.status as status, kate.value as kategori, 
 			a.deskripsiGalang as deskripsiGalang, date_format(a.created_at, '%d %M %Y') as dibuat, a.publish, u.name as namaPenggalang,
-			date_format(u.created_at, '%d %M %Y') as userdibuat, a.detailGalang
+			date_format(u.created_at, '%d %M %Y') as userdibuat, a.detailGalang, a.idUser
 			FROM galang_dana a
 			LEFT JOIN file on a.idGalang = file.table_id 
 			LEFT JOIN user u on a.idUser = u.id 
@@ -147,7 +149,9 @@ class Penggalangan extends MY_Controller {
 			) qryd
 			ON qrya.idGalang = qryd.idGalang
 			WHERE qrya.idGalang = '$id'
-			ORDER BY dibuat DESC");
+			ORDER BY dibuat DESC) qryall
+			LEFT JOIN file on qryall.idUser = file.table_id
+			WHERE file.table = 'user'");
 
 			$data['updategalang'] = $this->mymodel->selectWithQuery("SELECT update_galang_dana.deskripsiUpdate, 
 			update_galang_dana.nominalterpakai, user.name, date_format(update_galang_dana.created_at, '%d %M %Y') as tglupdate
