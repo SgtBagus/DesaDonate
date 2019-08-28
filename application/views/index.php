@@ -179,8 +179,8 @@ print_r(count($listgalang));
                       <?php
                         } else {
                       ?>
-                        <small class="label pull-right bg-green btn-md round"> 
-                          Ditutup
+                        <small class="label pull-right bg-red btn-md round"> 
+                          Sudah Ditutup
                         </small>
                       <?php
                         }
