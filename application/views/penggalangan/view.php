@@ -68,7 +68,7 @@ foreach($listgalang as $row){
                 </div>
               </div>
             </div>
-            <button type="submit" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
+            <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
               <i class="fa fa-credit-card"></i> Donasi Sekarang
             </button>
             <br>
@@ -168,7 +168,7 @@ foreach($listgalang as $row){
         </div>
         <div class="row" align="center">
           <div class="col-md-12">
-            <button type="submit" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
+            <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
               <i class="fa fa-credit-card"></i> Donasi Sekarang
             </button>
           </div>
@@ -189,39 +189,7 @@ foreach($listgalang as $row){
       <div class="modal-body">
         <?php
         if($this->session->userdata('session_sop') == true){
-          ?>
-          <form action="<?= base_url('penggalangan')?>/donate/" method="POST">
-            <div class="form-group">
-              <label>Nominal Uang</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-credit-card"> Rp. </i>
-                </div>
-                <input type="text" class="number-separator form-control" placeholder="Masukan Nominal uang..">
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Catatan : </label>
-              <textarea class="form-control" rows="3" placeholder="Masukan catatan yang ingin disampaikan"></textarea>
-            </div>
-            <div class="form-group">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" checked>
-                  Tampil atas Nama !
-                </label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6" align="left">
-                <button type="button" class="btn pull-left btn-block btn-md btn-danger" data-dismiss="modal"><i class="fa fa-close"></i> Tutup</button>
-              </div>
-              <div class="col-md-6" align="right">
-                <button type="submit" class="btn btn-block pull-right btn-md btn-primary"><i class="fa fa-credit-card"></i> Kirim</button>
-              </div>
-            </div>
-          </form>
-          <?php
+          $this->load->view('modals/donate_form');
         } else if($this->session->userdata('session_sop') == ""){
           ?>
           <div class="alert alert-danger alert-dismissible">
@@ -229,30 +197,7 @@ foreach($listgalang as $row){
             <h4><i class="icon fa fa-ban"></i> Perhatian!</h4>
             Mohon untuk Melakukan Login Masuk Terlebih Dahulu !
           </div>
-          <h3 align="center"> Masuk Sebagai Donatur</h3>
-          <form action="<?= base_url('#')?>/" method="POST">
-            <div class="form-group">
-              <label>Email</label>
-              <div class="input-group">
-                <div class="input-group-addon">
-                  <i class="fa fa-envelope"></i>
-                </div>
-                <input type="email" class="form-control" placeholder="Masukan Email anda">
-              </div>
-              <span style="text-align: right;"><a href="<?= base_url('login/') ?>lupapassword">Lupa Password?</a></span>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-block pull-right btn-md btn-primary"><i class="fa fa-sign-in"></i> Masuk</button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12" align="center">
-                <span>Belum Punya Akun? <a href="<?= base_url('login/') ?>daftar">Daftar</a></span>
-              </div>
-            </div>
-          </form>
-          <?php
+          <?php $this->load->view('modals/login_form');
         }
         ?>
       </div>

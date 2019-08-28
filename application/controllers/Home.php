@@ -101,6 +101,12 @@ class Home extends MY_Controller {
         $this->template->load('template/template','index',$data); 
 	}
 
+	public function lupapassword()
+	{
+		$data['page_name'] = "Lupa Password";
+        $this->template->load('template/template','lupapassword',$data);
+	}
+
 	public function profil($name)
 	{
 		$data['page_name'] = "profl";

@@ -88,7 +88,7 @@
                           </a>
                         </div>  
                         <div class="col-md-3">
-                          <a href="<?= base_url('login/logout') ?>">
+                          <a href="<?= base_url('actlogin/logout') ?>">
                             <button type="button" class="btn btn-block btn-danger"><i class="fa fa-sign-out"></i></button>
                           </a>
                         </div>        
@@ -108,10 +108,10 @@
             ?>
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
-                <li><a href="<?= base_url('login') ?>">Login</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#modal-login">Login</a></li>
                 <li>
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="refresh">
-                    <i class="fa fa-refresh"></i>
+                    <i class="fa fa-refresh"></i> 
                   </button>
                 </li>
               </ul>
@@ -122,11 +122,20 @@
         </div>
       </nav>
     </header>
-    <div class="row">
-      <br>
-      <br>
-    </div>
+    <div class="row" style="height: 50px"></div>
     <?=$contents?>
+    <div class="modal modal-default fade" id="modal-login" style="display: none;">
+      <div class="modal-dialog round">
+        <div class="modal-content round">
+          <div class="modal-header top-round bg-green">
+            <h4 class="modal-title" align="center"><i class="fa fa-credit-card"></i> Donasi Sekarang</h4>
+          </div>
+          <div class="modal-body">
+            <?php $this->load->view('modals/login_form') ?>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="main-footer">
       <div class="container">
         <div class="pull-right hidden-xs"> 
