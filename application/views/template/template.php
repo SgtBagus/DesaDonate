@@ -174,7 +174,7 @@
         x=3;
         $('#myList li:lt('+x+')').show();
         $('#loadMore').click(function () {
-          x= (x+5 <= size_li) ? x+5 : size_li;
+          x= (x+3 <= size_li) ? x+3 : size_li;
           $('#myList li:lt('+x+')').show();
           $('#showLess').show();
           if(x == size_li){
@@ -182,7 +182,7 @@
           }
         });
         $('#showLess').click(function () {
-          x=(x-5<0) ? 3 : x-5;
+          x=(x-3<0) ? 3 : x-3;
           $('#myList li').not(':lt('+x+')').hide();
           $('#loadMore').show();
           $('#showLess').show();
@@ -191,8 +191,7 @@
           }
         });
       });
-    </script>
-    <script>
+
       $(function () {
         $('.select2').select2()
         $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })

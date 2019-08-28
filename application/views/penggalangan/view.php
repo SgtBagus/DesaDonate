@@ -1,8 +1,5 @@
 <?php 
-// var_dump($donaturwaktu);
-// die();
 foreach($listgalang as $row){
-
   ?>
   <div class="content-wrapper">
     <div class="container">
@@ -23,48 +20,43 @@ foreach($listgalang as $row){
           <div class="col-md-4">            
             <div class="row">
               <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-              <?php if(strlen($row['desa_value']) > 15){ ?>
-                          <h5><i class="fa fa-globe"></i> <?= substr($row['desa_value'], 0, 15) ?>...</h5> 
-                        <?php } else {
-                          ?>
-                          <h5><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h5> 
-                        <?php } ?>   
+                <h5>
+                  <i class="fa fa-globe"></i>
+                  <?= strlen($row["desa_value"]) > 15 ? substr($row["desa_value"],0,15)."..." : $row["desa_value"] ?>
+                </h5> 
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-              <?php if(strlen($row['kategori']) > 15){ ?>
-                          <h5><i class="fa fa-list-ul"></i> <?= substr($row['kategori'], 0, 15) ?>...</h5> 
-                        <?php } else {
-                          ?>
-                          <h5><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?></h5> 
-                        <?php } ?> 
+                <h5>
+                  <i class="fa fa-list-ul"></i>
+                  <?= strlen($row["kategori"]) > 15 ? substr($row["kategori"],0,15)."..." : $row["kategori"] ?>
+                </h5> 
               </div>
             </div>
             <div class="row">
               <div class="col-md-12 div_status">
                 <?php
-                  if($row['publish'] == 'Masih Dibuka'){
-                ?>
+                if($row['publish'] == 'Masih Dibuka'){
+                  ?>
                   <div class="alert alert-success alert-dismissible round status-alert" align="center">
                     <i class="fa fa-check-circle"></i> <b>Masih Dibuka</b>
                   </div>
-                <?php
-                  } else {
-                ?>
+                  <?php
+                } else {
+                  ?>
                   <div class="alert alert-danger alert-dismissible round status-alert" align="center">
                     <i class="fa fa-ban"></i> <b>Sudah Ditutup</b>
                   </div>
-                <?php
-                  }
+                  <?php
+                }
                 ?>
               </div>
             </div>
             <?php
-                $target = $row['targetDonasi'];
-                $terkumpul = $row['donasion'] + $row['donasioff'];
-                // var_dump($terkumpul);
-                $persen = ($terkumpul/$target)*100;
+            $target = $row['targetDonasi'];
+            $terkumpul = $row['donasion'] + $row['donasioff'];
+            $persen = ($terkumpul/$target)*100;
 
-                ?>
+            ?>
             <div class="box box-solid round">
               <div class="box-body">
                 <div align="center">
@@ -141,14 +133,14 @@ foreach($listgalang as $row){
                                       <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
                                       <h5>
                                         <b>
-                                        <?php
+                                          <?php
                                           if($row['statusDonatur'] == 1){
-                                              echo $row['namaUser'];
+                                            echo $row['namaUser'];
                                           } 
                                           else{
                                             echo 'Anonim';
                                           }
-                                        ?>
+                                          ?>
                                         </b>
                                       </h5>
                                     </div>
@@ -175,15 +167,15 @@ foreach($listgalang as $row){
                                       <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
                                       <h5>
                                         <b>
-                                        <?php
+                                          <?php
                                           if($row['statusDonatur'] == 1){
-                                              echo $row['namaDonatur'];
+                                            echo $row['namaDonatur'];
                                           } 
                                           else{
                                             echo 'Anonim';
                                           }
-                                        ?>
-                                        (Offline Donatur)
+                                          ?>
+                                          (Offline Donatur)
                                         </b>
                                       </h5>
                                     </div>
