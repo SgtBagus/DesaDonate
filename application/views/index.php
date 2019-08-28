@@ -171,7 +171,7 @@ print_r(count($listgalang));
                       <i class="fa fa-cog"></i> Status :
                       <br>
                       <?php
-                        if($row['publish'] == 'Dibuka'){
+                        if($row['publish'] == 'Masih Dibuka'){
                       ?>
                         <small class="label pull-right bg-green btn-md round"> 
                           Masih Dibuka
