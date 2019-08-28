@@ -93,7 +93,7 @@ foreach($listgalang as $row){
                       <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
                     </div>
                     <div class="col-md-8">
-                      <h4><b><?= $row['namaPenggalang'] ?> </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
+                      <h4><b><?= $row['namaPenggalang'] ?> </b></h4>
                       <small><?= $row['desa_value'] ?></small>
                     </div>
                   </div>
