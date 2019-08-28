@@ -133,7 +133,9 @@ print_r(count($listgalang));
               <div class="box box-solid round">
                 <div class="box-body">
                   <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center"><?= $row['tittleGalang'] ?></h3>
+                  <h3 align="center">
+                    <?= strlen($row["tittleGalang"]) > 25 ? substr($row["tittleGalang"],0,25)."..." : $row["tittleGalang"] ?> 
+                  </h3>
                   <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                       <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
