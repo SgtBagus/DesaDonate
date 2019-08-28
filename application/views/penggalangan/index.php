@@ -51,7 +51,7 @@
         <ul id="myList">
           <?php foreach($listgalang as $row){ ?>
             <li>
-              <a href="<?= base_url('penggalangan') ?>/view/<?= $row['id'] ?>" class="a_black">
+              <a href="<?= base_url('penggalangan') ?>/view/<?= $row['idGalang'] ?>" class="a_black">
                 <div class="col-md-4 col-12 mb-md-0 mb-5">
                   <div class="box box-solid round">
                     <div class="box-body">
@@ -67,8 +67,8 @@
                       </div>
                       <?php
                         $target = $row['targetDonasi'];
-                        $terkumpul = $row['terkumpul'];
-
+                        $terkumpul = $row['donasion'] + $row['donasioff'];
+                        // var_dump($terkumpul);
                         $persen = ($terkumpul/$target)*100;
 
                       ?>
@@ -81,7 +81,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                           <i class="fa fa-credit-card"></i> Terkumpul
                           <br>
-                          <b>Rp <?= number_format($row['terkumpul'],0,',','.'); ?>,-</b>
+                          <b>Rp <?= number_format($terkumpul,0,',','.'); ?>,-</b>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                           <i class="fa fa-credit-card"></i> Target Donasi
@@ -91,7 +91,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                           <i class="fa fa-heart"></i> Terpakai :  
                           <br>
-                          <b>Rp. 523.421,-</b>
+                          <b>Rp <?= number_format($row['terpakai'],0,',','.'); ?>,-</b>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                           <i class="fa fa-cog"></i> Status :

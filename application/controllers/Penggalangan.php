@@ -22,39 +22,84 @@ class Penggalangan extends MY_Controller {
 		$data['kategori'] = $this->mymodel->selectWithQuery("SELECT * FROM master_kategori WHERE status = 'ENABLE'");
 
 		if($kategori == ''){
-			$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT a.idGalang as id, 
+			$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qrya.*, 
+			COALESCE(totaldonasion, 0) as donasion, COALESCE(totaldonasioff, 0) as donasioff, 
+			COALESCE(totalterpakai, 0) as terpakai 
+			FROM
+			(SELECT a.idGalang, 
 			a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, 
 			file.dir as file_dir, a.status as status, kate.value as kategori, 
-			COALESCE(SUM(donasi.nominalDonasi), 0) as terkumpul, 
-			COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as terpakai,
-			a.deskripsiGalang as deskripsi
-			FROM galang_dana a 
+			a.deskripsiGalang as deskripsi, a.created_at, a.publish
+			FROM galang_dana a
 			LEFT JOIN file on a.idGalang = file.table_id 
 			LEFT JOIN user u on a.idUser = u.id 
-			LEFT JOIN donasi on a.idGalang = donasi.idGalang
-			LEFT JOIN update_galang_dana on a.idGalang = update_galang_dana.idGalang
 			LEFT JOIN master_desa desa on u.idDesa = desa.idDesa 
 			LEFT JOIN master_kategori kate on a.idKategori = kate.idKategori
 			where file.table = 'galang_dana' AND a.status = 'ENABLE'
 			GROUP BY a.idGalang
-			ORDER BY a.created_at desc");
+			) qrya
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi.nominalDonasi), 0) as totaldonasion
+					FROM donasi WHERE status = 'ENABLE' AND statusPembayaran='Terbayar'
+					GROUP BY idGalang
+			) qryb
+			ON qrya.idGalang = qryb.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi_off.nominalDonasi), 0) as totaldonasioff
+					FROM donasi_off WHERE status = 'ENABLE'
+					GROUP BY idGalang
+			) qryc
+			ON qrya.idGalang = qryc.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as totalterpakai
+				FROM update_galang_dana WHERE status = 'ENABLE'
+				GROUP BY idGalang
+			) qryd
+			ON qrya.idGalang = qryd.idGalang
+			ORDER BY created_at DESC");
 		}else{
-			$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT a.idGalang as id, 
+			$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qrya.*, 
+			COALESCE(totaldonasion, 0) as donasion, COALESCE(totaldonasioff, 0) as donasioff, 
+			COALESCE(totalterpakai, 0) as terpakai 
+			FROM
+			(SELECT a.idGalang, 
 			a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, 
 			file.dir as file_dir, a.status as status, kate.value as kategori, 
-			COALESCE(SUM(donasi.nominalDonasi), 0) as terkumpul, 
-			COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as terpakai,
-			a.deskripsiGalang as deskripsi
-			FROM galang_dana a 
+			a.deskripsiGalang as deskripsi, a.created_at, a.publish
+			FROM galang_dana a
 			LEFT JOIN file on a.idGalang = file.table_id 
 			LEFT JOIN user u on a.idUser = u.id 
-			LEFT JOIN donasi on a.idGalang = donasi.idGalang
-			LEFT JOIN update_galang_dana on a.idGalang = update_galang_dana.idGalang
 			LEFT JOIN master_desa desa on u.idDesa = desa.idDesa 
 			LEFT JOIN master_kategori kate on a.idKategori = kate.idKategori
-			where file.table = 'galang_dana' AND a.status = 'ENABLE' AND a.idKategori = '$kategori'
+			where file.table = 'galang_dana' AND a.status = 'ENABLE'
 			GROUP BY a.idGalang
-			ORDER BY a.created_at desc");
+			) qrya
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi.nominalDonasi), 0) as totaldonasion
+					FROM donasi WHERE status = 'ENABLE' AND statusPembayaran='Terbayar'
+					GROUP BY idGalang
+			) qryb
+			ON qrya.idGalang = qryb.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi_off.nominalDonasi), 0) as totaldonasioff
+					FROM donasi_off WHERE status = 'ENABLE'
+					GROUP BY idGalang
+			) qryc
+			ON qrya.idGalang = qryc.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as totalterpakai
+				FROM update_galang_dana WHERE status = 'ENABLE'
+				GROUP BY idGalang
+			) qryd
+			ON qrya.idGalang = qryd.idGalang
+			WHERE qrya.idKategori = '$kategori'
+			ORDER BY created_at DESC");
 		}
 		$data['admin_url'] = $this->admin_url;
         $data['page_name'] = "Penggalangan";
@@ -63,25 +108,46 @@ class Penggalangan extends MY_Controller {
 
 	public function view($id)
 	{
-		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT a.idGalang as id, 
+		$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qrya.*, 
+			COALESCE(totaldonasion, 0) as donasion, COALESCE(totaldonasioff, 0) as donasioff, 
+			COALESCE(totalterpakai, 0) as terpakai 
+			FROM
+			(SELECT a.idGalang, 
 			a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, 
 			file.dir as file_dir, a.status as status, kate.value as kategori, 
-			COALESCE(SUM(donasi.nominalDonasi), 0) as terkumpul, 
-			COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as terpakai,
-			a.deskripsiGalang as deskripsi,
-			u.name as namaPenggalang,
-			date_format(a.created_at, '%d %M %Y') as dibuat,
-			date_format(u.created_at, '%d %M %Y') as userdibuat,
-			a.deskripsiGalang
-			FROM galang_dana a 
+			a.deskripsiGalang as deskripsiGalang, date_format(a.created_at, '%d %M %Y') as dibuat, a.publish, u.name as namaPenggalang,
+			date_format(u.created_at, '%d %M %Y') as userdibuat, a.detailGalang
+			FROM galang_dana a
 			LEFT JOIN file on a.idGalang = file.table_id 
 			LEFT JOIN user u on a.idUser = u.id 
-			LEFT JOIN donasi on a.idGalang = donasi.idGalang
-			LEFT JOIN update_galang_dana on a.idGalang = update_galang_dana.idGalang
 			LEFT JOIN master_desa desa on u.idDesa = desa.idDesa 
 			LEFT JOIN master_kategori kate on a.idKategori = kate.idKategori
-			where file.table = 'galang_dana' AND a.status = 'ENABLE' AND a.idGalang = '$id'
-			GROUP BY a.idGalang");
+			where file.table = 'galang_dana' AND a.status = 'ENABLE'
+			GROUP BY a.idGalang
+			) qrya
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi.nominalDonasi), 0) as totaldonasion
+					FROM donasi WHERE status = 'ENABLE' AND statusPembayaran='Terbayar'
+					GROUP BY idGalang
+			) qryb
+			ON qrya.idGalang = qryb.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(donasi_off.nominalDonasi), 0) as totaldonasioff
+					FROM donasi_off WHERE status = 'ENABLE'
+					GROUP BY idGalang
+			) qryc
+			ON qrya.idGalang = qryc.idGalang
+			LEFT OUTER JOIN
+			(
+			SELECT idGalang, COALESCE(SUM(update_galang_dana.nominalterpakai), 0) as totalterpakai
+				FROM update_galang_dana WHERE status = 'ENABLE'
+				GROUP BY idGalang
+			) qryd
+			ON qrya.idGalang = qryd.idGalang
+			WHERE qrya.idGalang = '$id'
+			ORDER BY dibuat DESC");
 
 			$data['updategalang'] = $this->mymodel->selectWithQuery("SELECT update_galang_dana.deskripsiUpdate, 
 			update_galang_dana.nominalterpakai, user.name, date_format(update_galang_dana.created_at, '%d %M %Y') as tglupdate
@@ -94,12 +160,33 @@ class Penggalangan extends MY_Controller {
 			donasi.nominalDonasi, donasi.statusDonatur, donasi.tanggalPembayaran
 			FROM donasi
 			LEFT JOIN tbl_user on donasi.idUser = tbl_user.idUser
-			WHERE donasi.status = 'ENABLE'
+			WHERE donasi.status = 'ENABLE' AND donasi.statusPembayaran = 'Terbayar'
 			AND donasi.idGalang = '$id' ORDER BY donasi.tanggalPembayaran desc");
+
+			$data['donaturoff'] = $this->mymodel->selectWithQuery("SELECT donasi_off.*, user.name FROM donasi_off 
+			LEFT JOIN user on donasi_off.idUser = user.id
+			WHERE donasi_off.status='ENABLE' AND donasi_off.idGalang = '$id' ORDER BY donasi_off.created_at desc");
 
 		$data['admin_url'] = $this->admin_url;
         $data['page_name'] = "Penggalangan";
         $this->template->load('template/template','penggalangan/view',$data);
+	}
+
+	public function adddonasi()
+	{
+		
+		$dt = $_POST['dt'];
+
+		$dt['statusPembayaran'] = "Belum Terbayar";
+		
+		$dt['created_at'] = date('Y-m-d H:i:s');
+
+		$dt['status'] = "ENABLE";
+
+		// var_dump($dt);
+		// die();
+
+		$str = $this->db->insert('donasi', $dt);
 	}
 	
 }
