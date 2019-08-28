@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Agu 2019 pada 10.12
+-- Generation Time: 28 Agu 2019 pada 10.09
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -488,26 +488,34 @@ CREATE TABLE IF NOT EXISTS `donasi` (
   `idGalang` int(11) NOT NULL,
   `idUser` int(11) NOT NULL,
   `nominalDonasi` varchar(255) NOT NULL,
+  `catatanDonasi` text NOT NULL,
   `statusDonatur` varchar(255) NOT NULL,
   `statusPembayaran` varchar(255) NOT NULL,
   `tanggalPembayaran` datetime NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `donasi`
 --
 
-INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `statusDonatur`, `statusPembayaran`, `tanggalPembayaran`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '100000', '1', 'Terbayar', '2019-08-23 00:00:00', 'ENABLE', '2019-08-22 10:54:20', '2019-08-23 09:03:08'),
-(2, 1, 1, '200000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:09', '0000-00-00 00:00:00'),
-(3, 1, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:20', '0000-00-00 00:00:00'),
-(4, 2, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:34', '0000-00-00 00:00:00'),
-(5, 1, 1, '500000', '2', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:53', '0000-00-00 00:00:00'),
-(6, 3, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-23 10:17:33', '0000-00-00 00:00:00'),
-(7, 2, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-27 10:55:20', '0000-00-00 00:00:00');
+INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `catatanDonasi`, `statusDonatur`, `statusPembayaran`, `tanggalPembayaran`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '100000', 'Tidak ada', '1', 'Terbayar', '2019-08-28 11:07:24', 'ENABLE', '2019-08-22 10:54:20', '2019-08-28 11:07:29'),
+(2, 1, 2, '200000', 'Tidak ada', '1', 'Terbayar', '2019-08-28 11:07:36', 'ENABLE', '2019-08-22 11:05:09', '2019-08-28 11:07:38'),
+(3, 1, 1, '1000000', 'Tidak ada', '2', 'Terbayar', '2019-08-28 10:54:01', 'ENABLE', '2019-08-22 11:05:20', '2019-08-28 10:54:05'),
+(4, 2, 1, '1000000', 'Tidak ada', '2', 'Terbayar', '2019-08-28 10:54:11', 'ENABLE', '2019-08-22 11:16:34', '2019-08-28 10:54:13'),
+(5, 1, 1, '500000', 'Tidak ada', '1', 'Terbayar', '2019-08-28 10:54:17', 'ENABLE', '2019-08-22 11:16:53', '2019-08-28 10:54:20'),
+(6, 3, 1, '5000000', 'Tidak ada', '1', 'Terbayar', '2019-08-28 14:04:22', 'ENABLE', '2019-08-23 10:17:33', '2019-08-28 14:04:27'),
+(7, 2, 2, '5000000', 'Tidak ada', '1', 'Terbayar', '2019-08-27 15:44:42', 'ENABLE', '2019-08-27 10:55:20', '2019-08-27 15:44:44'),
+(8, 5, 1, '500000', 'Aku sugeh', '1', 'Terbayar', '2019-08-28 13:56:17', 'ENABLE', '2019-08-28 11:17:27', '2019-08-28 13:56:20'),
+(9, 3, 1, '5,000,000', '', '1', 'Terbayar', '2019-08-28 14:02:17', 'DISABLE', '2019-08-28 13:55:39', '2019-08-28 14:02:19'),
+(10, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 13:59:52', '0000-00-00 00:00:00'),
+(11, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:46', '0000-00-00 00:00:00'),
+(12, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:59', '0000-00-00 00:00:00'),
+(13, 3, 1, '200000', 'Semoga Bermanfaat', '1', 'Terbayar', '2019-08-28 14:04:38', 'ENABLE', '2019-08-28 14:04:05', '2019-08-28 14:04:40'),
+(14, 2, 1, '5000000', 'Alhamdulilah', '0', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 15:08:40', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -518,20 +526,22 @@ INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `status
 CREATE TABLE IF NOT EXISTS `donasi_off` (
   `idDonasioff` int(11) NOT NULL,
   `idGalang` int(11) NOT NULL,
+  `idUser` int(11) NOT NULL,
   `namaDonatur` varchar(255) NOT NULL,
   `nominalDonasi` varchar(255) NOT NULL,
   `statusDonatur` int(11) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `donasi_off`
 --
 
-INSERT INTO `donasi_off` (`idDonasioff`, `idGalang`, `namaDonatur`, `nominalDonasi`, `statusDonatur`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Supardi', '2000000', 1, 'ENABLE', '2019-08-27 12:12:02', '0000-00-00 00:00:00');
+INSERT INTO `donasi_off` (`idDonasioff`, `idGalang`, `idUser`, `namaDonatur`, `nominalDonasi`, `statusDonatur`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 20, 'Supardi', '2000000', 1, 'ENABLE', '2019-08-27 12:12:02', '0000-00-00 00:00:00'),
+(2, 3, 0, 'Sapri', '2000000', 1, 'ENABLE', '2019-08-28 14:03:14', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -549,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=242 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -774,7 +784,10 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (238, '', '', '', 'master_kategoricreita', 2, 'ENABLE', '2019-08-27 11:50:18', NULL),
 (239, '6950c16c9bcc6995f376b297f16317592048.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f16317592048.png', 'cerita', 1, 'ENABLE', '2019-08-27 11:58:33', NULL),
 (240, '', '', '', 'donasi_off', 1, 'ENABLE', '2019-08-27 12:12:02', NULL),
-(241, '6950c16c9bcc6995f376b297f16317592049.jpg', 'image/jpg', 'webfile/6950c16c9bcc6995f376b297f16317592049.jpg', 'cerita', 2, 'ENABLE', '2019-08-27 11:58:33', NULL);
+(241, '6950c16c9bcc6995f376b297f16317592049.jpg', 'image/jpg', 'webfile/6950c16c9bcc6995f376b297f16317592049.jpg', 'cerita', 2, 'ENABLE', '2019-08-27 11:58:33', NULL),
+(242, '', '', '', 'donasi_off', 2, 'ENABLE', '2019-08-28 14:03:14', NULL),
+(243, '', '', '', 'master_desa', 3, 'ENABLE', '2019-08-28 14:23:49', NULL),
+(244, '', '', '', 'webpage', 2, 'ENABLE', '2019-08-28 14:33:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -801,11 +814,11 @@ CREATE TABLE IF NOT EXISTS `galang_dana` (
 --
 
 INSERT INTO `galang_dana` (`idGalang`, `tittleGalang`, `idKategori`, `deskripsiGalang`, `detailGalang`, `idUser`, `targetDonasi`, `publish`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Pembangunan Jembatan', 1, 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '55000000', 'Dibuka', 'ENABLE', '2019-08-22 10:51:20', '2019-08-22 10:53:08'),
-(2, 'Pembuatan Kolam Renang', 1, 'Sebagai tambahan fasilitas untuk tempat rekreasi di desa.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '20000000', 'Dibuka', 'ENABLE', '2019-08-22 11:15:47', '0000-00-00 00:00:00'),
-(3, 'Proyek MRT', 1, 'Proyek MRT untuk kemudahan penduduk desa', 'Proyek MRT untuk kemudahan penduduk desa', 22, '90000000', 'Dibuka', 'ENABLE', '2019-08-23 10:09:41', '0000-00-00 00:00:00'),
-(4, 'Proyek Fly Over', 1, 'Fly Over buat trek', 'Fly Over buat trek', 22, '50000000', 'Dibuka', 'ENABLE', '2019-08-23 15:18:17', '0000-00-00 00:00:00'),
-(5, 'Pembangunan Tempat Wisata Coban', 1, 'Membangun wisata Coban atau air terjun sebagai objek wisata di kota Banyuwangi', 'Pembangunan lahan parkir, loket tiket masuk, toilet, pagar pembatas, tempat piknik keluarga, membuat warung', 20, '50000000', 'Dibuka', 'ENABLE', '2019-08-27 11:29:25', '0000-00-00 00:00:00');
+(1, 'Pembangunan Jembatan', 1, 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '55000000', 'Masih Dibuka', 'ENABLE', '2019-08-22 10:51:20', '2019-08-22 10:53:08'),
+(2, 'Pembuatan Kolam Renang', 1, 'Sebagai tambahan fasilitas untuk tempat rekreasi di desa.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '20000000', 'Sudah Ditutup', 'ENABLE', '2019-08-22 11:15:47', '0000-00-00 00:00:00'),
+(3, 'Proyek MRT', 1, 'Proyek MRT untuk kemudahan penduduk desa', 'Proyek MRT untuk kemudahan penduduk desa', 22, '90000000', 'Masih Dibuka', 'ENABLE', '2019-08-23 10:09:41', '0000-00-00 00:00:00'),
+(4, 'Proyek Fly Over', 1, 'Fly Over buat trek', 'Fly Over buat trek', 22, '50000000', 'Masih Dibuka', 'ENABLE', '2019-08-23 15:18:17', '0000-00-00 00:00:00'),
+(5, 'Pembangunan Tempat Wisata Coban', 1, 'Membangun wisata Coban atau air terjun sebagai objek wisata di kota Banyuwangi', 'Pembangunan lahan parkir, loket tiket masuk, toilet, pagar pembatas, tempat piknik keluarga, membuat warung', 20, '50000000', 'Masih Dibuka', 'ENABLE', '2019-08-27 11:29:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1115,15 +1128,16 @@ CREATE TABLE IF NOT EXISTS `master_desa` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `master_desa`
 --
 
 INSERT INTO `master_desa` (`idDesa`, `value`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Desa Anjlok', 'ENABLE', '2019-08-26 07:26:09', '0000-00-00 00:00:00'),
-(2, 'Desa Tengah Dalan', 'ENABLE', '2019-08-26 07:26:09', '0000-00-00 00:00:00');
+(1, 'Desa Gambiran', 'ENABLE', '2019-08-26 07:26:09', '2019-08-28 14:23:28'),
+(2, 'Desa Karanganyar', 'ENABLE', '2019-08-26 07:26:09', '2019-08-28 14:23:39'),
+(3, 'Desa Sempu', 'ENABLE', '2019-08-28 14:23:49', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1390,14 +1404,15 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`idUser`, `namaUser`, `emailUser`, `alamatUser`, `teleponUser`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'ENABLE', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'ENABLE', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'ENABLE', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1449,8 +1464,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `status`, `created_at`, `updated_at`) VALUES
-(20, 'adminarvin', 'admin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-27 08:37:00'),
-(22, 'desa1', 'Desa nomer 1', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-16 15:19:52');
+(20, 'adminarvin', 'Arvin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-27 08:37:00'),
+(22, 'desa1', 'Bagus', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-16 15:19:52');
 
 -- --------------------------------------------------------
 
@@ -1460,13 +1475,22 @@ INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa
 
 CREATE TABLE IF NOT EXISTS `webpage` (
   `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
   `slug` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `prioritas` varchar(255) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `webpage`
+--
+
+INSERT INTO `webpage` (`id`, `title`, `slug`, `content`, `prioritas`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Tentang Aplikasi', 'tentang-aplikasi', 'Ini adalah Halaman tentang aplikasi', '1', 'ENABLE', '2019-08-28 14:30:59', '2019-08-28 14:32:37'),
+(2, 'Kontak Kami', 'kontak-kami', 'Kontak Kami Kontak KamiKontak KamiKontak KamiKontak Kami', '2', 'ENABLE', '2019-08-28 14:33:01', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -1667,17 +1691,17 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `donasi_off`
 --
 ALTER TABLE `donasi_off`
-  MODIFY `idDonasioff` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idDonasioff` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=242;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=245;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
@@ -1712,7 +1736,7 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT for table `master_desa`
 --
 ALTER TABLE `master_desa`
-  MODIFY `idDesa` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `idDesa` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `master_donatur`
 --
@@ -1757,7 +1781,7 @@ ALTER TABLE `site`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `update_galang_dana`
 --
@@ -1772,7 +1796,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `webpage`
 --
 ALTER TABLE `webpage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
