@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 27 Agu 2019 pada 04.01
+-- Generation Time: 27 Agu 2019 pada 10.12
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -412,6 +412,7 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `isiBerita` text NOT NULL,
   `idUser` int(11) NOT NULL,
   `idKategori` int(11) NOT NULL,
+  `views` int(11) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
@@ -421,9 +422,35 @@ CREATE TABLE IF NOT EXISTS `berita` (
 -- Dumping data untuk tabel `berita`
 --
 
-INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
-(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 1, 'ENABLE', '2019-08-27 08:56:43', '0000-00-00 00:00:00');
+INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 0, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
+(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 2, 0, 'ENABLE', '2019-08-27 08:56:43', '2019-08-27 11:52:21');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `cerita`
+--
+
+CREATE TABLE IF NOT EXISTS `cerita` (
+  `idCerita` int(11) NOT NULL,
+  `judulCerita` varchar(255) NOT NULL,
+  `isiCerita` text NOT NULL,
+  `idUser` int(11) NOT NULL,
+  `idKategori` int(11) NOT NULL,
+  `views` int(11) NOT NULL,
+  `status` enum('ENABLE','DISABLE') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `cerita`
+--
+
+INSERT INTO `cerita` (`idCerita`, `judulCerita`, `isiCerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Legenda Dongeng Cerita Rakyat Banyuwangi', 'Pada zaman dahulu kala. Terdapat sebuah Kerajaan yang di pimpin oleh Raja yang sangat bijaksana dan adil. Raja tersebut mempunyai seorang Putra yang sangat tampan dan gagah, yang bernama Raden Banterang. Raden Banterang sangat gemar berburu.\r\n\r\nSuatu hari, Raden Banterang pergi berburu kedalam hutan. Ia di temani dengan Pengawal kerajaan. Di tengah perjalanan. Ia melihat seekor Kijang melintas di depannya. Ia pun segera mengejar Kijang tersebut hingga masuk ke dalam hutan belantara. Ia pun terpisah dari rombongan Pengawalnya tersebut.\r\n\r\nRaden Banterang terus mengejar KIjang tersebut. Ia semakin jauh masuk kedalam hutan. Ia pun tiba di sebuah sungai yang sangat jernih. Karena kelelahan mengejar Kijang, ia pun mendekati sungai tersebut dan meminum air jernih itu. Di saat ia asik meminum air. Tiba-tiba, ia sangat terkejut karena kedatang seorang gadis yang sangat cantik.\r\n\r\nRaden Banterang kebingungan, karena ia takut gadis cantik tersebut adalah penunggu hutan ini. Namun, ia memberanikan diri untuk mendekati gadis cantik tersebut.', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00'),
+(2, 'Asal Mula Banyuwangi', 'Dikisahkan, di pantai Timur Pulau Jawa, ada seorang raja bernama Prabu Menak Prakosa. Ia mempunyai seorang anak laki-laki yang tampan dan perkasa, bernama Raden Banterang. Namun, sifatnya yang pemarah membuat rakyatnya sedikit gerah.\r\n\r\nSuatu ketika Raden Banterang berburu ke hutan. Ia bertemu dengan seorang gadis rupawan. Disapanya perempuan muda itu, "Apakah engkau seorang Dewi? Mengapa tidak ada orang yang menyertaimu?"\r\n\r\nSi gadis menjawab, "Sama sekali bukan Dewi, saya manusia. Saya lari dari kejaran musuh yang menyerang kerajaan."\r\n\r\nRaden Banterang tersentak kaget. Tanpa memperlihatkan rasa kagetnya, ia bertanya, "Apakah yang ada di hadapan saya sekarang adalah putri Raja Klungkung?"', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -467,7 +494,7 @@ CREATE TABLE IF NOT EXISTS `donasi` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `donasi`
@@ -479,7 +506,32 @@ INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `status
 (3, 1, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:05:20', '0000-00-00 00:00:00'),
 (4, 2, 1, '1000000', '1', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:34', '0000-00-00 00:00:00'),
 (5, 1, 1, '500000', '2', 'Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-22 11:16:53', '0000-00-00 00:00:00'),
-(6, 3, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-23 10:17:33', '0000-00-00 00:00:00');
+(6, 3, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-23 10:17:33', '0000-00-00 00:00:00'),
+(7, 2, 1, '5000000', '1', 'Belum Dibayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-27 10:55:20', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `donasi_off`
+--
+
+CREATE TABLE IF NOT EXISTS `donasi_off` (
+  `idDonasioff` int(11) NOT NULL,
+  `idGalang` int(11) NOT NULL,
+  `namaDonatur` varchar(255) NOT NULL,
+  `nominalDonasi` varchar(255) NOT NULL,
+  `statusDonatur` int(11) NOT NULL,
+  `status` enum('ENABLE','DISABLE') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `donasi_off`
+--
+
+INSERT INTO `donasi_off` (`idDonasioff`, `idGalang`, `namaDonatur`, `nominalDonasi`, `statusDonatur`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Supardi', '2000000', 1, 'ENABLE', '2019-08-27 12:12:02', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -497,7 +549,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=233 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=242 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -713,7 +765,16 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (229, '6950c16c9bcc6995f376b297f163175971830.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175971830.jpg', 'galang_dana', 4, 'ENABLE', '2019-08-23 15:18:18', NULL),
 (230, '6950c16c9bcc6995f376b297f163175939642.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175939642.png', 'user', 20, NULL, NULL, '2019-08-27 08:37:00'),
 (231, '6950c16c9bcc6995f376b297f163175982958.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175982958.jpeg', 'berita', 1, 'ENABLE', '2019-08-27 08:47:19', NULL),
-(232, '6950c16c9bcc6995f376b297f163175993432.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175993432.jpeg', 'berita', 2, 'ENABLE', '2019-08-27 08:56:43', NULL);
+(232, '6950c16c9bcc6995f376b297f163175993432.jpeg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175993432.jpeg', 'berita', 2, 'ENABLE', '2019-08-27 08:56:43', NULL),
+(233, '', '', '', 'donasi', 7, 'ENABLE', '2019-08-27 10:55:20', NULL),
+(234, '6950c16c9bcc6995f376b297f163175943022.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175943022.jpg', 'galang_dana', 5, 'ENABLE', '2019-08-27 11:29:25', NULL),
+(235, '', '', '', 'master_kategoriberita', 1, 'ENABLE', '2019-08-27 11:49:54', NULL),
+(236, '', '', '', 'master_kategoriberita', 2, 'ENABLE', '2019-08-27 11:50:00', NULL),
+(237, '', '', '', 'master_kategoricreita', 1, 'ENABLE', '2019-08-27 11:50:12', NULL),
+(238, '', '', '', 'master_kategoricreita', 2, 'ENABLE', '2019-08-27 11:50:18', NULL),
+(239, '6950c16c9bcc6995f376b297f16317592048.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f16317592048.png', 'cerita', 1, 'ENABLE', '2019-08-27 11:58:33', NULL),
+(240, '', '', '', 'donasi_off', 1, 'ENABLE', '2019-08-27 12:12:02', NULL),
+(241, '6950c16c9bcc6995f376b297f16317592049.jpg', 'image/jpg', 'webfile/6950c16c9bcc6995f376b297f16317592049.jpg', 'cerita', 2, 'ENABLE', '2019-08-27 11:58:33', NULL);
 
 -- --------------------------------------------------------
 
@@ -726,22 +787,25 @@ CREATE TABLE IF NOT EXISTS `galang_dana` (
   `tittleGalang` varchar(255) NOT NULL,
   `idKategori` int(11) NOT NULL,
   `deskripsiGalang` text NOT NULL,
+  `detailGalang` text NOT NULL,
   `idUser` int(11) NOT NULL,
   `targetDonasi` varchar(255) NOT NULL,
+  `publish` varchar(255) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `galang_dana`
 --
 
-INSERT INTO `galang_dana` (`idGalang`, `tittleGalang`, `idKategori`, `deskripsiGalang`, `idUser`, `targetDonasi`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Pembangunan Jembatan', 1, 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '55000000', 'ENABLE', '2019-08-22 10:51:20', '2019-08-22 10:53:08'),
-(2, 'Pembuatan Kolam Renang', 1, 'Sebagai tambahan fasilitas untuk tempat rekreasi di desa.', 20, '20000000', 'ENABLE', '2019-08-22 11:15:47', '0000-00-00 00:00:00'),
-(3, 'Proyek MRT', 1, 'Proyek MRT untuk kemudahan penduduk desa', 22, '90000000', 'ENABLE', '2019-08-23 10:09:41', '0000-00-00 00:00:00'),
-(4, 'Proyek Fly Over', 1, 'Fly Over buat trek', 22, '50000000', 'ENABLE', '2019-08-23 15:18:17', '0000-00-00 00:00:00');
+INSERT INTO `galang_dana` (`idGalang`, `tittleGalang`, `idKategori`, `deskripsiGalang`, `detailGalang`, `idUser`, `targetDonasi`, `publish`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Pembangunan Jembatan', 1, 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '55000000', 'Dibuka', 'ENABLE', '2019-08-22 10:51:20', '2019-08-22 10:53:08'),
+(2, 'Pembuatan Kolam Renang', 1, 'Sebagai tambahan fasilitas untuk tempat rekreasi di desa.', 'Jembatan sudah tidak layak digunakan dan membahayakan keselamatan warga.', 20, '20000000', 'Dibuka', 'ENABLE', '2019-08-22 11:15:47', '0000-00-00 00:00:00'),
+(3, 'Proyek MRT', 1, 'Proyek MRT untuk kemudahan penduduk desa', 'Proyek MRT untuk kemudahan penduduk desa', 22, '90000000', 'Dibuka', 'ENABLE', '2019-08-23 10:09:41', '0000-00-00 00:00:00'),
+(4, 'Proyek Fly Over', 1, 'Fly Over buat trek', 'Fly Over buat trek', 22, '50000000', 'Dibuka', 'ENABLE', '2019-08-23 15:18:17', '0000-00-00 00:00:00'),
+(5, 'Pembangunan Tempat Wisata Coban', 1, 'Membangun wisata Coban atau air terjun sebagai objek wisata di kota Banyuwangi', 'Pembangunan lahan parkir, loket tiket masuk, toilet, pagar pembatas, tempat piknik keluarga, membuat warung', 20, '50000000', 'Dibuka', 'ENABLE', '2019-08-27 11:29:25', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1108,6 +1172,50 @@ INSERT INTO `master_kategori` (`idKategori`, `value`, `status`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `master_kategoriberita`
+--
+
+CREATE TABLE IF NOT EXISTS `master_kategoriberita` (
+  `idKategoriB` int(11) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `status` enum('ENABLE','DISABLE') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_kategoriberita`
+--
+
+INSERT INTO `master_kategoriberita` (`idKategoriB`, `value`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Aktual', 'ENABLE', '2019-08-27 11:49:53', '0000-00-00 00:00:00'),
+(2, 'Teknologi', 'ENABLE', '2019-08-27 11:50:00', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `master_kategoricreita`
+--
+
+CREATE TABLE IF NOT EXISTS `master_kategoricreita` (
+  `idKategoriC` int(11) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  `status` enum('ENABLE','DISABLE') NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `master_kategoricreita`
+--
+
+INSERT INTO `master_kategoricreita` (`idKategoriC`, `value`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Dongeng', 'ENABLE', '2019-08-27 11:50:12', '0000-00-00 00:00:00'),
+(2, 'Mitos', 'ENABLE', '2019-08-27 11:50:18', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `menu_master`
 --
 
@@ -1122,7 +1230,7 @@ CREATE TABLE IF NOT EXISTS `menu_master` (
   `status` enum('ENABLE','DISABLE') DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `menu_master`
@@ -1152,15 +1260,20 @@ INSERT INTO `menu_master` (`id`, `name`, `icon`, `link`, `urutan`, `parent`, `no
 (32, 'Kategori', 'fa fa-circle', 'master/M_kategori', '2', '27', '', 'ENABLE', '2019-08-16 11:03:19', NULL),
 (33, 'Laporan', 'fa fa-credit-card', 'report/Report_transaksi_admin', '2', '0', '', 'ENABLE', '2019-08-19 12:33:05', NULL),
 (34, 'Galang Dana', 'fa fa-sign-language', 'master/Galang_dana', '1', '0', '', 'ENABLE', '2019-08-22 10:35:32', NULL),
-(35, 'Donasi', 'fa fa-handshake-o', 'master/Donasi', '2', '0', '', 'ENABLE', '2019-08-22 10:36:26', NULL),
+(35, 'Donasi Online', 'fa fa-circle', 'master/Donasi', '0', '44', '', 'ENABLE', '2019-08-22 10:36:26', '2019-08-27 11:44:11'),
 (36, 'Update Galang Dana', 'fa fa-tasks', 'master/Update_galang_dana', '3', '0', '', 'ENABLE', '2019-08-22 10:38:12', NULL),
-(37, 'Master', 'fa fa-folder', '#', '6', '0', '', 'ENABLE', '2019-08-22 10:42:04', '2019-08-27 08:39:40'),
+(37, 'Master', 'fa fa-folder', '#', '7', '0', '', 'ENABLE', '2019-08-22 10:42:04', '2019-08-27 12:08:07'),
 (38, 'Kategori', 'fa fa-circle', 'master/Master_kategori', '0', '37', '', 'ENABLE', '2019-08-22 10:42:38', NULL),
 (39, 'Web Page', 'fa fa-circle', 'master/Webpage ', '1', '37', '', 'ENABLE', '2019-08-22 10:43:06', NULL),
 (40, 'Laporan Galang Dana', 'fa fa-bar-chart', 'report/Laporan_galang_dana', '4', '0', '', 'ENABLE', '2019-08-22 11:52:21', NULL),
 (41, 'Donatur', 'fa fa-circle', 'master/Master_donatur', '2', '37', '', 'ENABLE', '2019-08-22 16:07:45', NULL),
 (42, 'Desa', 'fa fa-circle', 'master/Master_desa', '3', '37', '', 'ENABLE', '2019-08-22 16:08:14', NULL),
-(43, 'Berita Desa', 'fa fa-newspaper-o', 'master/Berita', '5', '0', '', 'ENABLE', '2019-08-27 08:39:22', NULL);
+(43, 'Berita Desa', 'fa fa-newspaper-o', 'master/Berita', '5', '0', '', 'ENABLE', '2019-08-27 08:39:22', NULL),
+(44, 'Donasi', 'fa fa-credit-card', '#', '2', '0', '', 'ENABLE', '2019-08-27 11:42:33', NULL),
+(46, 'Kategori Berita', 'fa fa-circle', 'master/Master_kategoriberita', '4', '37', '', 'ENABLE', '2019-08-27 11:46:18', NULL),
+(45, 'Donasi Offline', 'fa fa-circle', 'master/Donasi_off', '1', '44', '', 'ENABLE', '2019-08-27 11:43:53', NULL),
+(47, 'Kategori Cerita', 'fa fa-circle', 'master/Master_kategoricreita', '5', '37', '', 'ENABLE', '2019-08-27 11:47:11', NULL),
+(48, 'Cerita Donatur', 'fa fa-camera', 'master/Cerita', '6', '0', '', 'ENABLE', '2019-08-27 12:07:24', NULL);
 
 -- --------------------------------------------------------
 
@@ -1218,7 +1331,7 @@ CREATE TABLE IF NOT EXISTS `role` (
 --
 
 INSERT INTO `role` (`id`, `role`, `status`, `menu`, `created_at`, `updated_at`) VALUES
-(17, 'Super Admin', 'ENABLE', '["17","34","35","36","40","43","37","38","39","41","42"]', '2018-10-12 17:03:59', '2019-08-27 08:40:11'),
+(17, 'Super Admin', 'ENABLE', '["17","34","44","35","45","36","40","43","37","38","39","41","42","46","47","48"]', '2018-10-12 17:03:59', '2019-08-27 12:07:41'),
 (18, 'Operator', 'ENABLE', '["17","27","30","31","32","28","29"]', '2018-10-24 10:29:54', '2019-08-16 11:03:35'),
 (19, 'Pelanggan', 'DISABLE', NULL, '2019-08-18 01:31:39', NULL);
 
@@ -1309,7 +1422,7 @@ CREATE TABLE IF NOT EXISTS `update_galang_dana` (
 
 INSERT INTO `update_galang_dana` (`idUpdate`, `idGalang`, `idUser`, `deskripsiUpdate`, `nominalterpakai`, `status`, `created_at`, `updated_at`) VALUES
 (1, 1, 20, 'Beli Batu Batu', '1000000', 'ENABLE', '2019-08-22 11:08:13', '0000-00-00 00:00:00'),
-(2, 3, 22, 'Beli Besi', '1000000', 'ENABLE', '2019-08-23 10:27:40', '0000-00-00 00:00:00');
+(2, 2, 20, 'Beli Besi', '1000000', 'ENABLE', '2019-08-23 10:27:40', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1378,6 +1491,12 @@ ALTER TABLE `berita`
   ADD PRIMARY KEY (`idBerita`);
 
 --
+-- Indexes for table `cerita`
+--
+ALTER TABLE `cerita`
+  ADD PRIMARY KEY (`idCerita`);
+
+--
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
@@ -1388,6 +1507,12 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `donasi`
   ADD PRIMARY KEY (`idDonasi`);
+
+--
+-- Indexes for table `donasi_off`
+--
+ALTER TABLE `donasi_off`
+  ADD PRIMARY KEY (`idDonasioff`);
 
 --
 -- Indexes for table `file`
@@ -1448,6 +1573,18 @@ ALTER TABLE `master_donatur`
 --
 ALTER TABLE `master_kategori`
   ADD PRIMARY KEY (`idKategori`);
+
+--
+-- Indexes for table `master_kategoriberita`
+--
+ALTER TABLE `master_kategoriberita`
+  ADD PRIMARY KEY (`idKategoriB`);
+
+--
+-- Indexes for table `master_kategoricreita`
+--
+ALTER TABLE `master_kategoricreita`
+  ADD PRIMARY KEY (`idKategoriC`);
 
 --
 -- Indexes for table `menu_master`
@@ -1517,6 +1654,11 @@ ALTER TABLE `access_control`
 ALTER TABLE `berita`
   MODIFY `idBerita` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT for table `cerita`
+--
+ALTER TABLE `cerita`
+  MODIFY `idCerita` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
@@ -1525,17 +1667,22 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `donasi_off`
+--
+ALTER TABLE `donasi_off`
+  MODIFY `idDonasioff` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=233;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=242;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
 ALTER TABLE `galang_dana`
-  MODIFY `idGalang` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `idGalang` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `grafik`
 --
@@ -1577,10 +1724,20 @@ ALTER TABLE `master_donatur`
 ALTER TABLE `master_kategori`
   MODIFY `idKategori` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
+-- AUTO_INCREMENT for table `master_kategoriberita`
+--
+ALTER TABLE `master_kategoriberita`
+  MODIFY `idKategoriB` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `master_kategoricreita`
+--
+ALTER TABLE `master_kategoricreita`
+  MODIFY `idKategoriC` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `menu_master`
 --
 ALTER TABLE `menu_master`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `report`
 --
