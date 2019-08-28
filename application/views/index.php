@@ -84,129 +84,123 @@ print_r(count($listgalang));
               <div class="col-md-6">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <?php 
-                    for($i = 0; $i < count($listgalang); $i++){ ?>
-                      <li data-target="#carousel-example-generic" data-slide-to="<?= $i ?>" class=""></li>
-                    <?php } ?>
+                    for($i = 0; $i < count($listgalang); $i++){ $no = '1'; ?>
+                      <li data-target="#carousel-example-generic" data-slide-to="<?= $i ?>" class="" id="li-carousel-<?= $no ?>"></li>
+                    <?php $no++; } ?>
                   </ol>
                   <div class="carousel-inner">
-                    <div class="item  active" style="height: 310px">
-                      <img src="<?= $admin_url ?>webfile/ayobangundesa.jpg" style="height: 100%; width: 100%" class="sidebar_mobile">
-                      <div class="carousel-caption">
-                        Ayo Bangun Desa ! Demi kemajuan desa, kita membangun bersama agar meratanya fasilitas di indonesia.
-                      </div>
-                    </div>
-                    <?php foreach($listgalang as $row){ ?>
-                      <div class="item" style="height: 310px">
-                      
+                    <?php 
+                    foreach($listgalang as $row){ $no = '1'; ?>
+                    <div class="item" style="height: 310px" id="carousel-<?= $no ?>">
                       <a href="<?= base_url('penggalangan/view/'.$row['idGalang'])?>">
                         <img src="<?= $admin_url.$row['file_dir'] ?>" alt="<?= $i ?> slide" style="height: 100%; width: 100%" class="sidebar_mobile">
                         <div class="carousel-caption">
                           <?= $row['deskripsi'] ?>
                         </div>
                       </a>
-                      </div>
-                    <?php } ?>
-                  </div>
-                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                    <span class="fa fa-angle-left"></span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                    <span class="fa fa-angle-right"></span>
-                  </a>
+                    </div>
+                    <?php $no++;
+                  } ?>
                 </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="fa fa-angle-right"></span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row" align="center">
-        <h1><i class="fa fa-archive"></i> Galang Dana Desa </h1>
-        <small>Halo #OrangBaik, Siap memberi bantuan ?</small>
-      </div>
-      <br>
-      <div class="row">
-        <?php foreach($listgalang as $row){ ?>
-          <a href="<?= base_url('penggalangan') ?>/view/<?= $row['idGalang'] ?>" class="a_black">
-            <div class="col-md-6 col-12 mb-md-0 mb-5">
-              <div class="box box-solid round">
-                <div class="box-body">
-                  <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center">
-                    <?= strlen($row["tittleGalang"]) > 25 ? substr($row["tittleGalang"],0,25)."..." : $row["tittleGalang"] ?> 
-                  </h3>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <h4><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h4>  
-                    </div>
+    </div>
+    <div class="row" align="center">
+      <h1><i class="fa fa-archive"></i> Galang Dana Desa </h1>
+      <small>Halo #OrangBaik, Siap memberi bantuan ?</small>
+    </div>
+    <br>
+    <div class="row">
+      <?php foreach($listgalang as $row){ ?>
+        <a href="<?= base_url('penggalangan') ?>/view/<?= $row['idGalang'] ?>" class="a_black">
+          <div class="col-md-6 col-12 mb-md-0 mb-5">
+            <div class="box box-solid round">
+              <div class="box-body">
+                <img src="<?= $admin_url.$row['file_dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                <h3 align="center">
+                  <?= strlen($row["tittleGalang"]) > 25 ? substr($row["tittleGalang"],0,25)."..." : $row["tittleGalang"] ?> 
+                </h3>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <h4><i class="fa fa-globe"></i> <?= $row['desa_value'] ?></h4>  
                   </div>
-                  <?php
-                  $target = $row['targetDonasi'];
-                  $terkumpul = $row['donasion'] + $row['donasioff'];
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                    <h4><i class="fa fa-list-ul"></i> <?= $row['kategori'] ?> </h4>  
+                  </div>
+                </div>
+                <?php
+                $target = $row['targetDonasi'];
+                $terkumpul = $row['donasion'] + $row['donasioff'];
                   // var_dump($terkumpul);
-                  $persen = ($terkumpul/$target)*100;
+                $persen = ($terkumpul/$target)*100;
 
-                  ?>
-                  <div class="progress-xs" style="margin-bottom: 10px">
-                    <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <?= $persen.'%' ?>">
-                      <span class="sr-only">20% Complete</span>
-                    </div>
+                ?>
+                <div class="progress-xs" style="margin-bottom: 10px">
+                  <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: <?= $persen.'%' ?>">
+                    <span class="sr-only">20% Complete</span>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-credit-card"></i> Terkumpul
-                      <br>
-                      <b>Rp <?= number_format($terkumpul,0,',','.'); ?>,-</b>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <i class="fa fa-credit-card"></i> Target Donasi
-                      <br>
-                      <b>Rp <?= number_format($row['targetDonasi'],0,',','.'); ?>,-</b>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-heart"></i> Terpakai :  
-                      <br>
-                      <b>Rp <?= number_format($row['terpakai'],0,',','.'); ?>,-</b>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <i class="fa fa-cog"></i> Status :
-                      <br>
-                      <?php
-                        if($row['publish'] == 'Masih Dibuka'){
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <i class="fa fa-credit-card"></i> Terkumpul
+                    <br>
+                    <b>Rp <?= number_format($terkumpul,0,',','.'); ?>,-</b>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                    <i class="fa fa-credit-card"></i> Target Donasi
+                    <br>
+                    <b>Rp <?= number_format($row['targetDonasi'],0,',','.'); ?>,-</b>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                    <i class="fa fa-heart"></i> Terpakai :  
+                    <br>
+                    <b>Rp <?= number_format($row['terpakai'],0,',','.'); ?>,-</b>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                    <i class="fa fa-cog"></i> Status :
+                    <br>
+                    <?php
+                    if($row['publish'] == 'Masih Dibuka'){
                       ?>
-                        <small class="label pull-right bg-green btn-md round"> 
-                          Masih Dibuka
-                        </small>
+                      <small class="label pull-right bg-green btn-md round"> 
+                        Masih Dibuka
+                      </small>
                       <?php
-                        } else {
+                    } else {
                       ?>
-                        <small class="label pull-right bg-red btn-md round"> 
-                          Sudah Ditutup
-                        </small>
+                      <small class="label pull-right bg-red btn-md round"> 
+                        Sudah Ditutup
+                      </small>
                       <?php
-                        }
-                      ?>
-                    </div>
+                    }
+                    ?>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
-        <?php } ?>
-      </div>
-      <div class="row" align="center">
-        <a href="<?= base_url('penggalangan') ?>">
-          <button type="button" class="btn btn-primary btn-lg round">
-            <i class="fa fa-search"></i> Lihat Semua Penggalangan
-          </button>
+          </div>
         </a>
-      </div>
-    </section>
-  </div>
+      <?php } ?>
+    </div>
+    <div class="row" align="center">
+      <a href="<?= base_url('penggalangan') ?>">
+        <button type="button" class="btn btn-primary btn-lg round">
+          <i class="fa fa-search"></i> Lihat Semua Penggalangan
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
 </div>
 <div class="cover">
   <div class="div-center">
@@ -250,7 +244,7 @@ print_r(count($listgalang));
                       <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6">
-                      <small class="label bg-blue btn-md round"> 
+                      <small class="label pull-left bg-blue btn-md round"> 
                         <i class="fa fa-user"></i> <b><?= $row['name'] ?></b>
                       </small>
                     </div>
@@ -308,39 +302,48 @@ print_r(count($listgalang));
               <div class="box box-solid round">
                 <div class="box-body">
                   <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center"><?= $row['judulCerita'] ?></h3>
+                  <h3 align="center">
+                    <?= strlen($row["judulCerita"]) > 20 ? substr($row["judulCerita"], 0, 20)."..." : $row["judulCerita"] ?>    
+                  </h3>
                   <p style="text-indent: 15px;"><?= $row['isiCerita'] ?>... "Klik untuk baca lebih lanjut."</p>
                   <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                       <i class="fa fa-eye"></i> <?= $row['views'] ?>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label bg-blue btn-md round"> 
+                      <small class="label pull-right bg-blue btn-md round"> 
                         <i class="fa fa-user"></i> <b><?= $row['namaUser'] ?></b>
                       </small>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <small class="label pull-right bg-yellow btn-md round"> 
-                        <i class="fa fa-calendar"></i> <b><?= $row['tanggal'] ?></b>
-                      </small>
-                    </div>
+                      </i> <b><?= $row['tanggal'] ?></b>
+                    </small>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
-        <?php } ?>
-      </div>
-      <div class="row" align="center">
-        <a href="<?= base_url('story') ?>">
-          <button type="button" class="btn btn-primary btn-lg round">
-            <i class="fa fa-search"></i> Lihat Semua Aku dan Cerita
-          </button>
+          </div>
         </a>
-      </div>
-    </section>
-  </div>
+      <?php } ?>
+    </div>
+    <div class="row" align="center">
+      <a href="<?= base_url('story') ?>">
+        <button type="button" class="btn btn-primary btn-lg round">
+          <i class="fa fa-search"></i> Lihat Semua Aku dan Cerita
+        </button>
+      </a>
+    </div>
+  </section>
+</div>
 </div> 
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#carousel-1").addClass("active");
+    $("#li-carousel-1").addClass("active");
+  });
+</script>

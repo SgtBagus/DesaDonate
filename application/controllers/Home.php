@@ -86,7 +86,7 @@ class Home extends MY_Controller {
 		WHERE berita.status = 'ENABLE' AND file.table = 'berita'");
 
 		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
-		cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 380) as isiCerita,
+		cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 200) as isiCerita,
 		date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
 		master_kategoricreita.value as kategori, cerita.views
 		FROM cerita

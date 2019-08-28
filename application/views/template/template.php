@@ -251,9 +251,7 @@
           "searching"   : true,
           "ordering"    : true,
           "info"        : false,
-          "autoWidth"   : false,
           "scrollY": true,
-          "scrollX": true,
           "language": {
             "search": "<b> Pencarian : </b>",
             "zeroRecords": function () {
@@ -265,23 +263,6 @@
             }
           },
         });
-
-        $('#datatable-update').DataTable({
-          "paging"      : false,
-          "lengthChange": false,
-          "searching"   : false,
-          "ordering"    : true,
-          "info"        : false,
-          "autoWidth"   : false,
-          "scrollY": true,
-          "scrollX": true,
-          "language": {
-            "zeroRecords": function () {
-              return "<img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>";
-            },
-          },
-        })
-
       });
 
       $("#btnFile").click(function() {

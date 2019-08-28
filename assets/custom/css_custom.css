@@ -136,3 +136,7 @@
 .div_status{
   margin-bottom: -10px;
 }
+
+table.dataTable tbody td {
+    white-space: nowrap;
+}
