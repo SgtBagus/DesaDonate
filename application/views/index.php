@@ -170,9 +170,21 @@ print_r(count($listgalang));
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <i class="fa fa-cog"></i> Status :
                       <br>
-                      <small class="label pull-right bg-green btn-md round"> 
-                        <?= $row['publish'] ?>
-                      </small>
+                      <?php
+                        if($row['publish'] == 'Dibuka'){
+                      ?>
+                        <small class="label pull-right bg-green btn-md round"> 
+                          Masih Dibuka
+                        </small>
+                      <?php
+                        } else {
+                      ?>
+                        <small class="label pull-right bg-green btn-md round"> 
+                          Ditutup
+                        </small>
+                      <?php
+                        }
+                      ?>
                     </div>
                   </div>
                 </div>
