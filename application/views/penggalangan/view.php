@@ -22,13 +22,13 @@ foreach($listgalang as $row){
               <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                 <h5>
                   <i class="fa fa-globe"></i>
-                  <?= strlen($row["desa_value"]) > 15 ? substr($row["desa_value"],0,15)."..." : $row["desa_value"] ?>
+                  <?= $row["desa_value"] ?>
                 </h5> 
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                 <h5>
                   <i class="fa fa-list-ul"></i>
-                  <?= strlen($row["kategori"]) > 15 ? substr($row["kategori"],0,15)."..." : $row["kategori"] ?>
+                  <?= $row["kategori"] ?>
                 </h5> 
               </div>
             </div>
@@ -93,7 +93,7 @@ foreach($listgalang as $row){
                       <img src="<?= $admin_url.$row['foto']?>" class="img-circle" alt="User Image" width="80px" height="80px">
                     </div>
                     <div class="col-md-8">
-                      <h4><b><?= $row['namaPenggalang'] ?> </b><i class="fa fa-check-circle" style="color:blue"></i></h4>
+                      <h4><b><?= $row['namaPenggalang'] ?> </b></h4>
                       <small><?= $row['desa_value'] ?></small>
                     </div>
                   </div>
@@ -106,90 +106,147 @@ foreach($listgalang as $row){
           <div class="col-md-12">
             <div class="box box-solid round">
               <div class="box-body">
-                <div class="row">
-                  <div class="col-md-8 col-sm-8 col-xs-12">
-                    <p>
-                      <?= $row['detailGalang'] ?>
-                    </p>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-xs-12">
-                    <h4>Donatur :</h4>
-                    <div class="nav-tabs-custom">
-                      <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_donatur_1" data-toggle="tab" aria-expanded="false">Online</a></li>
-                        <li class=""><a href="#tab_donatur_2" data-toggle="tab" aria-expanded="false">Offline</a></li>
-                      </ul>
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="tab_donatur_1">
+                <div class="nav-tabs-custom">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_detail_1" data-toggle="tab" aria-expanded="false">Detail</a></li>
+                    <li class=""><a href="#tab_detail_2" data-toggle="tab" aria-expanded="false">Update</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="tab_detail_1">
+                      <div class="row">
+                        <div class="col-md-12">
                           <div class="row">
-                            <div class="col-md-12">
-                              <?php foreach($donaturwaktu as $row){ ?>
-                                <a href="<?= base_url('/profil/'.$row['id']) ?>" class="a_black">
-                                  <div class="row">
-                                    <div class="col-md-4" align="center">
-                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
-                                    </div>
-                                    <div class="col-md-8">
-                                      <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
-                                      <h5>
-                                        <b>
-                                          <?php
-                                          if($row['statusDonatur'] == 1){
-                                            echo $row['namaUser'];
-                                          } 
-                                          else{
-                                            echo 'Anonim';
-                                          }
-                                          ?>
-                                        </b>
-                                      </h5>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                              <p>
+                                <?= $row['detailGalang'] ?>
+                              </p>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                              <h4>Donatur :</h4>
+                              <div class="nav-tabs-custom">
+                                <ul class="nav nav-tabs">
+                                  <li class="active"><a href="#tab_donatur_1" data-toggle="tab" aria-expanded="false">Online</a></li>
+                                  <li class=""><a href="#tab_donatur_2" data-toggle="tab" aria-expanded="false">Offline</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                  <div class="tab-pane active" id="tab_donatur_1">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <?php foreach($donaturwaktu as $row){ ?>
+                                          <a href="<?= base_url('/profil/'.$row['id']) ?>" class="a_black">
+                                            <div class="row">
+                                              <div class="col-md-4" align="center">
+                                                <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                              </div>
+                                              <div class="col-md-8">
+                                                <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
+                                                <h5>
+                                                  <b>
+                                                    <?php
+                                                    if($row['statusDonatur'] == 1){
+                                                      echo $row['namaUser'];
+                                                    } 
+                                                    else{
+                                                      echo 'Anonim';
+                                                    }
+                                                    ?>
+                                                  </b>
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        <?php } ?>
+                                        <br>
+                                        <div class="row">
+                                          <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
-                                </a>
-                              <?php } ?>
-                              <br>
-                              <div class="row">
-                                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                                  <div class="tab-pane" id="tab_donatur_2">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <?php foreach($donaturoff as $row){ ?>
+                                          <a href="" class="a_black">
+                                            <div class="row">
+                                              <div class="col-md-4" align="center">
+                                                <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                              </div>
+                                              <div class="col-md-8">
+                                                <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
+                                                <h5>
+                                                  <b>
+                                                    <?php
+                                                    if($row['statusDonatur'] == 1){
+                                                      echo $row['namaDonatur'];
+                                                    } 
+                                                    else{
+                                                      echo 'Anonim';
+                                                    }
+                                                    ?>
+                                                    (Offline Donatur)
+                                                  </b>
+                                                </h5>
+                                              </div>
+                                            </div>
+                                          </a>
+                                        <?php } ?>
+                                        <br>
+                                        <div class="row">
+                                          <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="tab-pane" id="tab_donatur_2">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <?php foreach($donaturoff as $row){ ?>
-                                <a href="" class="a_black">
-                                  <div class="row">
-                                    <div class="col-md-4" align="center">
-                                      <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
-                                    </div>
-                                    <div class="col-md-8">
-                                      <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>
-                                      <h5>
-                                        <b>
-                                          <?php
-                                          if($row['statusDonatur'] == 1){
-                                            echo $row['namaDonatur'];
-                                          } 
-                                          else{
-                                            echo 'Anonim';
-                                          }
-                                          ?>
-                                          (Offline Donatur)
-                                        </b>
-                                      </h5>
-                                    </div>
-                                  </div>
-                                </a>
-                              <?php } ?>
-                              <br>
-                              <div class="row">
-                                <button type="submit" class="btn btn-block btn-primary btn-lg round"><i class="fa fa-search"></i> Tampilkan lebih Banyak</button>
-                              </div>
-                            </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="tab_detail_2">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="row" align="center">
+                            <h3><b>Update Terbaru</b></h3>
+                          </div>
+                          <div class="box-body table-responsive no-padding">
+                            <table class="table table-hover">
+                              <thead>
+                                <tr>
+                                  <th>No</th>
+                                  <th>Tanggal</th>
+                                  <th>Deskripsi</th>
+                                  <th>Dana Terpakai</th>
+                                  <th>Pemberita</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <?php 
+                                if($updategalang == null){?>
+                                  <tr>
+                                    <td colspan="5" align="center">
+                                      <img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>
+                                    </td>
+                                  </tr>
+                                <?php } else {
+                                  $no = 1;
+                                  foreach($updategalang as $row){ ?>
+                                    <tr>
+                                      <td><?= $no++ ?></td>
+                                      <td><?= $row['tglupdate'] ?></td>
+                                      <td><?= $row['deskripsiUpdate'] ?></td>
+                                      <td><?= $row['nominalterpakai'] ?></td>
+                                      <td><?= $row['name'] ?></td>
+                                    </tr>
+                                  <?php } 
+                                }
+                                ?>
+                              </tbody>
+                            </table>
                           </div>
                         </div>
-                        
                       </div>
                     </div>
                   </div>

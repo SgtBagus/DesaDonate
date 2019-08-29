@@ -70,7 +70,7 @@
                           <i class="fa fa-eye"></i> <?= $row['views'] ?>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                          <i class="fa fa-globe"></i> <?= $row['namadesa'] ?>
+                          <i class="fa fa-globe"></i> <?= strlen($row["namadesa"]) > 15 ? substr($row["namadesa"],0,15)."..." : $row["namadesa"] ?>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
                           <small class="label bg-blue btn-md round"> 
