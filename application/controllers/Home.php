@@ -117,10 +117,12 @@ class Home extends MY_Controller {
 		$data['admin_url'] = $this->admin_url;
 
 		$data['biodata'] = $this->mymodel->selectWithQuery("SELECT tbl_user.*, 
-		file.dir, file.table, date_format(tbl_user.created_at, '%d %M %Y') as tanggal
+		date_format(tbl_user.created_at, '%d %M %Y') as tanggal
 		FROM tbl_user
-		LEFT JOIN file on tbl_user.idUser = file.table_id
-		WHERE tbl_user.idUser = '$id' AND file.table = 'tbl_user'");
+		WHERE tbl_user.idUser = '$id'");
+
+		// var_dump($data['biodata']);
+		// die();
 
 		$data['jumlahgalang'] = $this->mymodel->selectWithQuery("SELECT idGalang, 
 		COUNT(idDonasi) as jumlahdonasi

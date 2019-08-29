@@ -8,7 +8,9 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-12" align="center">
-                                    <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="100px" height="100px">
+                                <?php foreach($biodata as $row) { ?>
+                                    <img src="<?= $admin_url.$row['fotoUser'] ?>" class="img-circle" alt="User Image" width="100px" height="100px">
+                                <?php } ?>
                                 </div>
                             </div>
                         </div>

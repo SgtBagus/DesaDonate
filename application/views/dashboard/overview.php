@@ -5,45 +5,45 @@
             <div class="col-md-4">        
                 <div class="box box-solid round">
                     <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-4" align="center">
-                            <img src="https://img.freepik.com/free-vector/background-with-people-doing-donation_23-2147558145.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
-                            </div>
-                            <div class="col-md-8">
-                                <h4><b>15</b></h4>
-                                Penggalangan Dimulai
-                            </div>
+                    <div class="row">
+                        <div class="col-md-4" align="center">
+                        <img src="https://img.freepik.com/free-vector/background-with-people-doing-donation_23-2147558145.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
                         </div>
+                        <div class="col-md-8">
+                        <h4><b><?= count($jumlahgalang) ?></b></h4>
+                        Penggalangan Dana
+                        </div>
+                    </div>
                     </div>
                 </div>  
             </div>
             <div class="col-md-4">        
                 <div class="box box-solid round">
                     <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-4" align="center">
-                            <img src="https://img.freepik.com/free-vector/money-bag_16734-108.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
-                            </div>
-                            <div class="col-md-8">
-                                <h4><b>Rp. 987.000</b></h4>
-                                Donasi
-                            </div>
+                    <div class="row">
+                        <div class="col-md-4" align="center">
+                        <img src="https://img.freepik.com/free-vector/background-with-people-doing-donation_23-2147558145.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
                         </div>
+                        <div class="col-md-8">
+                        <h4><b><?= $jumlahdonasi[0]['jumlah'] ?></b></h4>
+                        Jumlah Donasi
+                        </div>
+                    </div>
                     </div>
                 </div>  
             </div>
             <div class="col-md-4">        
                 <div class="box box-solid round">
                     <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-4" align="center">
-                            <img src="https://img.freepik.com/free-vector/money-bag-exchange_23-2147510722.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
-                            </div>
-                            <div class="col-md-8">
-                                <h4><b>Rp. 327.000</b></h4>
-                                Donasi Tersalurkan
-                            </div>
+                    <div class="row">
+                        <div class="col-md-4" align="center">
+                        <img src="https://img.freepik.com/free-vector/money-bag-exchange_23-2147510722.jpg?size=338&ext=jpg" class="img-circle" alt="User Image" width="75px" height="75px">
                         </div>
+                        <div class="col-md-8">
+                        <h4><b>Rp <?= number_format($totaldonasi[0]['total'],0,',','.'); ?>,-</b></h4>
+                        Donasi Tersalurkan
+                        </div>
+                    </div>
                     </div>
                 </div>  
             </div>

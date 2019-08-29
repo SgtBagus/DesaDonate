@@ -49,150 +49,42 @@
         </div>
       </div>
       <div class="row" id="myList">
-        <li>  
-          <div class="col-md-4 col-6 mb-md-0 mb-5">
-            <a href="<?= base_url('story') ?>/view/1" class="a_black">
-              <div class="box box-solid round">
-                <div class="box-body">
-                  <img src="https://images.pexels.com/photos/259780/pexels-photo-259780.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center">
-                    JUDUL CERITA
-                  </h3>
-                  <p style="text-indent: 15px;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                  </p>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-eye"></i> 34
+        <?php foreach($listcerita as $row){ ?>
+          <li>  
+            <a href="<?= base_url('cerita') ?>/view/<?= $row['id'] ?>" class="a_black">
+              <div class="col-md-4 col-12 mb-md-0 mb-5">
+                <div class="box box-solid round">
+                  <div class="box-body">
+                    <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                    <h3 align="center">
+                      <?= strlen($row["judulCerita"]) > 20 ? substr($row["judulCerita"], 0, 20)."..." : $row["judulCerita"] ?>    
+                    </h3>
+                    <p style="text-indent: 15px;"><?= $row['isiCerita'] ?>... "Klik untuk baca lebih lanjut."</p>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                        <i class="fa fa-eye"></i> <?= $row['views'] ?>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                        <small class="label pull-right bg-blue btn-md round"> 
+                          <i class="fa fa-user"></i> <b><?= $row['namaUser'] ?></b>
+                        </small>
+                      </div>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-blue btn-md round"> 
-                        <i class="fa fa-user"></i> <b>Erica Hartman</b>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"> </i> <b>19-02-1956</b>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li>  
-          <div class="col-md-4 col-6 mb-md-0 mb-5">
-            <a href="<?= base_url('story') ?>/view/1" class="a_black">
-              <div class="box box-solid round">
-                <div class="box-body">
-                  <img src="https://images.pexels.com/photos/259780/pexels-photo-259780.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center">
-                    JUDUL CERITA
-                  </h3>
-                  <p style="text-indent: 15px;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                  </p>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-eye"></i> 34
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-blue btn-md round"> 
-                        <i class="fa fa-user"></i> <b>Erica Hartman</b>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"> </i> <b>19-02-1956</b>
-                      </small>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="left">
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-6" align="right">
+                        <small class="label pull-right bg-yellow btn-md round"> 
+                          <i class="fa fa-calendar"> </i> <b><?= $row['tanggal'] ?></b>
+                        </small>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </a>
-          </div>
-        </li>
-        <li>  
-          <div class="col-md-4 col-6 mb-md-0 mb-5">
-            <a href="<?= base_url('story') ?>/view/1" class="a_black">
-              <div class="box box-solid round">
-                <div class="box-body">
-                  <img src="https://images.pexels.com/photos/259780/pexels-photo-259780.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center">
-                    JUDUL CERITA
-                  </h3>
-                  <p style="text-indent: 15px;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                  </p>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-eye"></i> 34
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-blue btn-md round"> 
-                        <i class="fa fa-user"></i> <b>Erica Hartman</b>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"> </i> <b>19-02-1956</b>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li>  
-          <div class="col-md-4 col-6 mb-md-0 mb-5">
-            <a href="<?= base_url('story') ?>/view/1" class="a_black">
-              <div class="box box-solid round">
-                <div class="box-body">
-                  <img src="https://images.pexels.com/photos/259780/pexels-photo-259780.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center">
-                    JUDUL CERITA
-                  </h3>
-                  <p style="text-indent: 15px;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                  </p>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                      <i class="fa fa-eye"></i> 34
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-blue btn-md round"> 
-                        <i class="fa fa-user"></i> <b>Erica Hartman</b>
-                      </small>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6" align="right">
-                      <small class="label pull-right bg-yellow btn-md round"> 
-                      <i class="fa fa-calendar"> </i> <b>19-02-1956</b>
-                      </small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </li>
+          </li>
+        <?php } ?>
       </div>
       <div class="row" align="center">
         <button type="button" id="loadMore" class="btn btn-primary btn-lg round">
