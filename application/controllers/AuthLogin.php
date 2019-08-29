@@ -16,14 +16,7 @@ class AuthLogin extends MY_Controller {
 
 		$google_data = $this->google->validate();
         $data = $google_data;
-        
-        // var_dump($data);
-        // die();
-		
-		$email = $data['email'];
-
-		// $cek = $this->UserModel->userData($email)->num_rows();
-		$cek = $this->mlogin->login($email);
+		$email = $data['email'];		$cek = $this->mlogin->login($email);
         $session = $this->mlogin->data($email);
         
 		if ($cek > 0) {
@@ -34,9 +27,6 @@ class AuthLogin extends MY_Controller {
 			$this->session->set_userdata('alamat', $session->alamatUser);
 			$this->session->set_userdata('telepon', $session->teleponUser);
 			echo "success";
-
-			// redirect
-
 		}else {
 			$data = array(
 				'namaUser' => $data['name'],

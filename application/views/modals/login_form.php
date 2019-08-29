@@ -16,22 +16,22 @@
   </div>
 </form>
 <script type="text/javascript">
-  $("#login-google").click(function(){
-    $.ajax({
-      type: "POST",
-      url: '<?= base_url() ?>AuthLogin/loginProcess/',
-      cache: false,
-      contentType: false,
-      processData: false,
-      success: function(response, textStatus, xhr) {
-        var str = response;
-        if (str.indexOf("success") != -1){
-          location.reload();
-        }
-      },
-    });
-    return false;
-  });
+  // $("#login-google").click(function(){
+  //   $.ajax({
+  //     type: "POST",
+  //     url: '<?= base_url() ?>AuthLogin/loginProcess/',
+  //     cache: false,
+  //     contentType: false,
+  //     processData: false,
+  //     success: function(response, textStatus, xhr) {
+  //       var str = response;
+  //       if (str.indexOf("success") != -1){
+  //         location.reload();
+  //       }
+  //     },
+  //   });
+  //   return false;
+  // });
 
 
   // $("#login_form").submit(function(){
