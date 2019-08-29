@@ -247,7 +247,7 @@
 
         $('#datatable').DataTable({
           "paging"      : true,
-          "lengthChange": false,
+          "lengthChange": true,
           "searching"   : true,
           "ordering"    : true,
           "info"        : false,

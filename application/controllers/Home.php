@@ -281,7 +281,7 @@ class Home extends MY_Controller {
 			ORDER BY created_at DESC");
 		
 		$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
-			berita.judulberita, SUBSTR(berita.isiBerita, 1, 380) as isiBerita,
+			berita.judulberita, berita.isiBerita as isiBerita,
 			date_format(berita.created_at, '%d %M %Y') as tanggal, user.name, master_desa.value as namadesa, 
 			master_kategoriberita.value as kategori, berita.views
 			FROM berita

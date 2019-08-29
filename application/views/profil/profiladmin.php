@@ -9,6 +9,9 @@
         <p style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center"> 
         <?= $row['desc'] ?>
         </p>
+        <a href="https://api.whatsapp.com/send?phone=<?= $row['noWA'] ?>&text=Halo Admin <?= $row['namaDesa'] ?>. Perkenalkan Saya <?= $this->session->userdata('nama')?>. Saya ingin menanyakan tentang..." target="_blank">
+          <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+        </a>
       <?php } ?>
       </div>
   </div>
@@ -155,8 +158,8 @@
                             <h3 align="center">
                               <?= strlen($row["judulberita"]) > 20 ? substr($row["judulberita"],0,20)."..." : $row["namadesa"] ?>
                             </h3>
-                            <p style="text-indent: 15px;">
-                              <?= strlen($row["isiBerita"]) > 250 ? substr($row["isiBerita"],0,250)."..." : $row["namadesa"] ?>
+                            <p style="text-indent: 15px; text-align: justify;">
+                              <?= strlen($row["isiBerita"]) > 200 ? substr($row["isiBerita"],0,200)."..." : $row["namadesa"] ?>
                             </p>
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-6" align="left">

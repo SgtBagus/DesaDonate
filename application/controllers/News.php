@@ -42,8 +42,8 @@ class News extends MY_Controller {
 			LEFT JOIN file on berita.idBerita = file.table_id
 			WHERE berita.status = 'ENABLE' 
 			AND file.table = 'berita'"
-			.$kategori_query
-			.$desa_query);
+			.$kategori_query."
+			".$desa_query);
 
 		$data['admin_url'] = $this->admin_url;
 		$data['page_name'] = "News";
@@ -59,6 +59,9 @@ class News extends MY_Controller {
 		$data['kategori'] = $this->mymodel->selectDataone('master_kategori', array('idKategori' => $data['berita']['idKategori']));
 
 		$data['user'] = $this->mymodel->selectDataone('user', array('id' => $data['berita']['idUser']));
+
+		$data['user_image'] = $this->mymodel->selectDataone('file', array('table' => 'user', 'table_id' => $data['user']['id']));
+
 		$data['userDesa'] = $this->mymodel->selectDataone('master_desa', array('idDesa' => $data['user']['idDesa']));
 
 		$data['admin_url'] = $this->admin_url;

@@ -31,6 +31,11 @@ class Dashboard extends MY_Controller {
 		$data['totaldonasi'] = $this->mymodel->selectWithQuery("SELECT SUM(nominalDonasi) as total
 		FROM donasi
 		WHERE statusPembayaran = 'Terbayar' AND status = 'ENABLE' AND idUser = '$id'");
+
+		$data['donasi'] = $this->mymodel->selectWithQuery("SELECT donasi.*, galang_dana.tittleGalang from donasi
+		LEFT JOIN galang_dana on donasi.idGalang = galang_dana.idGalang
+		WHERE donasi.idUser = '$id' AND donasi.statusPembayaran = 'Terbayar'
+		ORDER BY donasi.created_at desc");
 		
 		$this->template->load('template/template','dashboard/index', $data);
     }
@@ -51,6 +56,11 @@ class Dashboard extends MY_Controller {
 		date_format(tbl_user.created_at, '%d %M %Y') as tanggal
 		FROM tbl_user
 		WHERE tbl_user.idUser = '$id'");
+
+		$data['donasi'] = $this->mymodel->selectWithQuery("SELECT donasi.*, galang_dana.tittleGalang from donasi
+		LEFT JOIN galang_dana on donasi.idGalang = galang_dana.idGalang
+		WHERE donasi.idUser = '$id'
+		ORDER BY donasi.created_at desc");
 		
 		$data['page_name'] = "Penggalangan";
 		$data['content'] = "donasi";

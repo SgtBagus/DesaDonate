@@ -14,7 +14,9 @@
       </a>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12" align="center">
-      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      <a href="https://api.whatsapp.com/send?phone=6285526250131&text=Perkenalkan Saya <?= $this->session->userdata('nama')?>. Saya ingin menanyakan tentang..." target="_blank">
+        <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      </a>
     </div>
   </div>
 </div>

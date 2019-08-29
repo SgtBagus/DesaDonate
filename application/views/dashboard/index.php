@@ -1,3 +1,8 @@
+<?php
+if(!($this->session->userdata('session_sop'))){
+    header("Location: ".base_url());
+}
+?>
 <div class="content-wrapper">
     <div class="container">
         <section class="content">
@@ -29,22 +34,22 @@
                                 <div class="box-body">
                                     <ul class="list-group list-group-unbordered">
                                         <a href="<?= base_url('dashboard') ?>">
-                                            <li class="list-group-item a_black" id="overview">
+                                            <li class="list-group-item a_black" style="margin-bottom: 5px;" id="overview">
                                                 <i class="fa fa-dashboard"></i> Overview
                                             </li>
                                         </a>
                                         <a href="<?= base_url('dashboard/donasi') ?>">
-                                            <li class="list-group-item a_black" id="donasi">
+                                            <li class="list-group-item a_black" style="margin-bottom: 5px;" id="donasi">
                                                 <i class="fa fa-money"></i> Donasi Saya
                                             </li>
                                         </a>
                                         <a href="<?= base_url('dashboard/account') ?>">
-                                            <li class="list-group-item a_black" id="account">
+                                            <li class="list-group-item a_black" style="margin-bottom: 5px;" id="account">
                                                 <i class="fa fa-user"></i> Akun Saya
                                             </li>
                                         </a>
                                     </ul>
-                                    <button type="submit" class="btn btn-block btn-danger btn-md"><i class="fa fa-sign-out"></i> Logout</button>
+                                    <a href="<?= base_url('AuthLogin/logout') ?>"><button type="button" class="btn btn-block btn-danger btn-md"><i class="fa fa-sign-out"></i> Logout</button></a>
                                 </div>
                             </div>
                         </div>

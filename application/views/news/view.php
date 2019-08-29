@@ -26,7 +26,7 @@
               <h5>
                 <i class="fa fa-globe"></i>
 
-                "Ini Nama Desa Berita 'Belum ada tabel nya'"
+                <?= $userDesa['value'] ?>
                 
               </h5> 
             </div>
@@ -47,12 +47,12 @@
           <br>
           Kabar Desa dilihat sebanyak <b><?= $berita['views'] ?> Orang</b> dan dibuat pada <b><?= date_format(date_create($berita['created_at']), 'd-m-Y'); ?></b> oleh:
           <br><br>
-          <a href="<?= base_url('/profil') ?>/asdsd" class="a_black">
+          <a href="<?= base_url('/profildesa/'.$user['id']) ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
                 <div class="row">
                   <div class="col-md-4" align="center">
-                    <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                    <img src="<?= $admin_url.$user_image['dir']?>" class="img-circle" alt="User Image" width="80px" height="80px">
                   </div>
                   <div class="col-md-8">
                     <h4><b><?= $user['name'] ?></b></h4>

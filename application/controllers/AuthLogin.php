@@ -29,7 +29,7 @@ class AuthLogin extends MY_Controller {
 			$this->session->set_userdata('desc', $session->desc);
 			$this->session->set_userdata('foto', $session->fotoUser);
 			echo "success";
-			header("Location: <?= base_url() ?>")
+			header("Location:".base_url());
 		}else {
 			$data = array(
 				'namaUser' => $data['name'],
@@ -51,8 +51,10 @@ class AuthLogin extends MY_Controller {
                 $this->session->set_userdata('nama', $session->namaUser);
                 $this->session->set_userdata('alamat', $session->alamatUser);
                 $this->session->set_userdata('telepon', $session->teleponUser);
+				$this->session->set_userdata('desc', $session->desc);
+				$this->session->set_userdata('foto', $session->fotoUser);
                 echo "success";
-				header("Location: <?= base_url() ?>")
+				header("Location:".base_url());
 			}
 		}
         
