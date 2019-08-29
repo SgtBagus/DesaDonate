@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 29 Agu 2019 pada 06.17
+-- Generation Time: 29 Agu 2019 pada 11.48
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -423,8 +423,8 @@ CREATE TABLE IF NOT EXISTS `berita` (
 --
 
 INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 0, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
-(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 2, 0, 'ENABLE', '2019-08-27 08:56:43', '2019-08-27 11:52:21');
+(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 11, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
+(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 2, 7, 'ENABLE', '2019-08-27 08:56:43', '2019-08-27 11:52:21');
 
 -- --------------------------------------------------------
 
@@ -495,7 +495,7 @@ CREATE TABLE IF NOT EXISTS `donasi` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `donasi`
@@ -515,7 +515,13 @@ INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `catata
 (11, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:46', '0000-00-00 00:00:00'),
 (12, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:59', '0000-00-00 00:00:00'),
 (13, 3, 1, '200000', 'Semoga Bermanfaat', '1', 'Terbayar', '2019-08-28 14:04:38', 'ENABLE', '2019-08-28 14:04:05', '2019-08-28 14:04:40'),
-(14, 2, 1, '5000000', 'Alhamdulilah', '0', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 15:08:40', '0000-00-00 00:00:00');
+(14, 2, 1, '5000000', 'Alhamdulilah', '0', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 15:08:40', '0000-00-00 00:00:00'),
+(15, 5, 1, '200000', 'Sama sama', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 15:39:09', '0000-00-00 00:00:00'),
+(16, 5, 1, '500000', 'iyaa', '0', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 15:39:26', '0000-00-00 00:00:00'),
+(17, 4, 3, '5000000', 'alhamdulilah', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 16:03:48', '0000-00-00 00:00:00'),
+(18, 4, 3, '2000000', 'buatmu', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 16:03:58', '0000-00-00 00:00:00'),
+(19, 4, 3, '2000000', 'buatmu', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 16:03:59', '0000-00-00 00:00:00'),
+(20, 4, 3, '5900500', 'aamiiin', '0', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-29 16:04:18', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -559,7 +565,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=248 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -790,7 +796,8 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (244, '', '', '', 'webpage', 2, 'ENABLE', '2019-08-28 14:33:01', NULL),
 (245, '6950c16c9bcc6995f376b297f163175942482.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175942482.png', 'user', 22, 'ENABLE', NULL, '2019-08-28 15:15:31'),
 (246, '6950c16c9bcc6995f376b297f163175939642.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175939642.png', 'tbl_user', 1, 'ENABLE', NULL, '2019-08-28 15:15:31'),
-(247, '6950c16c9bcc6995f376b297f163175996201.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175996201.png', 'tbl_user', 2, 'ENABLE', NULL, '2019-08-28 15:15:31');
+(247, '6950c16c9bcc6995f376b297f163175996201.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175996201.png', 'tbl_user', 2, 'ENABLE', NULL, '2019-08-28 15:15:31'),
+(248, '', '', '', 'konfig', 26, 'ENABLE', '2019-08-29 16:17:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -937,7 +944,7 @@ CREATE TABLE IF NOT EXISTS `konfig` (
   `status` enum('ENABLE','DISABLE') DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `konfig`
@@ -957,7 +964,8 @@ INSERT INTO `konfig` (`id`, `slug`, `value`, `status`, `created_at`, `updated_at
 (16, 'TITLE_LOGIN_APPLICATION', 'Karya Studio | Login', 'ENABLE', '2019-02-18 15:47:41', '2019-08-15 17:59:53'),
 (17, 'LOGIN_TITLE', 'LOGIN ADMIN', 'ENABLE', '2019-02-18 15:48:55', NULL),
 (24, 'LOGIN', '1', 'ENABLE', '2019-02-21 14:12:14', '2019-08-15 17:59:17'),
-(25, 'email-template', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\r\n<html xmlns="http://www.w3.org/1999/xhtml">\r\n\r\n<head>\r\n    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n    <meta name="viewport" content="width=device-width" />\r\n\r\n\r\n    <style type="text/css">\r\n        /* Your custom styles go here */\r\n        * {\r\n            margin: 0;\r\n            padding: 0;\r\n            font-size: 100%;\r\n            font-family: ''Avenir Next'', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;\r\n            line-height: 1.65;\r\n        }\r\n\r\n        img {\r\n            max-width: 100%;\r\n            margin: 0 auto;\r\n            display: block;\r\n        }\r\n\r\n        body,\r\n        .body-wrap {\r\n            width: 100% !important;\r\n            height: 100%;\r\n            background: #f8f8f8;\r\n        }\r\n\r\n        a {\r\n            color: #71bc37;\r\n            text-decoration: none;\r\n        }\r\n\r\n        a:hover {\r\n            text-decoration: underline;\r\n        }\r\n\r\n        .text-center {\r\n            text-align: center;\r\n        }\r\n\r\n        .text-right {\r\n            text-align: right;\r\n        }\r\n\r\n        .text-left {\r\n            text-align: left;\r\n        }\r\n\r\n        .button {\r\n            display: inline-block;\r\n            color: white;\r\n            background: #71bc37;\r\n            border: solid #71bc37;\r\n            border-width: 10px 20px 8px;\r\n            font-weight: bold;\r\n            border-radius: 4px;\r\n        }\r\n\r\n        .button:hover {\r\n            text-decoration: none;\r\n        }\r\n\r\n        h1,\r\n        h2,\r\n        h3,\r\n        h4,\r\n        h5,\r\n        h6 {\r\n            margin-bottom: 20px;\r\n            line-height: 1.25;\r\n        }\r\n\r\n        h1 {\r\n            font-size: 32px;\r\n        }\r\n\r\n        h2 {\r\n            font-size: 28px;\r\n        }\r\n\r\n        h3 {\r\n            font-size: 24px;\r\n        }\r\n\r\n        h4 {\r\n            font-size: 20px;\r\n        }\r\n\r\n        h5 {\r\n            font-size: 16px;\r\n        }\r\n\r\n        p,\r\n        ul,\r\n        ol {\r\n            font-size: 16px;\r\n            font-weight: normal;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .container {\r\n            display: block !important;\r\n            clear: both !important;\r\n            margin: 0 auto !important;\r\n            max-width: 580px !important;\r\n        }\r\n\r\n        .container table {\r\n            width: 100% !important;\r\n            border-collapse: collapse;\r\n        }\r\n\r\n        .container .masthead {\r\n            padding: 80px 0;\r\n            background: #71bc37;\r\n            color: white;\r\n        }\r\n\r\n        .container .masthead h1 {\r\n            margin: 0 auto !important;\r\n            max-width: 90%;\r\n            text-transform: uppercase;\r\n        }\r\n\r\n        .container .content {\r\n            background: white;\r\n            padding: 30px 35px;\r\n        }\r\n\r\n        .container .content.footer {\r\n            background: none;\r\n        }\r\n\r\n        .container .content.footer p {\r\n            margin-bottom: 0;\r\n            color: #888;\r\n            text-align: center;\r\n            font-size: 14px;\r\n        }\r\n\r\n        .container .content.footer a {\r\n            color: #888;\r\n            text-decoration: none;\r\n            font-weight: bold;\r\n        }\r\n\r\n        .container .content.footer a:hover {\r\n            text-decoration: underline;\r\n        }\r\n\r\n    </style>\r\n</head>\r\n\r\n<body>\r\n    <table class="body-wrap">\r\n        <tr>\r\n            <td class="container">\r\n\r\n                <!-- Message start -->\r\n                <table>\r\n                    <tr>\r\n                        <td align="center" class="masthead">\r\n\r\n                            <h1>Something Big...</h1>\r\n\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td class="content">\r\n\r\n                            <h2>Hi Stranger,</h2>\r\n\r\n                            <p>Kielbasa venison ball tip shankle. Boudin prosciutto landjaeger, pancetta jowl turkey tri-tip porchetta beef pork loin drumstick. Frankfurter short ribs kevin pig ribeye drumstick bacon kielbasa. Pork loin brisket biltong, pork belly filet mignon ribeye pig ground round porchetta turducken turkey. Pork belly beef ribs sausage ham hock, ham doner frankfurter pork chop tail meatball beef pig meatloaf short ribs shoulder. Filet mignon ham hock kielbasa beef ribs shank. Venison swine beef ribs sausage pastrami shoulder.</p>\r\n\r\n                            <table>\r\n                                <tr>\r\n                                    <td align="center">\r\n                                        <p>\r\n                                            <a href="#" class="button">Share the Awesomeness</a>\r\n                                        </p>\r\n                                    </td>\r\n                                </tr>\r\n                            </table>\r\n\r\n                            <p>By the way, if you''re wondering where you can find more of this fine meaty filler, visit <a href="http://baconipsum.com">Bacon Ipsum</a>.</p>\r\n\r\n                            <p><em>– Mr. Pen</em></p>\r\n\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n\r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td class="container">\r\n\r\n                <!-- Message start -->\r\n                <table>\r\n                    <tr>\r\n                        <td class="content footer" align="center">\r\n                            <p>Sent by <a href="#">Company Name</a>, 1234 Yellow Brick Road, OZ, 99999</p>\r\n                            <p><a href="mailto:">hello@company.com</a> | <a href="#">Unsubscribe</a></p>\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n\r\n            </td>\r\n        </tr>\r\n    </table>\r\n</body>\r\n\r\n</html>\r\n', 'ENABLE', NULL, NULL);
+(25, 'email-template', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\r\n<html xmlns="http://www.w3.org/1999/xhtml">\r\n\r\n<head>\r\n    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n    <meta name="viewport" content="width=device-width" />\r\n\r\n\r\n    <style type="text/css">\r\n        /* Your custom styles go here */\r\n        * {\r\n            margin: 0;\r\n            padding: 0;\r\n            font-size: 100%;\r\n            font-family: ''Avenir Next'', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;\r\n            line-height: 1.65;\r\n        }\r\n\r\n        img {\r\n            max-width: 100%;\r\n            margin: 0 auto;\r\n            display: block;\r\n        }\r\n\r\n        body,\r\n        .body-wrap {\r\n            width: 100% !important;\r\n            height: 100%;\r\n            background: #f8f8f8;\r\n        }\r\n\r\n        a {\r\n            color: #71bc37;\r\n            text-decoration: none;\r\n        }\r\n\r\n        a:hover {\r\n            text-decoration: underline;\r\n        }\r\n\r\n        .text-center {\r\n            text-align: center;\r\n        }\r\n\r\n        .text-right {\r\n            text-align: right;\r\n        }\r\n\r\n        .text-left {\r\n            text-align: left;\r\n        }\r\n\r\n        .button {\r\n            display: inline-block;\r\n            color: white;\r\n            background: #71bc37;\r\n            border: solid #71bc37;\r\n            border-width: 10px 20px 8px;\r\n            font-weight: bold;\r\n            border-radius: 4px;\r\n        }\r\n\r\n        .button:hover {\r\n            text-decoration: none;\r\n        }\r\n\r\n        h1,\r\n        h2,\r\n        h3,\r\n        h4,\r\n        h5,\r\n        h6 {\r\n            margin-bottom: 20px;\r\n            line-height: 1.25;\r\n        }\r\n\r\n        h1 {\r\n            font-size: 32px;\r\n        }\r\n\r\n        h2 {\r\n            font-size: 28px;\r\n        }\r\n\r\n        h3 {\r\n            font-size: 24px;\r\n        }\r\n\r\n        h4 {\r\n            font-size: 20px;\r\n        }\r\n\r\n        h5 {\r\n            font-size: 16px;\r\n        }\r\n\r\n        p,\r\n        ul,\r\n        ol {\r\n            font-size: 16px;\r\n            font-weight: normal;\r\n            margin-bottom: 20px;\r\n        }\r\n\r\n        .container {\r\n            display: block !important;\r\n            clear: both !important;\r\n            margin: 0 auto !important;\r\n            max-width: 580px !important;\r\n        }\r\n\r\n        .container table {\r\n            width: 100% !important;\r\n            border-collapse: collapse;\r\n        }\r\n\r\n        .container .masthead {\r\n            padding: 80px 0;\r\n            background: #71bc37;\r\n            color: white;\r\n        }\r\n\r\n        .container .masthead h1 {\r\n            margin: 0 auto !important;\r\n            max-width: 90%;\r\n            text-transform: uppercase;\r\n        }\r\n\r\n        .container .content {\r\n            background: white;\r\n            padding: 30px 35px;\r\n        }\r\n\r\n        .container .content.footer {\r\n            background: none;\r\n        }\r\n\r\n        .container .content.footer p {\r\n            margin-bottom: 0;\r\n            color: #888;\r\n            text-align: center;\r\n            font-size: 14px;\r\n        }\r\n\r\n        .container .content.footer a {\r\n            color: #888;\r\n            text-decoration: none;\r\n            font-weight: bold;\r\n        }\r\n\r\n        .container .content.footer a:hover {\r\n            text-decoration: underline;\r\n        }\r\n\r\n    </style>\r\n</head>\r\n\r\n<body>\r\n    <table class="body-wrap">\r\n        <tr>\r\n            <td class="container">\r\n\r\n                <!-- Message start -->\r\n                <table>\r\n                    <tr>\r\n                        <td align="center" class="masthead">\r\n\r\n                            <h1>Something Big...</h1>\r\n\r\n                        </td>\r\n                    </tr>\r\n                    <tr>\r\n                        <td class="content">\r\n\r\n                            <h2>Hi Stranger,</h2>\r\n\r\n                            <p>Kielbasa venison ball tip shankle. Boudin prosciutto landjaeger, pancetta jowl turkey tri-tip porchetta beef pork loin drumstick. Frankfurter short ribs kevin pig ribeye drumstick bacon kielbasa. Pork loin brisket biltong, pork belly filet mignon ribeye pig ground round porchetta turducken turkey. Pork belly beef ribs sausage ham hock, ham doner frankfurter pork chop tail meatball beef pig meatloaf short ribs shoulder. Filet mignon ham hock kielbasa beef ribs shank. Venison swine beef ribs sausage pastrami shoulder.</p>\r\n\r\n                            <table>\r\n                                <tr>\r\n                                    <td align="center">\r\n                                        <p>\r\n                                            <a href="#" class="button">Share the Awesomeness</a>\r\n                                        </p>\r\n                                    </td>\r\n                                </tr>\r\n                            </table>\r\n\r\n                            <p>By the way, if you''re wondering where you can find more of this fine meaty filler, visit <a href="http://baconipsum.com">Bacon Ipsum</a>.</p>\r\n\r\n                            <p><em>– Mr. Pen</em></p>\r\n\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n\r\n            </td>\r\n        </tr>\r\n        <tr>\r\n            <td class="container">\r\n\r\n                <!-- Message start -->\r\n                <table>\r\n                    <tr>\r\n                        <td class="content footer" align="center">\r\n                            <p>Sent by <a href="#">Company Name</a>, 1234 Yellow Brick Road, OZ, 99999</p>\r\n                            <p><a href="mailto:">hello@company.com</a> | <a href="#">Unsubscribe</a></p>\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n\r\n            </td>\r\n        </tr>\r\n    </table>\r\n</body>\r\n\r\n</html>\r\n', 'ENABLE', NULL, NULL),
+(26, 'WHATSAPP_ADMIN', '085526250131', 'ENABLE', '2019-08-29 16:17:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -1247,7 +1255,7 @@ CREATE TABLE IF NOT EXISTS `menu_master` (
   `status` enum('ENABLE','DISABLE') DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `menu_master`
@@ -1290,7 +1298,8 @@ INSERT INTO `menu_master` (`id`, `name`, `icon`, `link`, `urutan`, `parent`, `no
 (46, 'Kategori Berita', 'fa fa-circle', 'master/Master_kategoriberita', '4', '37', '', 'ENABLE', '2019-08-27 11:46:18', NULL),
 (45, 'Donasi Offline', 'fa fa-circle', 'master/Donasi_off', '1', '44', '', 'ENABLE', '2019-08-27 11:43:53', NULL),
 (47, 'Kategori Cerita', 'fa fa-circle', 'master/Master_kategoricreita', '5', '37', '', 'ENABLE', '2019-08-27 11:47:11', NULL),
-(48, 'Cerita Donatur', 'fa fa-camera', 'master/Cerita', '6', '0', '', 'ENABLE', '2019-08-27 12:07:24', NULL);
+(48, 'Cerita Donatur', 'fa fa-camera', 'master/Cerita', '6', '0', '', 'ENABLE', '2019-08-27 12:07:24', NULL),
+(49, 'Master User', 'fa fa-user', 'master/User', '7', '37', '', 'ENABLE', '2019-08-29 16:13:52', NULL);
 
 -- --------------------------------------------------------
 
@@ -1348,8 +1357,8 @@ CREATE TABLE IF NOT EXISTS `role` (
 --
 
 INSERT INTO `role` (`id`, `role`, `status`, `menu`, `created_at`, `updated_at`) VALUES
-(17, 'Super Admin', 'ENABLE', '["17","34","44","35","45","36","40","43","37","38","39","41","42","46","47","48"]', '2018-10-12 17:03:59', '2019-08-27 12:07:41'),
-(18, 'Operator', 'ENABLE', '["17","27","30","31","32","28","29"]', '2018-10-24 10:29:54', '2019-08-16 11:03:35'),
+(17, 'Admin Desa', 'ENABLE', '["17","34","44","35","45","36","40","43","48","37","38","39","41","42","46","47","49"]', '2018-10-12 17:03:59', '2019-08-29 16:14:40'),
+(18, 'Super Admin', 'ENABLE', '["17","34","44","35","45","36","40","43","48","37","38","39","41","42","46","47","49"]', '2018-10-24 10:29:54', '2019-08-29 16:15:35'),
 (19, 'Pelanggan', 'DISABLE', NULL, '2019-08-18 01:31:39', NULL);
 
 -- --------------------------------------------------------
@@ -1409,7 +1418,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_user`
@@ -1417,7 +1426,8 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 
 INSERT INTO `tbl_user` (`idUser`, `namaUser`, `emailUser`, `alamatUser`, `teleponUser`, `desc`, `fotoUser`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-01 00:00:00', '0000-00-00 00:00:00'),
-(2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-13 00:00:00', '0000-00-00 00:00:00');
+(2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-13 00:00:00', '0000-00-00 00:00:00'),
+(3, 'Bagus Andika (MadChan)', 'procw57@gmail.com', '', '', '', 'webfile/Default.png', 'ENABLE', '2019-08-29 14:52:35', '2019-08-29 14:52:35');
 
 -- --------------------------------------------------------
 
@@ -1459,6 +1469,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `role_id` int(255) DEFAULT NULL,
   `idDesa` int(11) NOT NULL,
   `desc` varchar(255) DEFAULT NULL,
+  `noWA` varchar(255) NOT NULL,
   `status` varchar(255) DEFAULT '0',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
@@ -1468,9 +1479,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `status`, `created_at`, `updated_at`) VALUES
-(20, 'adminarvin', 'Arvin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-27 08:37:00'),
-(22, 'desa1', 'Bagus', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-28 15:15:31');
+INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `noWA`, `status`, `created_at`, `updated_at`) VALUES
+(20, 'adminarvin', 'Arvin Admin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', '081334574255', 'ENABLE', '2019-08-16 00:00:00', '2019-08-29 16:16:37'),
+(22, 'desa1', 'Bagus Admin', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', '081334574255', 'ENABLE', '2019-08-16 00:00:00', '2019-08-29 16:16:51');
 
 -- --------------------------------------------------------
 
@@ -1696,7 +1707,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `idDonasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `donasi_off`
 --
@@ -1706,7 +1717,7 @@ ALTER TABLE `donasi_off`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=248;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=249;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
@@ -1731,7 +1742,7 @@ ALTER TABLE `keys`
 -- AUTO_INCREMENT for table `konfig`
 --
 ALTER TABLE `konfig`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `logs`
 --
@@ -1766,7 +1777,7 @@ ALTER TABLE `master_kategoricreita`
 -- AUTO_INCREMENT for table `menu_master`
 --
 ALTER TABLE `menu_master`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `report`
 --
@@ -1786,7 +1797,7 @@ ALTER TABLE `site`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `update_galang_dana`
 --

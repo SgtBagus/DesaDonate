@@ -30,7 +30,7 @@
                                             <td><?= $row['statusPembayaran'] ?></td>
                                             <td>
                                                 <a href="<?= base_url('penggalangan/view/'.$row['idGalang'])?>"><button class="btn btn-info btn-xs"><i class="fa fa-eye"></i></button></a>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-print"></i></button>
+                                                <a target="_blank" href="<?= base_url('invoice/'.md5($row['idDonasi']))?>"><button class="btn btn-primary btn-xs"><i class="fa fa-print"></i></button></a>
                                             </td>
                                         </tr>
                                     <?php } ?>

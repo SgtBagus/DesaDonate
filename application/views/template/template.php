@@ -32,6 +32,12 @@
     }
   </style>
 </head>
+<?php 
+$actual_link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+// echo $actual_link;
+$this->session->set_userdata(array('url_session' => $actual_link));
+// echo $this->session->userdata('url_session');
+?>
 <body class="hold-transition skin-green layout-top-nav">
   <div class="wrapper">
     <header class="main-header">
