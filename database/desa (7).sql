@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 28 Agu 2019 pada 10.09
+-- Generation Time: 29 Agu 2019 pada 06.17
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -510,7 +510,7 @@ INSERT INTO `donasi` (`idDonasi`, `idGalang`, `idUser`, `nominalDonasi`, `catata
 (6, 3, 1, '5000000', 'Tidak ada', '1', 'Terbayar', '2019-08-28 14:04:22', 'ENABLE', '2019-08-23 10:17:33', '2019-08-28 14:04:27'),
 (7, 2, 2, '5000000', 'Tidak ada', '1', 'Terbayar', '2019-08-27 15:44:42', 'ENABLE', '2019-08-27 10:55:20', '2019-08-27 15:44:44'),
 (8, 5, 1, '500000', 'Aku sugeh', '1', 'Terbayar', '2019-08-28 13:56:17', 'ENABLE', '2019-08-28 11:17:27', '2019-08-28 13:56:20'),
-(9, 3, 1, '5,000,000', '', '1', 'Terbayar', '2019-08-28 14:02:17', 'DISABLE', '2019-08-28 13:55:39', '2019-08-28 14:02:19'),
+(9, 3, 1, '5000000', '', '1', 'Terbayar', '2019-08-28 14:02:17', 'DISABLE', '2019-08-28 13:55:39', '2019-08-28 14:02:19'),
 (10, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 13:59:52', '0000-00-00 00:00:00'),
 (11, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:46', '0000-00-00 00:00:00'),
 (12, 3, 1, '500000', '', '1', 'Belum Terbayar', '0000-00-00 00:00:00', 'ENABLE', '2019-08-28 14:00:59', '0000-00-00 00:00:00'),
@@ -559,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=245 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=248 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -787,7 +787,10 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (241, '6950c16c9bcc6995f376b297f16317592049.jpg', 'image/jpg', 'webfile/6950c16c9bcc6995f376b297f16317592049.jpg', 'cerita', 2, 'ENABLE', '2019-08-27 11:58:33', NULL),
 (242, '', '', '', 'donasi_off', 2, 'ENABLE', '2019-08-28 14:03:14', NULL),
 (243, '', '', '', 'master_desa', 3, 'ENABLE', '2019-08-28 14:23:49', NULL),
-(244, '', '', '', 'webpage', 2, 'ENABLE', '2019-08-28 14:33:01', NULL);
+(244, '', '', '', 'webpage', 2, 'ENABLE', '2019-08-28 14:33:01', NULL),
+(245, '6950c16c9bcc6995f376b297f163175942482.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175942482.png', 'user', 22, 'ENABLE', NULL, '2019-08-28 15:15:31'),
+(246, '6950c16c9bcc6995f376b297f163175939642.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175939642.png', 'tbl_user', 1, 'ENABLE', NULL, '2019-08-28 15:15:31'),
+(247, '6950c16c9bcc6995f376b297f163175996201.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175996201.png', 'tbl_user', 2, 'ENABLE', NULL, '2019-08-28 15:15:31');
 
 -- --------------------------------------------------------
 
@@ -1401,6 +1404,8 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `emailUser` varchar(255) NOT NULL,
   `alamatUser` varchar(255) NOT NULL,
   `teleponUser` varchar(255) NOT NULL,
+  `desc` text NOT NULL,
+  `fotoUser` varchar(255) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
@@ -1410,9 +1415,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 -- Dumping data untuk tabel `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`idUser`, `namaUser`, `emailUser`, `alamatUser`, `teleponUser`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'ENABLE', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'ENABLE', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+INSERT INTO `tbl_user` (`idUser`, `namaUser`, `emailUser`, `alamatUser`, `teleponUser`, `desc`, `fotoUser`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-01 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-13 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1465,7 +1470,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `status`, `created_at`, `updated_at`) VALUES
 (20, 'adminarvin', 'Arvin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-27 08:37:00'),
-(22, 'desa1', 'Bagus', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-16 15:19:52');
+(22, 'desa1', 'Bagus', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', 'ENABLE', '2019-08-16 00:00:00', '2019-08-28 15:15:31');
 
 -- --------------------------------------------------------
 
@@ -1701,7 +1706,7 @@ ALTER TABLE `donasi_off`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=245;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=248;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
