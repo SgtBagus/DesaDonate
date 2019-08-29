@@ -8,32 +8,32 @@
     <!-- <label>Email</label> -->
     <div class="row">
       <div class="col-md-12">
-        <!-- <a href="<?=$this->google_url?>"> -->
+        <a href="<?=$this->google_url?>"> 
           <button type="button" class="btn btn-block pull-right btn-lg btn-primary" id="login-google"><i class="fa fa-google"></i> Login Menggunakan Google</button>
-        <!-- </a> -->
+        </a> 
       </div>
     </div>
   </div>
 </form>
 <script type="text/javascript">
-  $("#login-google").click(function(){
-    $.ajax({
-      type: "POST",
-      url: '<?= $this->google_url ?>',
-      cache: false,
-      contentType: false,
-      processData: false,
-      success: function(response, textStatus, xhr) {
-        var str = response;
-        if (str.indexOf("success") != -1){
-          location.reload();
-        }else{
-          $("#error_input").hide().html(response).slideDown("fast");
-        }
-      },
-    });
-    return false;
-  });
+  // $("#login-google").click(function(){
+  //   $.ajax({
+  //     type: "POST",
+  //     url: '<?= $this->google_url ?>',
+  //     cache: false,
+  //     contentType: false,
+  //     processData: false,
+  //     success: function(response, textStatus, xhr) {
+  //       var str = response;
+  //       if (str.indexOf("success") != -1){
+  //         location.reload();
+  //       }else{
+  //         $("#error_input").hide().html(response).slideDown("fast");
+  //       }
+  //     },
+  //   });
+  //   return false;
+  // });
 
 
   // $("#login_form").submit(function(){
