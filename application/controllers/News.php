@@ -53,6 +53,7 @@ class News extends MY_Controller {
 	public function view($id)
 	{
 		$data['berita'] = $this->mymodel->selectDataone('berita', array('idBerita' => $id, 'status' => 'ENABLE'));
+		
 		$data['berita_image'] = $this->mymodel->selectDataone('file', array('table' => 'berita', 'table_id' => $data['berita']['idBerita']));
 
 		$data['kategori'] = $this->mymodel->selectDataone('master_kategori', array('idKategori' => $data['berita']['idKategori']));
@@ -62,6 +63,12 @@ class News extends MY_Controller {
 
 		$data['admin_url'] = $this->admin_url;
 		if($data['berita']){
+			$view = $data['berita']['views'] + 1;
+			$this->db->set('views', $view);
+			$this->db->where('idBerita', $id);
+			$this->db->update('berita');
+			// var_dump($update);
+			// die();
 			$this->template->load('template/template','news/view',$data);
 		}else{
 			$this->load->view('errors/html/error_404');
