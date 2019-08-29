@@ -124,7 +124,7 @@ foreach($listgalang as $row){
                           <div class="row">
                             <div class="col-md-12">
                               <?php foreach($donaturwaktu as $row){ ?>
-                                <a href="<?= base_url('/profil') ?>/ <?= $row['id'] ?>" class="a_black">
+                                <a href="<?= base_url('/profil/'.$row['id']) ?>" class="a_black">
                                   <div class="row">
                                     <div class="col-md-4" align="center">
                                       <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">

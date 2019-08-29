@@ -83,7 +83,7 @@
                     <li class="user-body">
                       <div class="row">
                         <div class="col-md-3">
-                          <a href="<?= base_url('profil') ?>/asds/">
+                          <a href="<?= base_url('profil/'.$this->session->userdata('id')) ?>">
                             <button type="button" class="btn btn-block btn-info"><i class="fa fa-user"></i></button>
                           </a>
                         </div>  
