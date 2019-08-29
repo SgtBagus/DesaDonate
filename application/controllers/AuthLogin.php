@@ -36,6 +36,9 @@ class AuthLogin extends MY_Controller {
 			$this->session->set_userdata('desc', $session->desc);
 			$this->session->set_userdata('foto', $session->fotoUser);
 			echo "success";
+
+			// redirect
+
 		}else {
 			$data = array(
 				'namaUser' => $data['name'],
