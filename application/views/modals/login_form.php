@@ -14,7 +14,7 @@
       </div>
   </div>
     </div>
-    <span style="text-align: right;"><a href="<?= base_url('lupa_password') ?>">Lupa Password?</a></span>
+    <span style="text-align: right;"><a href="<?= base_url('lupapassword') ?>">Lupa Password?</a></span>
   </div>
   <div class="row">
     <div class="col-md-12">

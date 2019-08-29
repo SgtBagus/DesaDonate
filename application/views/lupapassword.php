@@ -1,6 +1,12 @@
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
+      <section class="content-header">
+        <ol class="breadcrumb" style="background: #f3f3f3;">
+          <li><a href="<?= base_url() ?>"><b>AYO! BANGUN DESA</b></a></li>
+          <li class="active"><i class="fa fa-lock"></i> Lupa Password</li>
+        </ol>
+      </section>
       <div class="row" align="center">
         <h1><i class="fa fa-lock"></i> Lupa Password</h1>
         <small>Masukkan Nomor WhatsApp atau Email Anda yang telah terdaftar. Kami akan mengirimkan petunjuk untuk mengubah password Anda.</small>

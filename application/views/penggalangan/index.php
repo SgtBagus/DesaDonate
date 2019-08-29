@@ -1,7 +1,13 @@
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
-      <div class="row" align="center">
+      <section class="content-header">
+        <ol class="breadcrumb" style="background: #f3f3f3;">
+          <li><a href="<?= base_url() ?>"><b>AYO! BANGUN DESA</b></a></li>
+          <li class="active"><i class="fa fa-archive"></i> Galang Dana Desa</li>
+        </ol>
+      </section>
+      <div class="row" align="center"> 
         <h1><i class="fa fa-archive"></i> Galang Dana Desa </h1>
         <small>Halo #OrangBaik, Siap memberi bantuan ?</small>
       </div>

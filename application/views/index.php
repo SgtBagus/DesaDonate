@@ -26,7 +26,7 @@
           <div class="small-box bg-purple round">
             <div class="inner">
               <h4>Jumlah Desa Terdaftar</h4>
-              <h2><b><?= $total_desa[0]['jumlah'] ?></b></h2>
+              <h2><b><?= $total_desa[0]['jumlah'] ?></b></h2> 
             </div>
             <div class="icon">
               <i class="fa fa-home"></i>
@@ -322,25 +322,25 @@
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <small class="label pull-right bg-yellow btn-md round"> 
-                      </i> <b><?= $row['tanggal'] ?></b>
-                    </small>
+                        <i class="fa fa-calendar"> </i> <b><?= $row['tanggal'] ?></b>
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
+        <?php } ?>
+      </div>
+      <div class="row" align="center">
+        <a href="<?= base_url('story') ?>">
+          <button type="button" class="btn btn-primary btn-lg round">
+            <i class="fa fa-search"></i> Lihat Semua Aku dan Cerita
+          </button>
         </a>
-      <?php } ?>
-    </div>
-    <div class="row" align="center">
-      <a href="<?= base_url('story') ?>">
-        <button type="button" class="btn btn-primary btn-lg round">
-          <i class="fa fa-search"></i> Lihat Semua Aku dan Cerita
-        </button>
-      </a>
-    </div>
-  </section>
-</div>
+      </div>
+    </section>
+  </div>
 </div> 
 <script type="text/javascript">
   $(document).ready(function () {

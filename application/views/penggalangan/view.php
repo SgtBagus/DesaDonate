@@ -4,6 +4,14 @@ foreach($listgalang as $row){
   <div class="content-wrapper">
     <div class="container">
       <section class="content">
+        <section class="content-header">
+          <ol class="breadcrumb" style="background: #f3f3f3;">
+            <li><a href="<?= base_url() ?>"><b>AYO! BANGUN DESA</b></a></li>
+            <li><a href="<?= base_url('penggalangan') ?>"><i class="fa fa-archive"></i> Galang Dana Desa </a></li>
+            <li class="active"><?= $row['tittleGalang'] ?></li>
+          </ol>
+        </section>
+        <br>
         <div class="row">
           <div class="col-md-8">
             <h1>
@@ -228,23 +236,24 @@ foreach($listgalang as $row){
                                   <tr>
                                     <td colspan="5" align="center">
                                       <img src='https://icon-library.net/images/no-data-icon/no-data-icon-20.jpg' width='100px' height='100px'><p><b>Tidak Ada Data</b><p>
-                                    </td>
-                                  </tr>
-                                <?php } else {
-                                  $no = 1;
-                                  foreach($updategalang as $row){ ?>
-                                    <tr>
-                                      <td><?= $no++ ?></td>
-                                      <td><?= $row['tglupdate'] ?></td>
-                                      <td><?= $row['deskripsiUpdate'] ?></td>
-                                      <td><?= $row['nominalterpakai'] ?></td>
-                                      <td><?= $row['name'] ?></td>
+                                      </td>
                                     </tr>
-                                  <?php } 
-                                }
-                                ?>
-                              </tbody>
-                            </table>
+                                  <?php } else {
+                                    $no = 1;
+                                    foreach($updategalang as $row){ ?>
+                                      <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $row['tglupdate'] ?></td>
+                                        <td><?= $row['deskripsiUpdate'] ?></td>
+                                        <td><?= $row['nominalterpakai'] ?></td>
+                                        <td><?= $row['name'] ?></td>
+                                      </tr>
+                                    <?php } 
+                                  }
+                                  ?>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -254,18 +263,17 @@ foreach($listgalang as $row){
               </div>
             </div>
           </div>
-        </div>
-        <div class="row" align="center">
-          <div class="col-md-12">
-            <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
-              <i class="fa fa-credit-card"></i> Donasi Sekarang
-            </button>
+          <div class="row" align="center">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-donate">
+                <i class="fa fa-credit-card"></i> Donasi Sekarang
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
-</div>
 
 <?php } ?>
 
