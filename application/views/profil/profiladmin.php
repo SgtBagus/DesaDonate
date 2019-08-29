@@ -152,8 +152,12 @@
                         <div class="box box-solid round">
                             <div class="box-body">
                             <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                            <h3 align="center"><?= substr($row['judulberita'] , 0,20)?>...</h3>
-                            <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
+                            <h3 align="center">
+                              <?= strlen($row["judulberita"]) > 20 ? substr($row["judulberita"],0,20)."..." : $row["namadesa"] ?>
+                            </h3>
+                            <p style="text-indent: 15px;">
+                              <?= strlen($row["isiBerita"]) > 250 ? substr($row["isiBerita"],0,250)."..." : $row["namadesa"] ?>
+                            </p>
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                                 <i class="fa fa-eye"></i> <?= $row['views'] ?>

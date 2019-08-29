@@ -1,6 +1,14 @@
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
+      <section class="content-header">
+        <ol class="breadcrumb" style="background: #f3f3f3;">
+          <li><a href="<?= base_url() ?>"><b>AYO! BANGUN DESA</b></a></li>
+          <li><a href="<?= base_url('news') ?>"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa </a></li>
+          <li class="active"><?= $berita['judulberita'] ?></li>
+        </ol>
+      </section>
+      <br>
       <div class="row">
         <div class="col-md-8">
           <h1>

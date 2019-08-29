@@ -1,6 +1,12 @@
 <div class="content-wrapper">
   <div class="container">
     <section class="content">
+      <section class="content-header">
+        <ol class="breadcrumb" style="background: #f3f3f3;">
+          <li><a href="<?= base_url() ?>"><b>AYO! BANGUN DESA</b></a></li>
+          <li class="active"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</li>
+        </ol>
+      </section>
       <div class="row" align="center">
         <h1><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</h1>
         <small>Silakan Memilih untuk Membaca Detail Kabar Berita Terkini</small>
@@ -63,7 +69,9 @@
                   <div class="box box-solid round">
                     <div class="box-body">
                       <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                      <h3 align="center"><?= substr($row['judulberita'] , 0,20)?>...</h3>
+                      <h3 align="center">
+                        <?= strlen($row["judulberita"]) > 20 ? substr($row["judulberita"],0,20)."..." : $row["namadesa"] ?>
+                        </h3>
                       <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
                       <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6" align="left">

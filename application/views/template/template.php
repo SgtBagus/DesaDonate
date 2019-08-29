@@ -125,7 +125,7 @@
           }
           ?>
         </div>
-      </nav>
+      </nav> 
     </header>
     <div class="row" style="height: 45px;background-color: #f3f3f3;"></div>
     <?=$contents?>
