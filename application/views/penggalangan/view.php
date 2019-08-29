@@ -136,7 +136,7 @@ foreach($listgalang as $row){
                                           <a href="<?= base_url('/profil/'.$row['id']) ?>" class="a_black">
                                             <div class="row">
                                               <div class="col-md-4" align="center">
-                                                <img src="<?= base_url()?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" width="80px" height="80px">
+                                                <img src="<?= $admin_url.$row['dir']?>" class="img-circle" alt="User Image" width="80px" height="80px">
                                               </div>
                                               <div class="col-md-8">
                                                 <h3><b>Rp <?= number_format($row['nominalDonasi'],0,',','.'); ?>,-</b></h3>

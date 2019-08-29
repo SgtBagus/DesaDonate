@@ -161,11 +161,13 @@ class Penggalangan extends MY_Controller {
 			WHERE update_galang_dana.idGalang = '$id' AND update_galang_dana.status = 'ENABLE'");
 			
 			$data['donaturwaktu'] = $this->mymodel->selectWithQuery("SELECT donasi.idUser as id, tbl_user.namaUser, 
-			donasi.nominalDonasi, donasi.statusDonatur, donasi.tanggalPembayaran
+			donasi.nominalDonasi, donasi.statusDonatur, donasi.tanggalPembayaran, file.dir, file.table
 			FROM donasi
 			LEFT JOIN tbl_user on donasi.idUser = tbl_user.idUser
+			LEFT JOIN file on tbl_user.idUser = file.table_id
 			WHERE donasi.status = 'ENABLE' AND donasi.statusPembayaran = 'Terbayar'
-			AND donasi.idGalang = '$id' ORDER BY donasi.tanggalPembayaran desc");
+			AND donasi.idGalang = '$id' AND file.table = 'tbl_user'
+			ORDER BY donasi.tanggalPembayaran desc");
 
 			$data['donaturoff'] = $this->mymodel->selectWithQuery("SELECT donasi_off.*, user.name FROM donasi_off 
 			LEFT JOIN user on donasi_off.idUser = user.id

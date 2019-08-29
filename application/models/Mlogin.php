@@ -31,6 +31,11 @@ class Mlogin extends CI_Model {
    return $query->row();
   }
 
+  public function userAddProcess($data){
+		$query = $this->db->insert('master_user', $data);
+		return $query;
+	}
+
   
 }  
 

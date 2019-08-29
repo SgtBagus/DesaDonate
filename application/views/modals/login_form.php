@@ -1,13 +1,18 @@
+<?php 
+// var_dump($google_login_url);
+?>
 <h3 align="center"> Masuk Sebagai Donatur</h3>
 <form action="<?= base_url('actlogin/login')?>/" method="POST" id="login_form">
   <div class="form-group">
     <div class="show_error" id="error_input"></div>
     <label>Email</label>
     <div class="input-group">
-      <div class="input-group-addon">
-        <i class="fa fa-envelope"></i>
+    <div class="w3ls-login box">
+			
+      <div class="w3ls-bot">
+        <a href="<?=$google_login_url?>" class="btn-registration"><span class="join">GABUNG SEKARANG</span></a>
       </div>
-      <input type="email" class="form-control" name="email" placeholder="Masukan Email anda">
+  </div>
     </div>
     <span style="text-align: right;"><a href="<?= base_url('lupa_password') ?>">Lupa Password?</a></span>
   </div>

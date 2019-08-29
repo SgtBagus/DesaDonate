@@ -30,4 +30,49 @@ class Actlogin extends MY_Controller {
 		}
 
 	}
+
+	public function loginProcess(){
+		$google_data = $this->google->validate();
+		$data = $google_data;
+		
+		$email = $data['email'];
+
+		// $cek = $this->UserModel->userData($email)->num_rows();
+		$cek = $this->mlogin->login($email);
+
+		$data_session = array(
+			'authUser' => false
+		);
+		if ($cek > 0) {
+			$data_session = array(
+				'authUser' => true,
+				'idUser' => $this->UserModel->userData($email)->row('id_user'),
+			);
+			$this->session->set_userdata($data_session);
+			redirect(base_url()."dashboard/");
+		}else {
+			$data = array(
+				'nama_lengkap' => $data['name'],
+				'email' => $data['email'],
+				'rule' => 'Pendaftar',
+				'foto_profil' => 'Default.png',
+				'created_at' => $this->dateToday,
+				'updated_at' => $this->dateToday,
+				'status_user' => 'ENABLE',
+			);
+			$check = 0; 
+			$check = $this->UserModel->userAddProcess($data);
+			if($check > 0){
+				$data_session = array(
+					'authUser' => true,
+					'idUser' => $this->UserModel->userData($email)->row('id_user'),
+				);
+				$this->session->set_userdata($data_session);
+				redirect(base_url()."dashboard/");
+			}else{
+				redirect(base_url());
+			}
+		}
+        
+    }
 }

@@ -1,5 +1,6 @@
 <?php 
-print_r(count($listgalang));
+// var_dump($google_login_url);
+// die();
 ?>
 <div class="cover">
   <div class="div-center">
