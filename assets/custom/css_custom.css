@@ -138,5 +138,37 @@
 }
 
 table.dataTable tbody td {
-    white-space: nowrap;
+  white-space: nowrap;
+}
+
+.btn-social>:first-child {    
+  width: 25px;
+  height: 25px;
+  border-right: none;
+  top: 4px;
+  left: 6px;
+}
+
+.btn-login {
+  color: #323232;
+  background-color: #fdfdfd;
+  border-color: #4cd964;
+}
+
+.btn-login {
+  color: #323232;
+  background-color: #fdfdfd;
+  border-color: #4cd964;
+
+  color: #323232;
+  background-color: #fdfdfd;
+  border-color: #323232;
+}
+
+.btn-login:hover {
+  background-color: #f3f3f3;
+}
+
+.btn-login:active {
+  background-color: #f3f3f3;
 }

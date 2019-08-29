@@ -22,5 +22,12 @@ class Story extends MY_Controller {
 		$data['page_name'] = "Story";
         $this->template->load('template/template','story/index', $data);
     }
+
+
+	public function view($id)
+	{
+		$data['page_name'] = "Story";
+        $this->template->load('template/template','story/view', $data);
+    }
 		
 }
