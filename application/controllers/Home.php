@@ -1,17 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Home extends MY_Controller {
-	public function __construct()
-	{
+	public function __construct(){
 		parent::__construct();
-
-        $this->load->library('google');
 	}
 
 	public function index()
 	{
-
-		$data['google_login_url']=$this->google->get_login_url();
-
 		$data['page_name'] = "home";
 		$data['terdanai'] = $this->mymodel->selectWithQuery("SELECT COUNT(a.idGalang) as jumlah
 		FROM

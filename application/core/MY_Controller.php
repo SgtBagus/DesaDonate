@@ -10,6 +10,8 @@ abstract class MY_Controller extends CI_Controller{
 
 		parent::__construct();
 
+        $this->load->library('google');
+        
 		date_default_timezone_set("Asia/Jakarta");
 
 		$folder = $this->router->directory;
@@ -21,6 +23,7 @@ abstract class MY_Controller extends CI_Controller{
 		$role = $this->session->userdata('role_id');
 
 		$this->admin_url = "https://admin.karyastudio.com/";
+		$this->google_url = $this->google->get_login_url();
 
 		if($folder==""){
 
