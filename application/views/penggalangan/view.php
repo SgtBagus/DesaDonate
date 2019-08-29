@@ -22,13 +22,13 @@ foreach($listgalang as $row){
               <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                 <h5>
                   <i class="fa fa-globe"></i>
-                  <?= strlen($row["desa_value"]) > 15 ? substr($row["desa_value"],0,15)."..." : $row["desa_value"] ?>
+                  <?= $row["desa_value"] ?>
                 </h5> 
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                 <h5>
                   <i class="fa fa-list-ul"></i>
-                  <?= strlen($row["kategori"]) > 15 ? substr($row["kategori"],0,15)."..." : $row["kategori"] ?>
+                  <?= $row["kategori"] ?>
                 </h5> 
               </div>
             </div>
