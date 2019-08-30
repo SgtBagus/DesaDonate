@@ -111,7 +111,19 @@
         <h4 class="modal-title" align="center"><i class="fa fa-camera-retro"></i> Aku Dan Ceritaku</h4>
       </div>
       <div class="modal-body">
-        <?php $this->load->view('modals/story_form'); ?>
+        <?php
+        if($this->session->userdata('session_sop') == true){
+          $this->load->view('modals/story_form');
+        } else if($this->session->userdata('session_sop') == ""){
+          ?>
+          <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h4><i class="icon fa fa-ban"></i> Perhatian!</h4>
+            Mohon untuk Melakukan Login Masuk Terlebih Dahulu !
+          </div>
+          <?php $this->load->view('modals/login_form');
+        }
+        ?>
       </div>
     </div>
   </div>
