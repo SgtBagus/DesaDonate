@@ -132,17 +132,23 @@
   </div>
 </div>
 
- <div class="modal modal-default fade" id="modal-story-delete" style="display: none;">
-    <div class="modal-dialog round">
-      <div class="modal-content round">
-        <div class="modal-header top-round bg-red">
-          <h4 class="modal-title" align="center"><i class="fa fa-trash"></i> Hapus Cerita</h4>
-        </div>
-        <div class="modal-body">
-          <?php
-            $this->load->view('modals/delete_form');
-          ?>
-        </div>
+<div class="modal modal-default fade" id="modal-story-delete" style="display: none;">
+  <div class="modal-dialog round">
+    <div class="modal-content round">
+      <div class="modal-header top-round bg-red">
+        <h4 class="modal-title" align="center"><i class="fa fa-trash"></i> Hapus Cerita</h4>
+      </div>
+      <div class="modal-body">
+        <?php
+        $this->load->view('modals/delete_form');
+        ?>
       </div>
     </div>
   </div>
+</div>
+
+<script type="text/javascript">
+  $(function () {
+    CKEDITOR.replace('editor1');
+  });
+</script>

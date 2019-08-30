@@ -226,8 +226,6 @@ $this->session->set_userdata(array('url_session' => $actual_link));
         }
         );
 
-        CKEDITOR.replace('editor1');
-
         $('#datepicker').datepicker({
           autoclose: true
         });
