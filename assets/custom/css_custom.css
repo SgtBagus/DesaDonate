@@ -175,7 +175,8 @@ table.dataTable tbody td {
 
 .story-edit{
   background-color: #f3f3f3; 
-  border: none
+  border: none;
+  width: 100%;
 }
 
 .input-group .input-group-addon{

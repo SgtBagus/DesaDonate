@@ -37,7 +37,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-3 col-sm-3 col-xs-6">
+                  <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="form-group">
                       <h4>Urutkan Berdasarkan : </h4>
                       <select class="form-control select2" name="idKategori">
