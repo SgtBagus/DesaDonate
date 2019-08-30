@@ -53,6 +53,7 @@ $route['lupapassword'] = 'home/lupapassword';
 $route['profil/(:any)'] = 'home/profil/$1';
 $route['profildesa/(:any)'] = 'home/profildesa/$1';
 $route['invoice/(:any)'] = 'invoice/invoice/$1';
+$route['web/(:any)'] = 'home/web/$1';
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
