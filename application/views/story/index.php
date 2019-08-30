@@ -108,21 +108,12 @@
   <div class="modal-dialog round">
     <div class="modal-content round">
       <div class="modal-header top-round bg-green">
-        <h4 class="modal-title" align="center"><i class="fa fa-credit-card"></i> Donasi Sekarang</h4>
+        <h4 class="modal-title" align="center"><i class="fa fa-camera-retro"></i> Aku Dan Ceritaku</h4>
       </div>
       <div class="modal-body">
         <?php
-        if($this->session->userdata('session_sop') == true){
+        // if($this->session->userdata('session_sop') == true){
           $this->load->view('modals/story_form');
-        } else if($this->session->userdata('session_sop') == ""){
-          ?>
-          <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <h4><i class="icon fa fa-ban"></i> Perhatian!</h4>
-            Mohon untuk Melakukan Login Masuk Terlebih Dahulu !
-          </div>
-          <?php $this->load->view('modals/login_form');
-        }
         ?>
       </div>
     </div>

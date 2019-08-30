@@ -169,6 +169,7 @@ $this->session->set_userdata(array('url_session' => $actual_link));
     <script src="<?= base_url('assets/') ?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="<?= base_url('assets/') ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?= base_url('assets/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/') ?>bower_components/ckeditor/ckeditor.js"></script> 
     <script src="<?= base_url('assets/') ?>plugins/iCheck/icheck.min.js"></script>
     <script src="<?= base_url('assets/') ?>bower_components/fastclick/lib/fastclick.js"></script>
     <script src="<?= base_url('assets/') ?>dist/js/adminlte.min.js"></script>
@@ -224,6 +225,8 @@ $this->session->set_userdata(array('url_session' => $actual_link));
           $('#daterange-btn span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
         }
         );
+
+        CKEDITOR.replace('editor1');
 
         $('#datepicker').datepicker({
           autoclose: true

@@ -172,3 +172,14 @@ table.dataTable tbody td {
 .btn-login:active {
   background-color: #f3f3f3;
 }
+
+.story-edit{
+  background-color: #f3f3f3; 
+  border: none
+}
+
+.input-group .input-group-addon{
+  border-color: #f3f3f3;
+  background-color: #f3f3f3;
+  font-size: 20px;
+}

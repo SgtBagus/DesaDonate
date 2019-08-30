@@ -30,4 +30,14 @@ class Story extends MY_Controller {
         $this->template->load('template/template','story/view', $data);
     }
 		
+
+	public function create(){
+		die(var_dump($_POST));
+	}
+
+	public function edit($id){
+
+		$data['page_name'] = "Story";
+        $this->template->load('template/template','story/edit', $data);
+	}
 }
