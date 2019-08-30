@@ -6,7 +6,7 @@
                 <div class="box box-solid round" >
                     <div class="box-body">
                     <?php foreach($biodata as $row) { ?>
-                        <form action="#">
+                        <form action="<?= base_url('dashboard/editaccount') ?>" method="post" enctype="multipart/form-data">
                             <div class="nav-tabs-custom">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a href="#tab_accountr" data-toggle="tab" aria-expanded="false">Akun</a></li>
@@ -49,12 +49,12 @@
                                             <label for="exampleInputEmail1">Foto Profil</label>
                                             <div class="row">
                                                 <div class="col-md-5" align="center">
-                                                    <img src="<?= $admin_url.$row['fotoUser'] ?>"   class="img-circle" alt="User Image" width="250px" height="250px" id="preview_image">
+                                                    <img src="<?= base_url().$row['fotoUser'] ?>"   class="img-circle" alt="User Image" width="250px" height="250px" id="preview_image">
                                                 </div>
                                                 <div class="col-md-7">
                                                     <button type="button" class="btn btn-sm btn-primary" id="btnFile"><i class="fa fa-file"></i> Browser File</button>
 
-                                                    <input type="file" class="file" id="imageFile" style="display: none;" name="image_profil"/>
+                                                    <input type="file" class="file" id="imageFile" style="display: none;" name="file"/>
 
                                                     <!-- <input type="file" id="file"> -->
                                                     <p class="help-block">Foto yang diupload disarankan berukuran 70px x 70px dan memiliki format PNG, JPG, atau JPEG</p>

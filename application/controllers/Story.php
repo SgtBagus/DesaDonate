@@ -26,6 +26,9 @@ class Story extends MY_Controller {
 
 	public function view($id)
 	{
+		
+		$data['admin_url'] = $this->admin_url;
+		
 		$data['page_name'] = "Story";
         $this->template->load('template/template','story/view', $data);
     }

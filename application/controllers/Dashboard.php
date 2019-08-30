@@ -67,6 +67,30 @@ class Dashboard extends MY_Controller {
 		$data['admin_url'] = $this->admin_url;
         $this->template->load('template/template','dashboard/index', $data);
 	}
+
+	public function cerita()
+	{
+		$id = $this->session->userdata('id');
+
+		$data['biodata'] = $this->mymodel->selectWithQuery("SELECT tbl_user.*, 
+		date_format(tbl_user.created_at, '%d %M %Y') as tanggal
+		FROM tbl_user
+		WHERE tbl_user.idUser = '$id'");
+
+		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
+		cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 380) as isiCerita,
+		date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
+		master_kategoricreita.value as kategori, cerita.views, cerita.sinopsisCerita, cerita.likes
+		FROM cerita
+		LEFT JOIN tbl_user on cerita.idUser = tbl_user.idUser
+		LEFT JOIN master_kategoricreita on cerita.idKategori = master_kategoricreita.idKategoriC
+		LEFT JOIN file on cerita.idCerita = file.table_id
+		WHERE cerita.status = 'ENABLE' AND file.table = 'cerita' AND cerita.idUser = '$id'");
+
+		$data['content'] = "cerita";
+		$data['admin_url'] = $this->admin_url;
+        $this->template->load('template/template','dashboard/index', $data);
+	}
 	
 	public function account()
 	{
@@ -85,27 +109,41 @@ class Dashboard extends MY_Controller {
 	
 	public function editaccount()
 	{
-		$dt = $_POST['dt'];
-
-		$dt['nominalDonasi'] = str_replace( ',', '', $dt['nominalDonasi'] );
-		
-		if($dt['statusDonatur']){
-			$dt['statusDonatur'] = '1';
-		}else{
-			$dt['statusDonatur'] = '0';
-		}
-
-		$dt['statusPembayaran'] = "Belum Terbayar";
-		
-		$dt['created_at'] = date('Y-m-d H:i:s');
-
-		$dt['status'] = "ENABLE";
-		
-		var_dump($dt);
-		die();
-		
-
-		$str = $this->db->insert('donasi', $dt);
+			$id = $this->session->userdata('id');
+			
+			if (!empty($_FILES['file']['name'])){
+				$dir  = "webfile/profile/";
+				$config['upload_path']          = $dir;
+				$config['allowed_types']        = '*';
+				$config['file_name']           = md5('smartsoftstudio').rand(1000,100000);
+				$this->load->library('upload', $config);
+				if ( ! $this->upload->do_upload('file')){
+					$error = $this->upload->display_errors();
+					$this->alert->alertdanger($error);		
+				}else{
+					$file = $this->upload->data();
+					$data = array(
+						'fotoUser'=> $dir.$file['file_name'],
+					);
+						
+					
+					$this->mymodel->updateData('tbl_user', $data , array('idUser'=>$id));
+					
+					$this->session->set_userdata('foto', $data['fotoUser']);
+					// var_dump($s);
+					// die();
+					$dt = $_POST['dt'];
+					$dt['updated_at'] = date("Y-m-d H:i:s");
+					$this->mymodel->updateData('tbl_user', $dt , array('idUser'=>$id));
+					$this->alert->alertsuccess('Success Update Data');  
+				}
+			}else{
+				$dt = $_POST['dt'];
+				$dt['updated_at'] = date("Y-m-d H:i:s");
+					
+				$this->mymodel->updateData('tbl_user', $dt , array('idUser'=>$id));
+				$this->alert->alertsuccess('Success Update Data');  
+			}
 
 		header("Location:".base_url('dashboard/account'));
     }
