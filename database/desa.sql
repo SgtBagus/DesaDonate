@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 29 Agu 2019 pada 11.48
+-- Generation Time: 30 Agu 2019 pada 04.32
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -412,6 +412,7 @@ CREATE TABLE IF NOT EXISTS `berita` (
   `isiBerita` text NOT NULL,
   `idUser` int(11) NOT NULL,
   `idKategori` int(11) NOT NULL,
+  `idDesa` int(11) NOT NULL,
   `views` int(11) NOT NULL,
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
@@ -422,9 +423,9 @@ CREATE TABLE IF NOT EXISTS `berita` (
 -- Dumping data untuk tabel `berita`
 --
 
-INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 11, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
-(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 2, 7, 'ENABLE', '2019-08-27 08:56:43', '2019-08-27 11:52:21');
+INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKategori`, `idDesa`, `views`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Daerah dan Desa Dapat Rp 858 Triliun Tahun Depan', 'Jakarta - Alokasi transfer ke daerah dan dana desa tahun depan sebesar Rp 858,8 triliun. Angka ini meningkat 5,4% dari perkiraan realisasi tahun ini dan 37,8% dari realisasi 2015 sebesar Rp 623,1 triliun.\r\n\r\n"Pada tahun 2020, Pemerintah akan mengalokasikan anggaran Transfer ke Daerah dan Dana Desa sebesar Rp 858,8 triliun," kata Jokowi dalam Pidato Nota Keuangan 2020 di Gedung DPR/MPR RI, Senayan, Jakarta, Jumat (16/8/2019).\r\n\r\nJokowi menambahkan bahwa bertambahnya alokasi transfer ke daerah dan dana desa akan diikuti peningkatan kualitas. Selain itu juga diharapkan belanja pemerintah daerah bisa meningkatkan layanan publik.\r\n\r\n"Agar belanja pemerintah daerah dapat meningkatkan layanan dasar publik, mendorong pertumbuhan ekonomi daerah, serta mengurangi kesenjangan dan kemiskinan," ujar Jokowi.\r\n\r\nJokowi menyebutkan, peningkatan transfer ke daerah dan dana desa bisa dirasakan manfaatnya antara lain membaiknya pelayanan dasar publik.\r\n\r\n"Seperti akses rumah tangga terhadap sanitasi dan air minum layak, persalinan yang dibantu oleh tenaga kesehatan, serta angka partisipasi murni (APM) dari PAUD sampai dengan SMA sederajat," kata Jokowi.\r\n', 20, 1, 1, 11, 'ENABLE', '2019-08-27 08:47:19', '0000-00-00 00:00:00'),
+(2, 'Banyuwangi Tampilkan Inovasi Desa Lewat Festival Smart Kampung', 'Banyuwangi - Semangat inovasi terus digenjot Pemkab Banyuwangi bahkan hingga ke tingkat desa. Berbagai inovasi desa tersebut ditampilkan dalam Smart Kampung Festival yang dihelat di Gesibu Banyuwangi, Sabtu-Minggu (27-28/7/2019). \r\n\r\n"Festival ini menjadi etalase berbagai inovasi pada pelayanan publik dan UMKM kreatif yang ada di tingkat desa," jelas Bupati Banyuwangi Abdullah Azwar Anas saat membuka acara, Sabtu (27/7 /2019). \r\n\r\nMelalui program smart kampung, Anas mendorong desa untuk mengadaptasi kemajuan teknologi informasi dalam memberikan pelayanan. Desa yang selama ini dianggap kampungan dan tertinggal ingin diubah dengan sentuhan digital. \r\n\r\n"Belanja desa tidak hanya membeli batu dan semen, melalui smart kampung ini harus pula belanja bandwidth untuk memberikan pelayanan berbasis online," papar Anas. \r\n\r\nProgram smart kampung, imbuh Anas, juga diharapkan untuk menuntut desa dalam memaksimalkan gelontoran Dana Desa. "Jangan sampai Dana Desa ini, tidak berbuah apa-apa bagi masyarakat," harapnya. \r\n\r\nAda 16 smart kampung yang ditampilkan selama dua hari tersebut. Mereka mengusung berbagai inovasi pelayanan publik berbasis digital. Baik untuk memberi layanan administrasi, pemberdayaan UMKM hingga kesehatan. \r\n\r\nSalah satu inovasi yang cukup menarik adalah layanan ''Siap Cantik'' dari Desa Genteng Wetan. Siap Cantik yang merupakan akronim dari Sistem Aplikasi Posyandu dengan Pencatatan Elektronik itu, merupakan layanan digital berbasis android. \r\n\r\nPara ibu hamil maupun ibu balita dapat menggunakan layanan tersebut. Mulai P3K, update perkembangan janin dan balita, imunisasi hingga cek nutrisi. Yang tak kalah menariknya adalah inovasi yang dilakukan oleh Desa Ketapang, Kecamatan Kalipuro. \r\n\r\nDesa ini memberikan layanan dan pelaporan berbasis online. Melalui aplikasi android, warga bisa meminta berbagai jenis layanan administratif cukup dari rumah. ', 20, 2, 1, 7, 'ENABLE', '2019-08-27 08:56:43', '2019-08-27 11:52:21');
 
 -- --------------------------------------------------------
 
@@ -435,6 +436,7 @@ INSERT INTO `berita` (`idBerita`, `judulberita`, `isiBerita`, `idUser`, `idKateg
 CREATE TABLE IF NOT EXISTS `cerita` (
   `idCerita` int(11) NOT NULL,
   `judulCerita` varchar(255) NOT NULL,
+  `sinopsisCerita` varchar(255) NOT NULL,
   `isiCerita` text NOT NULL,
   `idUser` int(11) NOT NULL,
   `idKategori` int(11) NOT NULL,
@@ -448,9 +450,9 @@ CREATE TABLE IF NOT EXISTS `cerita` (
 -- Dumping data untuk tabel `cerita`
 --
 
-INSERT INTO `cerita` (`idCerita`, `judulCerita`, `isiCerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Legenda Dongeng Cerita Rakyat Banyuwangi', 'Pada zaman dahulu kala. Terdapat sebuah Kerajaan yang di pimpin oleh Raja yang sangat bijaksana dan adil. Raja tersebut mempunyai seorang Putra yang sangat tampan dan gagah, yang bernama Raden Banterang. Raden Banterang sangat gemar berburu.\r\n\r\nSuatu hari, Raden Banterang pergi berburu kedalam hutan. Ia di temani dengan Pengawal kerajaan. Di tengah perjalanan. Ia melihat seekor Kijang melintas di depannya. Ia pun segera mengejar Kijang tersebut hingga masuk ke dalam hutan belantara. Ia pun terpisah dari rombongan Pengawalnya tersebut.\r\n\r\nRaden Banterang terus mengejar KIjang tersebut. Ia semakin jauh masuk kedalam hutan. Ia pun tiba di sebuah sungai yang sangat jernih. Karena kelelahan mengejar Kijang, ia pun mendekati sungai tersebut dan meminum air jernih itu. Di saat ia asik meminum air. Tiba-tiba, ia sangat terkejut karena kedatang seorang gadis yang sangat cantik.\r\n\r\nRaden Banterang kebingungan, karena ia takut gadis cantik tersebut adalah penunggu hutan ini. Namun, ia memberanikan diri untuk mendekati gadis cantik tersebut.', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00'),
-(2, 'Asal Mula Banyuwangi', 'Dikisahkan, di pantai Timur Pulau Jawa, ada seorang raja bernama Prabu Menak Prakosa. Ia mempunyai seorang anak laki-laki yang tampan dan perkasa, bernama Raden Banterang. Namun, sifatnya yang pemarah membuat rakyatnya sedikit gerah.\r\n\r\nSuatu ketika Raden Banterang berburu ke hutan. Ia bertemu dengan seorang gadis rupawan. Disapanya perempuan muda itu, "Apakah engkau seorang Dewi? Mengapa tidak ada orang yang menyertaimu?"\r\n\r\nSi gadis menjawab, "Sama sekali bukan Dewi, saya manusia. Saya lari dari kejaran musuh yang menyerang kerajaan."\r\n\r\nRaden Banterang tersentak kaget. Tanpa memperlihatkan rasa kagetnya, ia bertanya, "Apakah yang ada di hadapan saya sekarang adalah putri Raja Klungkung?"', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00');
+INSERT INTO `cerita` (`idCerita`, `judulCerita`, `sinopsisCerita`, `isiCerita`, `idUser`, `idKategori`, `views`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'Legenda Dongeng Cerita Rakyat Banyuwangi', '0', 'Pada zaman dahulu kala. Terdapat sebuah Kerajaan yang di pimpin oleh Raja yang sangat bijaksana dan adil. Raja tersebut mempunyai seorang Putra yang sangat tampan dan gagah, yang bernama Raden Banterang. Raden Banterang sangat gemar berburu.\r\n\r\nSuatu hari, Raden Banterang pergi berburu kedalam hutan. Ia di temani dengan Pengawal kerajaan. Di tengah perjalanan. Ia melihat seekor Kijang melintas di depannya. Ia pun segera mengejar Kijang tersebut hingga masuk ke dalam hutan belantara. Ia pun terpisah dari rombongan Pengawalnya tersebut.\r\n\r\nRaden Banterang terus mengejar KIjang tersebut. Ia semakin jauh masuk kedalam hutan. Ia pun tiba di sebuah sungai yang sangat jernih. Karena kelelahan mengejar Kijang, ia pun mendekati sungai tersebut dan meminum air jernih itu. Di saat ia asik meminum air. Tiba-tiba, ia sangat terkejut karena kedatang seorang gadis yang sangat cantik.\r\n\r\nRaden Banterang kebingungan, karena ia takut gadis cantik tersebut adalah penunggu hutan ini. Namun, ia memberanikan diri untuk mendekati gadis cantik tersebut.', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00'),
+(2, 'Asal Mula Banyuwangi', '0', 'Dikisahkan, di pantai Timur Pulau Jawa, ada seorang raja bernama Prabu Menak Prakosa. Ia mempunyai seorang anak laki-laki yang tampan dan perkasa, bernama Raden Banterang. Namun, sifatnya yang pemarah membuat rakyatnya sedikit gerah.\r\n\r\nSuatu ketika Raden Banterang berburu ke hutan. Ia bertemu dengan seorang gadis rupawan. Disapanya perempuan muda itu, "Apakah engkau seorang Dewi? Mengapa tidak ada orang yang menyertaimu?"\r\n\r\nSi gadis menjawab, "Sama sekali bukan Dewi, saya manusia. Saya lari dari kejaran musuh yang menyerang kerajaan."\r\n\r\nRaden Banterang tersentak kaget. Tanpa memperlihatkan rasa kagetnya, ia bertanya, "Apakah yang ada di hadapan saya sekarang adalah putri Raja Klungkung?"', 1, 1, 0, 'ENABLE', '2019-08-27 11:58:33', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -565,7 +567,7 @@ CREATE TABLE IF NOT EXISTS `file` (
   `status` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=249 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=250 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `file`
@@ -797,7 +799,8 @@ INSERT INTO `file` (`id`, `name`, `mime`, `dir`, `table`, `table_id`, `status`, 
 (245, '6950c16c9bcc6995f376b297f163175942482.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175942482.png', 'user', 22, 'ENABLE', NULL, '2019-08-28 15:15:31'),
 (246, '6950c16c9bcc6995f376b297f163175939642.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175939642.png', 'tbl_user', 1, 'ENABLE', NULL, '2019-08-28 15:15:31'),
 (247, '6950c16c9bcc6995f376b297f163175996201.png', 'image/png', 'webfile/6950c16c9bcc6995f376b297f163175996201.png', 'tbl_user', 2, 'ENABLE', NULL, '2019-08-28 15:15:31'),
-(248, '', '', '', 'konfig', 26, 'ENABLE', '2019-08-29 16:17:38', NULL);
+(248, '', '', '', 'konfig', 26, 'ENABLE', '2019-08-29 16:17:38', NULL),
+(249, '6950c16c9bcc6995f376b297f163175921922.jpg', 'image/jpeg', 'webfile/6950c16c9bcc6995f376b297f163175921922.jpg', 'user', 23, 'ENABLE', '2019-08-30 09:22:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -1418,7 +1421,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `status` enum('ENABLE','DISABLE') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_user`
@@ -1427,7 +1430,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 INSERT INTO `tbl_user` (`idUser`, `namaUser`, `emailUser`, `alamatUser`, `teleponUser`, `desc`, `fotoUser`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'Arvin', 'arvin.fairuz.af@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-01 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Bagus', 'bagus@gmail.com', 'Malang', '081334574255', 'Semoga apa yang salah lakukakn menjadi berkah :)', 'webfile/Default.png', 'ENABLE', '2019-08-13 00:00:00', '0000-00-00 00:00:00'),
-(3, 'Bagus Andika (MadChan)', 'procw57@gmail.com', '', '', '', 'webfile/Default.png', 'ENABLE', '2019-08-29 14:52:35', '2019-08-29 14:52:35');
+(6, 'Bagus Andika (MadChan)', 'procw57@gmail.com', '', '', '', 'webfile/Default.png', 'ENABLE', '2019-08-29 17:05:32', '2019-08-29 17:05:32');
 
 -- --------------------------------------------------------
 
@@ -1473,7 +1476,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `status` varchar(255) DEFAULT '0',
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `user`
@@ -1481,7 +1484,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `nip`, `name`, `email`, `password`, `role_id`, `idDesa`, `desc`, `noWA`, `status`, `created_at`, `updated_at`) VALUES
 (20, 'adminarvin', 'Arvin Admin', 'arvin.fairuz.af@gmail.com', '89f6432af2e2bcea9489ad02cd27a134', 17, 1, '-', '081334574255', 'ENABLE', '2019-08-16 00:00:00', '2019-08-29 16:16:37'),
-(22, 'desa1', 'Bagus Admin', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', '081334574255', 'ENABLE', '2019-08-16 00:00:00', '2019-08-29 16:16:51');
+(22, 'desa1', 'Bagus Admin', 'desa1@gmail.com', '3cf9be6f2f317279cc0a8207a77bd0db', 17, 2, '-', '081334574255', 'ENABLE', '2019-08-16 00:00:00', '2019-08-29 16:16:51'),
+(23, 'supersuper', 'Aku Bupati', 'bupati@gmail.com', 'super123', 18, 1, 'Bupati Kabupaten Banyuwangi', '081334574255', 'ENABLE', '2019-08-30 09:22:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -1717,7 +1721,7 @@ ALTER TABLE `donasi_off`
 -- AUTO_INCREMENT for table `file`
 --
 ALTER TABLE `file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=249;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=250;
 --
 -- AUTO_INCREMENT for table `galang_dana`
 --
@@ -1797,7 +1801,7 @@ ALTER TABLE `site`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `update_galang_dana`
 --
@@ -1807,7 +1811,7 @@ ALTER TABLE `update_galang_dana`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `webpage`
 --
