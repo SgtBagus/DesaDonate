@@ -14,7 +14,7 @@ if(!($this->session->userdata('session_sop'))){
                             <div class="row">
                                 <div class="col-md-12" align="center">
                                 <?php foreach($biodata as $row) { ?>
-                                    <img src="<?= $admin_url.$row['fotoUser'] ?>" class="img-circle" alt="User Image" width="100px" height="100px">
+                                    <img src="<?= base_url().$row['fotoUser'] ?>" class="img-circle" alt="User Image" width="100px" height="100px">
                                 <?php } ?>
                                 </div>
                             </div>
@@ -43,6 +43,11 @@ if(!($this->session->userdata('session_sop'))){
                                                 <i class="fa fa-money"></i> Donasi Saya
                                             </li>
                                         </a>
+                                        <a href="<?= base_url('dashboard/cerita') ?>">
+                                            <li class="list-group-item a_black" style="margin-bottom: 5px;" id="cerita">
+                                                <i class="fa fa-camera  "></i> Cerita Saya
+                                            </li>
+                                        </a>
                                         <a href="<?= base_url('dashboard/account') ?>">
                                             <li class="list-group-item a_black" style="margin-bottom: 5px;" id="account">
                                                 <i class="fa fa-user"></i> Akun Saya
@@ -65,6 +70,8 @@ if(!($this->session->userdata('session_sop'))){
                             $this->load->view('dashboard/donasi');
                         }else if($content == 'account'){
                             $this->load->view('dashboard/account');
+                        }else if($content == 'cerita'){
+                            $this->load->view('dashboard/cerita');
                         }else{
                             $this->load->view('errors/html/error_404.php');
                         } 

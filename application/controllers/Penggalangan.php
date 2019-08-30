@@ -68,7 +68,7 @@ class Penggalangan extends MY_Controller {
 			(SELECT a.idGalang, 
 			a.tittleGalang as tittleGalang, desa.value as desa_value, a.targetDonasi as targetDonasi, 
 			file.dir as file_dir, a.status as status, kate.value as kategori, 
-			a.deskripsiGalang as deskripsi, a.created_at, a.publish
+			a.deskripsiGalang as deskripsi, a.created_at, a.publish, kate.idKategori
 			FROM galang_dana a
 			LEFT JOIN file on a.idGalang = file.table_id 
 			LEFT JOIN user u on a.idUser = u.id 
@@ -161,12 +161,11 @@ class Penggalangan extends MY_Controller {
 			WHERE update_galang_dana.idGalang = '$id' AND update_galang_dana.status = 'ENABLE'");
 			
 			$data['donaturwaktu'] = $this->mymodel->selectWithQuery("SELECT donasi.idUser as id, tbl_user.namaUser, 
-			donasi.nominalDonasi, donasi.statusDonatur, donasi.tanggalPembayaran, file.dir, file.table
+			donasi.nominalDonasi, donasi.statusDonatur, donasi.tanggalPembayaran, tbl_user.fotoUser
 			FROM donasi
 			LEFT JOIN tbl_user on donasi.idUser = tbl_user.idUser
-			LEFT JOIN file on tbl_user.idUser = file.table_id
 			WHERE donasi.status = 'ENABLE' AND donasi.statusPembayaran = 'Terbayar'
-			AND donasi.idGalang = '$id' AND file.table = 'tbl_user'
+			AND donasi.idGalang = '$id'
 			ORDER BY donasi.tanggalPembayaran desc");
 
 			$data['donaturoff'] = $this->mymodel->selectWithQuery("SELECT donasi_off.*, user.name FROM donasi_off 

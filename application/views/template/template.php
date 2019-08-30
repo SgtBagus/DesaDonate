@@ -75,12 +75,12 @@ $this->session->set_userdata(array('url_session' => $actual_link));
               <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="<?= $admin_url.$this->session->userdata('foto') ?>" class="user-image" alt="User Image">
+                    <img src="<?= base_url().$this->session->userdata('foto') ?>" class="user-image" alt="User Image">
                     <span class="hidden-xs"><?php echo $this->session->userdata('nama') ?></span>
                   </a>
                   <ul class="dropdown-menu">
                     <li class="user-header">
-                      <img src="<?= $admin_url.$this->session->userdata('foto') ?>" class="img-circle" alt="User Image">
+                      <img src="<?= base_url().$this->session->userdata('foto') ?>" class="img-circle" alt="User Image">
                       <p>
                         <?php echo $this->session->userdata('nama') ?>
                         <small><?php echo $this->session->userdata('email') ?></small>
