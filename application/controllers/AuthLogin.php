@@ -16,9 +16,11 @@ class AuthLogin extends MY_Controller {
 
 		$google_data = $this->google->validate();
         $data = $google_data;
-		$email = $data['email'];		$cek = $this->mlogin->login($email);
+		$email = $data['email'];		
+		$cek = $this->mlogin->login($email);
         $session = $this->mlogin->data($email);
-        
+		// var_dump($session);
+		// die();
 		if ($cek > 0) {
 			$this->session->set_userdata('session_sop', true);
 			$this->session->set_userdata('id', $session->idUser);
@@ -45,6 +47,7 @@ class AuthLogin extends MY_Controller {
 			$check = 0; 
 			$check = $this->mlogin->userAddProcess($data);
 			if($check > 0){
+				$session = $this->mlogin->data($email);
 				$this->session->set_userdata('session_sop', true);
                 $this->session->set_userdata('id', $session->idUser);
                 $this->session->set_userdata('email', $session->emailUser);
