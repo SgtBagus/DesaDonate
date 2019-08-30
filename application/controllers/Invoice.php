@@ -9,7 +9,13 @@ class Invoice extends MY_Controller {
 	public function invoice($id)
 	{
         $data = 'aa';
-		$this->load->view('invoice/index', $data);
+        $this->load->view('invoice/index');
+		// $this->template->load('invoice/template','invoice/invoice', $data);
     }
 		
+	public function index(){
+        $data = 'aa';
+        $this->template->load('invoice/template','invoice/html', $data); 
+    }
+
 }
