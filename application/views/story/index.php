@@ -111,10 +111,7 @@
         <h4 class="modal-title" align="center"><i class="fa fa-camera-retro"></i> Aku Dan Ceritaku</h4>
       </div>
       <div class="modal-body">
-        <?php
-        // if($this->session->userdata('session_sop') == true){
-          $this->load->view('modals/story_form');
-        ?>
+        <?php $this->load->view('modals/story_form'); ?>
       </div>
     </div>
   </div>
