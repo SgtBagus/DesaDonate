@@ -28,9 +28,28 @@ class Story extends MY_Controller {
 	{
 		
 		$data['admin_url'] = $this->admin_url;
+
+		$data['cerita'] = $this->mymodel->selectDataone('cerita', array('idCerita' => $id, 'status' => 'ENABLE'));
+		
+		$data['cerita_image'] = $this->mymodel->selectDataone('file', array('table' => 'cerita', 'table_id' => $data['cerita']['idCerita']));
+
+		$data['kategori'] = $this->mymodel->selectDataone('master_kategoricreita', array('idKategoriC' => $data['cerita']['idKategori']));
+
+		$data['user'] = $this->mymodel->selectDataone('tbl_user', array('idUser' => $data['cerita']['idUser']));
 		
 		$data['page_name'] = "Story";
-		$this->template->load('template/template','story/view', $data);
+		
+		if($data['cerita']){
+			$view = $data['cerita']['views'] + 1;
+			$this->db->set('views', $view);
+			$this->db->where('idCerita', $id);
+			$this->db->update('cerita');
+			// var_dump($update);
+			// die();
+			$this->template->load('template/template','story/view', $data);
+		}else{
+			$this->load->view('errors/html/error_404');
+		}
 	}
 
 

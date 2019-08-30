@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <h1>Donasi Saya</h1>
+        <h1>Cerita Saya</h1>
         <div class="row">
             <div class="col-md-12">        
                 <div class="box box-solid round" >
@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-12" align="right">
                                 <a href="<?= base_url('penggalangan') ?>">
-                                    <button type="button" class="btn btn-block btn-primary btn-md"><i class="fa fa-money"></i> Donasi</button>
+                                    <button type="button" class="btn btn-block btn-primary btn-md"><i class="fa fa-plus"></i> Buat Cerita</button>
                                 </a>
                             </div>
                         </div>
