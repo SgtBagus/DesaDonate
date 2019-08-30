@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <h3>INVOICE PEMBAYARAN</h3>
 
@@ -8,12 +8,12 @@
 <?php
 $id = $this->uri->segment(2);
 $data = $this->db->query("SELECT *, a.created_at as tanggal_donasi_dibuat
-FROM donasi a
-LEFT OUTER JOIN galang_dana b
-ON a.idGalang = b.idGalang
-LEFT OUTER JOIN tbl_user c
-ON a.idUser = c.idUser
-WHERE md5(a.idDonasi)='$id'")->result();
+  FROM donasi a
+  LEFT OUTER JOIN galang_dana b
+  ON a.idGalang = b.idGalang
+  LEFT OUTER JOIN tbl_user c
+  ON a.idUser = c.idUser
+  WHERE md5(a.idDonasi)='$id'")->result();
 print_r($data);
 echo '<br><br>';
 ?>
@@ -24,8 +24,8 @@ src="https://app.sandbox.midtrans.com/snap/snap.js"
 data-client-key="SB-Mid-client-BwKVZAEn_uaPXdIe"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <form id="payment-form" method="post" action="<?=site_url()?>/snap/finish">
-<input type="hidden" name="result_type" id="result-type" value=""></div>
-<input type="hidden" name="result_data" id="result-data" value=""></div>
+  <input type="hidden" name="result_type" id="result-type" value=""></div>
+  <input type="hidden" name="result_data" id="result-data" value=""></div>
 </form>
 
 <a class="btn btn-success green" id="pay-button">Bayar Sekarang</a>
@@ -36,12 +36,12 @@ data-client-key="SB-Mid-client-BwKVZAEn_uaPXdIe"></script>
   $('#pay-button').click(function (event) {
     event.preventDefault();
     $(this).attr("disabled", "disabled");
-  
-  $.ajax({
-    url: '<?=base_url()?>Snap/token?code=<?=$this->uri->segment(2)?>',
-    cache: false,
+    
+    $.ajax({
+      url: '<?=base_url()?>Snap/token?code=<?=$this->uri->segment(2)?>',
+      cache: false,
 
-    success: function(data) {
+      success: function(data) {
       //location = data;
 
       console.log('token = '+data);
@@ -77,7 +77,7 @@ data-client-key="SB-Mid-client-BwKVZAEn_uaPXdIe"></script>
       });
     }
   });
-});
+  });
 
 </script>
 
@@ -104,9 +104,9 @@ echo $expiredDate = strval($date->format('Y-m-d H:i:s'));
 		var distance = countDownDate - now;
 
 		// Time calculations for days, hours, minutes and seconds
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 		// Output the result in an element with id="demo"
 		document.getElementById("countDownKadarluasa").innerHTML = hours + " : " +minutes + " : " + seconds;

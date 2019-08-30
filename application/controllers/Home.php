@@ -296,4 +296,10 @@ class Home extends MY_Controller {
         $this->template->load('template/template','profil/profiladmin',$data);
 	}
 	
+
+	public function web($slug){
+		$data = $this->mymodel->selectDataone('webpage', array('slug' => $slug));
+        $this->template->load('template/template','web',$data);
+	}
+
 }
