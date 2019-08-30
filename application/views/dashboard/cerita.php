@@ -39,7 +39,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12" align="right">
-                                <a href="<?= base_url('penggalangan') ?>">
+                                <a href="<?= base_url('dashboard/addstory') ?>">
                                     <button type="button" class="btn btn-block btn-primary btn-md"><i class="fa fa-plus"></i> Buat Cerita</button>
                                 </a>
                             </div>

@@ -14,9 +14,18 @@
       <br>
       <div class="row">
         <div class="col-md-12">
+        <?php if($this->session->userdata('session_sop') == ''){ ?>
           <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-story">
             <i class="fa fa-camera-retro"></i> <b> Buat Cerita !</b>
           </button>
+        <?php }else{ ?>
+        <a href="<?= base_url('dashboard/addstory') ?>">
+          <button type="button" class="btn btn-block btn-primary btn-lg round">
+            <i class="fa fa-camera-retro"></i> <b> Buat Cerita !</b>
+          </button>
+        </a>
+        <?php } ?>
+        
         </div>
       </div>
       <br>
@@ -63,11 +72,11 @@
               <div class="col-md-4 col-12 mb-md-0 mb-5">
                 <div class="box box-solid round">
                   <div class="box-body">
-                    <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                    <img src="<?= base_url().$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
                     <h3 align="center">
                       <?= strlen($row["judulCerita"]) > 20 ? substr($row["judulCerita"], 0, 20)."..." : $row["judulCerita"] ?>    
                     </h3>
-                    <p style="text-indent: 15px;"><?= $row['isiCerita'] ?>... "Klik untuk baca lebih lanjut."</p>
+                    <p style="text-indent: 15px;"><?= $row['sinopsisCerita'] ?>... "Klik untuk baca lebih lanjut."</p>
                     <div class="row">
                       <div class="col-md-6 col-sm-6 col-xs-6" align="left">
                         <i class="fa fa-eye"></i> <?= $row['views'] ?>

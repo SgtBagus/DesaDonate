@@ -55,7 +55,7 @@ $this->session->set_userdata(array('url_session' => $actual_link));
               <li><a href="<?= base_url('news') ?>"><i class="fa fa-newspaper-o"></i> Apa Kabar Desa</a></li>
               <li><a href="<?= base_url('story') ?>"><i class="fa fa-camera-retro"></i> Aku Dan Ceritaku</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-list-ul"> </i> Fakta & Info <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-list-ul"> </i> Informasi <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                 <?php
                 $data = $this->mymodel->selectWhere('webpage','status = "ENABLE"'); 

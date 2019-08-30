@@ -146,5 +146,20 @@ class Dashboard extends MY_Controller {
 			}
 
 		header("Location:".base_url('dashboard/account'));
-    }
+	}
+	
+	public function addstory()
+	{
+		$id = $this->session->userdata('id');
+		
+		$data['biodata'] = $this->mymodel->selectWithQuery("SELECT tbl_user.*, 
+		date_format(tbl_user.created_at, '%d %M %Y') as tanggal
+		FROM tbl_user
+		WHERE tbl_user.idUser = '$id'");
+
+		$data['page_name'] = "Penggalangan";
+		$data['content'] = "addstory";
+		$data['admin_url'] = $this->admin_url;
+        $this->template->load('template/template','dashboard/index', $data);
+	}
 }

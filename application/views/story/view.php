@@ -18,7 +18,7 @@
       </div>
       <div class="row">
         <div class="col-md-8">
-          <img src="<?= $admin_url.$cerita_image['dir'] ?>" alt="Second slide" style="height: 390px; width: 100%" class="round">
+          <img src="<?= base_url().$cerita_image['dir'] ?>" alt="Second slide" style="height: 390px; width: 100%" class="round">
           <br><br>
           <?= $cerita['sinopsisCerita'] ?>
         </div> 
@@ -81,9 +81,17 @@
                     </button>
                   </a>
                     <?php }else{ ?>
-                    <button type="button" class="btn btn-block btn-primary round" data-toggle="modal" data-target="#modal-story">
-                      <i class="fa fa-camera-retro"></i> <b> Buat Cerita !</b>
-                    </button>
+                      <?php if($this->session->userdata('session_sop') == ''){ ?>
+                        <button type="button" class="btn btn-block btn-primary btn-lg round" data-toggle="modal" data-target="#modal-story">
+                          <i class="fa fa-camera-retro"></i> <b> Buat Cerita !</b>
+                        </button>
+                      <?php }else{ ?>
+                      <a href="<?= base_url('dashboard/addstory') ?>">
+                        <button type="button" class="btn btn-block btn-primary btn-lg round">
+                          <i class="fa fa-camera-retro"></i> <b> Buat Cerita !</b>
+                        </button>
+                      </a>
+                      <?php } ?>
                     <?php } ?>
               </div>
             </div>

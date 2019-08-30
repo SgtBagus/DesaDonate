@@ -57,6 +57,8 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
 
+$route['web/(:any)'] = 'Web/index/$1';
+
 /*
 | -------------------------------------------------------------------------
 | Sample REST API Routes

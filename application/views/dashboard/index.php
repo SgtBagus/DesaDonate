@@ -72,6 +72,8 @@ if(!($this->session->userdata('session_sop'))){
                             $this->load->view('dashboard/account');
                         }else if($content == 'cerita'){
                             $this->load->view('dashboard/cerita');
+                        }else if($content == 'addstory'){
+                            $this->load->view('dashboard/addstory');
                         }else{
                             $this->load->view('errors/html/error_404.php');
                         } 
