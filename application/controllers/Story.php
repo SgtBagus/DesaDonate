@@ -8,6 +8,26 @@ class Story extends MY_Controller {
 
 	public function index()
 	{
+	    $arr = array(
+			'urutan' => $this->input->post('idUrut'),
+			'pembuat' => $this->input->post('idPembuat'),
+		);
+
+		$this->session->set_userdata($arr);
+
+		$urutan = $this->session->userdata('urutan');
+		$pembuat = $this->session->userdata('pembuat');
+		
+		$urutan_query = "";
+		if($urutan){
+			$urutan_query = " ORDER BY cerita.".$urutan." DESC";
+		}
+
+		$pembuat_query = "";
+		if($pembuat){
+			$pembuat_query = " AND tbl_user.namaUser = '$pembuat'";
+		}
+	    
 		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
 			cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 200) as isiCerita,
 			date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
@@ -16,7 +36,9 @@ class Story extends MY_Controller {
 			LEFT JOIN tbl_user on cerita.idUser = tbl_user.idUser
 			LEFT JOIN master_kategoricreita on cerita.idKategori = master_kategoricreita.idKategoriC
 			LEFT JOIN file on cerita.idCerita = file.table_id
-			WHERE cerita.status = 'ENABLE' AND cerita.publish = 'ENABLE' AND file.table = 'cerita'");
+			WHERE cerita.status = 'ENABLE' AND cerita.publish = 'ENABLE' AND file.table = 'cerita'"
+			.$pembuat_query."
+			".$urutan_query);
 		
 		$data['admin_url'] = $this->admin_url;
 		$data['page_name'] = "Story";

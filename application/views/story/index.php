@@ -42,17 +42,18 @@
                         <div class="input-group-addon">
                           <i class="fa fa-user"></i>
                         </div>
-                        <input type="text" class="form-control" name="username" placeholder="Masukan Nama Pengguna">
+                        <input type="text" class="form-control" name="idPembuat" value="<?= $this->session->userdata('pembuat') ?>" placeholder="Masukan Nama Pengguna">
                       </div>
                     </div>
                   </div>
                   <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="form-group">
                       <h4>Urutkan Berdasarkan : </h4>
-                      <select class="form-control select2" name="idKategori">
-                        <option value="" selected="">Paling Baru</option>
-                        <option value="likes">Paling Disukai</option>
-                        <option value="views">Views Paling Banyak</option>
+                      <select class="form-control select2" name="idUrut">
+                      <?php if($this->session->userdata('urutan') == 'created_at') ?>
+                        <option value="created_at"  <?php if($this->session->userdata('urutan') == 'created_at'){ echo 'selected';} ?>>Paling Baru</option>
+                        <option value="likes" <?php if($this->session->userdata('urutan') == 'likes'){ echo 'selected';} ?>>Paling Disukai</option>
+                        <option value="views" <?php if($this->session->userdata('urutan') == 'views'){ echo 'selected';} ?>>Views Paling Banyak</option>
                       </select>
                     </div>
                   </div>
@@ -107,6 +108,9 @@
       <div class="row" align="center">
         <button type="button" id="loadMore" class="btn btn-primary btn-lg round">
           <i class="fa fa-search"></i> Tampilkan Lebih Banyak
+        </button>
+        <button type="button" id="showLess" class="btn btn-danger btn-lg round">
+          <i class="fa fa-search"></i> Tampilkan Lebih Sedikit
         </button>
       </div>
     </section>

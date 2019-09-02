@@ -45,7 +45,7 @@
           <br>
           <?= $cerita['judulCerita'] ?> dibuat pada <b><?= date_format(date_create($cerita['created_at']), 'd-m-Y'); ?></b> oleh:
           <br><br>
-          <a href="<?= base_url('/profil/'.'1') ?>" class="a_black">
+          <a href="<?= base_url('/profil/'.$cerita['idUser']) ?>" class="a_black">
             <div class="box box-solid round">
               <div class="box-body">
                 <div class="row">
