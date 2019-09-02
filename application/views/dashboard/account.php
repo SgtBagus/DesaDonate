@@ -24,7 +24,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">Nomor Whatsapp</label>
-                                                        <input type="text" name="dt[teleponUser]" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask placeholder="Masukan Nomor Whatsapp" value="<?= $row['teleponUser'] ?>">
+                                                        <input type="number" name="dt[teleponUser]" class="form-control" placeholder="Masukan Nomor Whatsapp" value="<?= $row['teleponUser'] ?>">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="exampleInputEmail1">Email</label>

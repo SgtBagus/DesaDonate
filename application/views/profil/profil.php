@@ -2,13 +2,13 @@
   <div class="row">
       <div class="div-center" align="center">
       <?php foreach($biodata as $row) { ?>
-        <img src="<?= $admin_url.$row['fotoUser'] ?>" class="img-circle" alt="User Image" width="250px" height="250px">
+        <img src="<?= base_url().$row['fotoUser'] ?>" class="img-circle" alt="User Image" width="250px" height="250px">
         <h1 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center"><?= $row['namaUser'] ?></h1>
         <h5 style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center"> Terdaftar pada Tanggal <?= $row['tanggal'] ?></h5>
         <p style="color:white; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center"> 
         <?= $row['desc'] ?>
         </p>
-      <?php } ?>
+      <?php break; } ?>
       </div>
   </div>
 </div>

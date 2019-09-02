@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6" align="right">
               <h5>
-                <i class="fa fa-heart" style="color: red;"></i> 21
+                <i class="fa fa-heart" style="color: red;"></i> <?= $cerita['likes'] ?>
               </h5> 
             </div>
           </div>
@@ -63,9 +63,9 @@
             </a>
             <div class="row">
               <div class="col-md-12">
-                <button type="button" class="btn btn-block btn-success round">
+                <!-- <button type="button" class="btn btn-block btn-success round">
                   <i class="fa fa-whatsapp"></i> <b> Hubungi Pembuat Cerita</b>
-                </button>
+                </button> -->
               </div>
             </div>
             <br>

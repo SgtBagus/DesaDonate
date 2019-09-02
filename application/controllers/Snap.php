@@ -15,7 +15,7 @@ class Snap extends CI_Controller {
         $this->dateToday = date("Y-m-d H:i:s");
     }
     public function token() {
-        $code               = $this->input->get('code');
+         $code               = $this->input->get('code');
         // $this->data['memberData']        = $this->MemberModel->memberDataById($this->idMember)->result();
         // $this->data['price']             = $this->CartModel->invoiceMetaByCode($this->bookingCode)->result();
         // $this->data['invoiceDetailData'] = $this->CartModel->invoiceDetailByCode($this->bookingCode)->result();
@@ -26,13 +26,13 @@ class Snap extends CI_Controller {
         ON a.idGalang = b.idGalang
         LEFT OUTER JOIN tbl_user c
         ON a.idUser = c.idUser
-        WHERE md5(a.idDonasi)='$code'")->result();
+        WHERE (a.kodeDonasi)='$code'")->result();
 
-
+        // print_r($data);
         foreach ($data as $i) {};
 
         $transaction_details = array(
-            'order_id' => md5($i->idDonasi),
+            'order_id' => ($i->kodeDonasi),
             'gross_amount' => $i->nominalDonasi
         );
         // $item_details[]      = array(
@@ -46,7 +46,7 @@ class Snap extends CI_Controller {
                 'id' => $p->idDonasi,
                 'price' => $p->nominalDonasi,
                 'quantity' => 1,
-                'name' => 'Biaya Donasi '. $p->tittleGalang
+                'name' => 'Biaya Donasi '. $code
             );
         }
         $item_details[] = array(
@@ -81,10 +81,9 @@ class Snap extends CI_Controller {
             'credit_card' => $credit_card,
             'expiry' => $custom_expiry
         );
-        $invCode               = $code;
-        $data                  = array(
-            'i_date_send' => $this->dateToday
-        );
+
+    
+        // print_R($transaction_data);
         error_log(json_encode($transaction_data));
         $snapToken = $this->midtrans->getSnapToken($transaction_data);
         error_log($snapToken);
@@ -107,8 +106,9 @@ class Snap extends CI_Controller {
         ON a.idGalang = b.idGalang
         LEFT OUTER JOIN tbl_user c
         ON a.idUser = c.idUser
-        WHERE md5(a.idDonasi)='$code'")->result();
+        WHERE kodeDonasi='$code'")->result();
 // print_r($data);
+// die;
         foreach ($data as $d) {};
        
         if ($statusCode == "200") {
@@ -119,7 +119,7 @@ class Snap extends CI_Controller {
                 'metodePembayaran' => $result->payment_type,
                 'statusPembayaran' => 'Terbayar'
             );
-            $this->db->where('md5(idDonasi)', $code);
+            $this->db->where('kodeDonasi', $code);
             $this->db->update('donasi', $data);
         } else if ($statusCode == "201") {
             if ($result->payment_type == "bank_transfer") {
@@ -130,7 +130,7 @@ class Snap extends CI_Controller {
                         'urlPembayaran' => $result->pdf_url,
                         'statusPembayaran' => 'Menunggu Pembayaran'
                 );
-                $this->db->where('md5(idDonasi)', $code);
+                $this->db->where('kodeDonasi', $code);
                 $this->db->update('donasi', $data);
             } else if ($result->payment_type == "echannel") {
                 $data = array(
@@ -140,7 +140,7 @@ class Snap extends CI_Controller {
                         'urlPembayaran' => $result->pdf_url,
                         'statusPembayaran' => 'Menunggu Pembayaran'
                 );
-                $this->db->where('md5(idDonasi)', $code);
+                $this->db->where('kodeDonasi', $code);
                 $this->db->update('donasi', $data);
             } else if ($result->payment_type == 'gopay') {
                         $data = array(
@@ -150,7 +150,7 @@ class Snap extends CI_Controller {
                                 'urlPembayaran' => $result->pdf_url,
                                 'statusPembayaran' => 'Menunggu Pembayaran'
                         );
-                        $this->db->where('md5(idDonasi)', $code);
+                        $this->db->where('kodeDonasi', $code);
                         $this->db->update('donasi', $data);
             } else {
                 $data = array(
@@ -160,7 +160,7 @@ class Snap extends CI_Controller {
                         'urlPembayaran' => $result->pdf_url,
                         'statusPembayaran' => 'Menunggu Pembayaran'
                 );
-                $this->db->where('md5(idDonasi)', $code);
+                $this->db->where('kodeDonasi', $code);
                 $this->db->update('donasi', $data);
             }
         }else{
@@ -172,7 +172,7 @@ class Snap extends CI_Controller {
                         'urlPembayaran' => $result->pdf_url,
                         'statusPembayaran' => 'Kadaluarsa'
                 );
-                $this->db->where('md5(idDonasi)', $code);
+                $this->db->where('kodeDonasi', $code);
                 $this->db->update('donasi', $data); 
         }
         // die;

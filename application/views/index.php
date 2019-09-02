@@ -172,21 +172,19 @@
                   <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                     <i class="fa fa-cog"></i> Status :
                     <br>
-                    <?php
-                    if($row['publish'] == 'Masih Dibuka'){
-                      ?>
-                      <small class="label pull-right bg-green btn-md round"> 
-                        Masih Dibuka
-                      </small>
-                      <?php
-                    } else {
-                      ?>
-                      <small class="label pull-right bg-red btn-md round"> 
-                        Sudah Ditutup
-                      </small>
-                      <?php
-                    }
-                    ?>
+                    <?php   if($row['publish'] == 'Masih Dibuka'){ ?>
+                        <small class="label pull-right bg-green btn-md round"> 
+                         Masih Dibuka
+                        </small>
+                        <?php
+                          } else{
+                        ?>
+<small class="label pull-right bg-red btn-md round"> 
+                         Sudah Ditutup
+                        </small>
+<?php
+                          } 
+                        ?>
                   </div>
                 </div>
               </div>
@@ -206,10 +204,9 @@
 </div>
 </div>
 <div class="cover">
-  <div class="div-center">
+<div class="div-center">
     <h1 style="color:white; font-size: 44px; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
-      LOREM IPSUM<br>
-      <small style="color: white; font-size: 25px; ">Lorem ipsum dolor sit amet</small>
+      AYO BANGUN DESA<br>
     </h1>
     <br>
     <div class="col-md-6 col-sm-6 col-xs-12 " align="center">
@@ -218,9 +215,12 @@
       </a>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12" align="center">
-      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      <a href="https://api.whatsapp.com/send?phone=6285526250131&text=Perkenalkan Saya <?= $this->session->userdata('nama')?>. Saya ingin menanyakan tentang..." target="_blank">
+        <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      </a>
     </div>
   </div>
+</div>
 </div>
 <div class="content-wrapper">
   <div class="container"> 
@@ -237,7 +237,7 @@
               <div class="box box-solid round">
                 <div class="box-body">
                   <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
-                  <h3 align="center"><?= $row['judulberita'] ?></h3>
+                  <h3 align="center"><?= strlen($row["judulberita"]) > 25 ? substr($row["judulberita"],0,25)."..." : $row["judulberita"] ?> </h3>
                   <p style="text-indent: 15px;"><?= $row['isiBerita'] ?>...</p>
                   <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
@@ -274,10 +274,9 @@
   </div>
 </div>
 <div class="cover">
-  <div class="div-center">
+<div class="div-center">
     <h1 style="color:white; font-size: 44px; font-weight: bold; text-shadow: 2px 2px 4px #000000;" align="center">
-      LOREM IPSUM<br>
-      <small style="color: white; font-size: 25px; ">Lorem ipsum dolor sit amet</small>
+      AYO BANGUN DESA<br>
     </h1>
     <br>
     <div class="col-md-6 col-sm-6 col-xs-12 " align="center">
@@ -286,25 +285,28 @@
       </a>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12" align="center">
-      <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      <a href="https://api.whatsapp.com/send?phone=6285526250131&text=Perkenalkan Saya <?= $this->session->userdata('nama')?>. Saya ingin menanyakan tentang..." target="_blank">
+        <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
+      </a>
     </div>
   </div>
+</div>
 </div>
 <div class="content-wrapper">
   <div class="container"> 
     <section class="content">
       <div class="row" align="center">
         <h1><i class="fa fa-camera-retro"></i> Aku dan Ceritaku</h1>
-        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
+        <small>Kumpulan Cerita Menarik Dari Pengguna Ayo Bangun Desa</small>
       </div>
       <br>
       <div class="row">
         <?php foreach($listcerita as $row){ ?>
-          <a href="<?= base_url('cerita') ?>/view/<?= $row['id'] ?>" class="a_black">
+          <a href="<?= base_url('story') ?>/view/<?= $row['id'] ?>" class="a_black">
             <div class="col-md-4 col-12 mb-md-0 mb-5">
               <div class="box box-solid round">
                 <div class="box-body">
-                  <img src="<?= $admin_url.$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
+                  <img src="https://desa.karyastudio.com/<?=$row['dir'] ?>" alt="Second slide" style="height: 230px; width: 100%">
                   <h3 align="center">
                     <?= strlen($row["judulCerita"]) > 20 ? substr($row["judulCerita"], 0, 20)."..." : $row["judulCerita"] ?>    
                   </h3>
@@ -321,7 +323,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                        <i class="fa fa-heart" style="color: red;"> </i> <b>20</b>
+                        <i class="fa fa-heart" style="color: red;"> </i> <b><?= $row['likes'] ?></b>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                       <small class="label pull-right bg-yellow btn-md round"> 

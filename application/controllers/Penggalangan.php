@@ -59,7 +59,7 @@ class Penggalangan extends MY_Controller {
 				GROUP BY idGalang
 			) qryd
 			ON qrya.idGalang = qryd.idGalang
-			ORDER BY created_at DESC");
+			ORDER BY created_at ASC");
 		}else{
 			$data['listgalang'] = $this->mymodel->selectWithQuery("SELECT qrya.*, 
 			COALESCE(totaldonasion, 0) as donasion, COALESCE(totaldonasioff, 0) as donasioff, 
@@ -99,7 +99,7 @@ class Penggalangan extends MY_Controller {
 			) qryd
 			ON qrya.idGalang = qryd.idGalang
 			WHERE qrya.idKategori = '$kategori'
-			ORDER BY created_at DESC");
+			ORDER BY created_at ASC");
 		}
 		$data['admin_url'] = $this->admin_url;
         $data['page_name'] = "Penggalangan";
@@ -149,7 +149,7 @@ class Penggalangan extends MY_Controller {
 			) qryd
 			ON qrya.idGalang = qryd.idGalang
 			WHERE qrya.idGalang = '$id'
-			ORDER BY dibuat DESC) qryall
+			ORDER BY dibuat ASC) qryall
 			LEFT JOIN file on qryall.idUser = file.table_id
 			WHERE file.table = 'user'");
 
@@ -166,11 +166,15 @@ class Penggalangan extends MY_Controller {
 			LEFT JOIN tbl_user on donasi.idUser = tbl_user.idUser
 			WHERE donasi.status = 'ENABLE' AND donasi.statusPembayaran = 'Terbayar'
 			AND donasi.idGalang = '$id'
-			ORDER BY donasi.tanggalPembayaran desc");
+			ORDER BY donasi.tanggalPembayaran ASC");
 
 			$data['donaturoff'] = $this->mymodel->selectWithQuery("SELECT donasi_off.*, user.name FROM donasi_off 
 			LEFT JOIN user on donasi_off.idUser = user.id
-			WHERE donasi_off.status='ENABLE' AND donasi_off.idGalang = '$id' ORDER BY donasi_off.created_at desc");
+			WHERE donasi_off.status='ENABLE' AND donasi_off.idGalang = '$id' ORDER BY donasi_off.created_at ASC");
+
+if(count($data['listgalang'])==0){
+	redirect(base_url());
+}
 
 		$data['admin_url'] = $this->admin_url;
         $data['page_name'] = "Penggalangan";
@@ -191,7 +195,26 @@ class Penggalangan extends MY_Controller {
 		}
 
 		$dt['statusPembayaran'] = "Belum Terbayar";
-		
+
+		 $dt['kodeDonasi'] = 'AYO-'.$this->session->userdata('id').''.date('YmdHis');
+
+		 $chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$res = "";
+for(;;){
+for ($i = 0; $i < 10; $i++) {
+    $res .= $chars[mt_rand(0, strlen($chars)-1)];
+}
+	
+	$query = $this->db->query("SELECT * FROM donasi WHERE kodeDonasi='$res'")->result();
+	// echo "SELECT * FROM donasi WHERE kodeDonasi='$res'";
+	if(count($query)==0){
+		// echo 'TIDAK ADA';
+		break;
+	}else{
+		// echo 'ADA';
+	}
+}
+		$dt['kodeDonasi'] = $res;
 		$dt['created_at'] = date('Y-m-d H:i:s');
 
 		$dt['status'] = "ENABLE";
@@ -201,7 +224,10 @@ class Penggalangan extends MY_Controller {
 
 		$str = $this->db->insert('donasi', $dt);
 
-		header("Location:".base_url('penggalangan/view/'.$dt['idGalang']));
+		$id = $this->db->insert_id();
+		$id = md5($id);
+		redirect(base_url()."invoice/$res");
+		// header("Location:".base_url('penggalangan/view/'.$dt['idGalang']));
 	}
 	
 }

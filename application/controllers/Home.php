@@ -69,7 +69,7 @@ class Home extends MY_Controller {
 			GROUP BY idGalang
 		) qryd
 		ON qrya.idGalang = qryd.idGalang
-		ORDER BY created_at DESC
+		ORDER BY created_at ASC
 		LIMIT 4");
 
 		$data['listberita'] = $this->mymodel->selectWithQuery("SELECT berita.idBerita as id, file.dir, 
@@ -81,17 +81,18 @@ class Home extends MY_Controller {
 		LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
 		LEFT JOIN master_kategoriberita on berita.idKategori = master_kategoriberita.idKategoriB
 		LEFT JOIN file on berita.idBerita = file.table_id
-		WHERE berita.status = 'ENABLE' AND file.table = 'berita'");
+		WHERE berita.status = 'ENABLE' AND file.table = 'berita' LIMIT 4");
 
 		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
 		cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 200) as isiCerita,
 		date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
-		master_kategoricreita.value as kategori, cerita.views
+		master_kategoricreita.value as kategori, cerita.views, cerita.likes
 		FROM cerita
 		LEFT JOIN tbl_user on cerita.idUser = tbl_user.idUser
 		LEFT JOIN master_kategoricreita on cerita.idKategori = master_kategoricreita.idKategoriC
 		LEFT JOIN file on cerita.idCerita = file.table_id
-		WHERE cerita.status = 'ENABLE' AND file.table = 'cerita'");
+		WHERE cerita.status = 'ENABLE' AND file.table = 'cerita'
+		LIMIT 3");
 
 		
 		$data['admin_url'] = $this->admin_url;
@@ -115,6 +116,9 @@ class Home extends MY_Controller {
 		FROM tbl_user
 		WHERE tbl_user.idUser = '$id'");
 
+if(count($data['biodata'])==0){
+	redirect(base_url());
+}
 		// var_dump($data['biodata']);
 		// die();
 
@@ -178,7 +182,7 @@ class Home extends MY_Controller {
 		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
 			cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 380) as isiCerita,
 			date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
-			master_kategoricreita.value as kategori, cerita.views
+			master_kategoricreita.value as kategori, cerita.views, cerita.likes
 			FROM cerita
 			LEFT JOIN tbl_user on cerita.idUser = tbl_user.idUser
 			LEFT JOIN master_kategoricreita on cerita.idKategori = master_kategoricreita.idKategoriC
@@ -202,6 +206,9 @@ class Home extends MY_Controller {
 		LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
 		WHERE user.id = '$id' AND file.table = 'user'");
 
+if(count($data['biodata'])==0){
+	redirect(base_url());
+}
 		$data['jumlahgalang'] = $this->mymodel->selectWithQuery("SELECT count(idGalang) as jumlah
 		FROM galang_dana
 		WHERE idUser = '$id'");
@@ -289,7 +296,8 @@ class Home extends MY_Controller {
 			LEFT JOIN master_desa on user.idDesa = master_desa.idDesa
 			LEFT JOIN master_kategoriberita on berita.idKategori = master_kategoriberita.idKategoriB
 			LEFT JOIN file on berita.idBerita = file.table_id
-			WHERE berita.status = 'ENABLE' AND file.table = 'berita' AND berita.idUser = '$id'");
+			WHERE berita.status = 'ENABLE' AND file.table = 'berita' AND berita.idUser = '$id'
+			LIMIT 4");
 
 		$data['admin_url'] = $this->admin_url;
 		$data['page_name'] = "profl";

@@ -276,7 +276,7 @@ foreach($listgalang as $row){
     </div>
   </div>
 
-<?php } ?>
+<?php break; } ?>
 
 <div class="modal modal-default fade" id="modal-donate" style="display: none;">
   <div class="modal-dialog round">

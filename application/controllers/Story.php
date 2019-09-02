@@ -11,7 +11,7 @@ class Story extends MY_Controller {
 		$data['listcerita'] = $this->mymodel->selectWithQuery("SELECT cerita.idCerita as id, file.dir, 
 			cerita.judulCerita, SUBSTR(cerita.isiCerita, 1, 200) as isiCerita,
 			date_format(cerita.created_at, '%d %M %Y') as tanggal, tbl_user.namaUser, 
-			master_kategoricreita.value as kategori, cerita.views, cerita.sinopsisCerita
+			master_kategoricreita.value as kategori, cerita.views, cerita.likes, cerita.sinopsisCerita
 			FROM cerita
 			LEFT JOIN tbl_user on cerita.idUser = tbl_user.idUser
 			LEFT JOIN master_kategoricreita on cerita.idKategori = master_kategoricreita.idKategoriC
@@ -31,6 +31,9 @@ class Story extends MY_Controller {
 
 		$data['cerita'] = $this->mymodel->selectDataone('cerita', array('idCerita' => $id, 'status' => 'ENABLE'));
 		
+		if(count($data['cerita'])==0){
+			redirect(base_url());
+		}
 		$data['cerita_image'] = $this->mymodel->selectDataone('file', array('table' => 'cerita', 'table_id' => $data['cerita']['idCerita']));
 
 		$data['kategori'] = $this->mymodel->selectDataone('master_kategoricreita', array('idKategoriC' => $data['cerita']['idKategori']));

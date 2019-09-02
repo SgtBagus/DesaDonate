@@ -25,11 +25,11 @@
                         <option value="" selected="">Semua Kategori</option>
                         <?php foreach($kategori as $row){
                           $text="";
-                            if($row['idKategori']==$this->session->userdata('idKategori')){
+                            if($row['idKategoriB']==$this->session->userdata('idKategori')){
                               $text = "selected";
                             } 
 
-                            echo "<option value=".$row['idKategori']." ".$text." >".$row['value']."</option>";
+                            echo "<option value=".$row['idKategoriB']." ".$text." >".$row['value']."</option>";
                           }
                         ?>
                       </select>

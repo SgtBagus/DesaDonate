@@ -19,7 +19,7 @@ class News extends MY_Controller {
 		$desa = $this->session->userdata('idDesa');
 
 		$data['desa'] = $this->mymodel->selectWithQuery("SELECT * FROM master_desa WHERE status = 'ENABLE'");
-		$data['kategori'] = $this->mymodel->selectWithQuery("SELECT * FROM master_kategori WHERE status = 'ENABLE'");
+		$data['kategori'] = $this->mymodel->selectWithQuery("SELECT * FROM master_kategoriberita WHERE status = 'ENABLE'");
 
 		$kategori_query = "";
 		if($kategori){
@@ -54,9 +54,13 @@ class News extends MY_Controller {
 	{
 		$data['berita'] = $this->mymodel->selectDataone('berita', array('idBerita' => $id, 'status' => 'ENABLE'));
 		
+		if(count($data['berita'])==0){
+			redirect(base_url());
+		}
+
 		$data['berita_image'] = $this->mymodel->selectDataone('file', array('table' => 'berita', 'table_id' => $data['berita']['idBerita']));
 
-		$data['kategori'] = $this->mymodel->selectDataone('master_kategori', array('idKategori' => $data['berita']['idKategori']));
+		$data['kategori'] = $this->mymodel->selectDataone('master_kategoriberita', array('idKategoriB' => $data['berita']['idKategori']));
 
 		$data['user'] = $this->mymodel->selectDataone('user', array('id' => $data['berita']['idUser']));
 

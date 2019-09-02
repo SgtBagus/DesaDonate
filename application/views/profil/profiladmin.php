@@ -12,7 +12,7 @@
         <a href="https://api.whatsapp.com/send?phone=<?= $row['noWA'] ?>&text=Halo Admin <?= $row['namaDesa'] ?>. Perkenalkan Saya <?= $this->session->userdata('nama')?>. Saya ingin menanyakan tentang..." target="_blank">
           <button type="button" class="btn btn-block btn-success btn-lg round cover_button"><i class="fa fa-whatsapp"></i> WhatsApp</button>
         </a>
-      <?php } ?>
+      <?php break; } ?>
       </div>
   </div>
 </div>

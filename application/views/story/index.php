@@ -89,7 +89,7 @@
                     </div>
                     <div class="row">
                       <div class="col-md-6 col-sm-6 col-xs-6" align="left">
-                        <i class="fa fa-heart" style="color: red;"> </i> <b>20</b>
+                        <i class="fa fa-heart" style="color: red;"> </i> <b><?= $row['likes'] ?></b>
                       </div>
                       <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                         <small class="label pull-right bg-yellow btn-md round"> 

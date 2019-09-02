@@ -105,13 +105,19 @@
                       <div class="col-md-6 col-sm-6 col-xs-6" align="right">
                         <i class="fa fa-cog"></i> Status :
                         <br>
+                        <?php   if($row['publish'] == 'Masih Dibuka'){ ?>
                         <small class="label pull-right bg-green btn-md round"> 
-                          <?php
-                          if($row['status'] == 'ENABLE'){
-                            echo 'Masih Dibuka';
-                          } 
-                          ?>
+                         Masih Dibuka
                         </small>
+                        <?php
+                          } else{
+                        ?>
+<small class="label pull-right bg-red btn-md round"> 
+                         Sudah Ditutup
+                        </small>
+<?php
+                          } 
+                        ?>
                       </div>
                     </div>
                   </div>

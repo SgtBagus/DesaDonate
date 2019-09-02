@@ -39,9 +39,9 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <button type="button" class="btn btn-block btn-success round">
+              <!-- <button type="button" class="btn btn-block btn-success round">
                 <i class="fa fa-whatsapp"></i> <b> Hubungi Whatsapp</b>
-              </button>
+              </button> -->
             </div>
           </div>
           <br>
