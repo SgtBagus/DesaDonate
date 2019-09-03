@@ -184,3 +184,9 @@ table.dataTable tbody td {
   background-color: #f3f3f3;
   font-size: 20px;
 }
+
+.scrol-300{
+  height: 300px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
